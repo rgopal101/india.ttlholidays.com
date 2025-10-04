@@ -6,7 +6,7 @@
  
 <section class="flight_detail">
 <div class="container py-5">
-    <div class="row justify-content-center g-4">
+        <div class="row justify-content-between g-4">
         <!-- Left side - Deal box -->
         <div class="col-md-5">
             <div class="deal-box">
@@ -52,25 +52,43 @@
                             </button>
 
                             <div class="traveler-menu" id="travelerMenu">
-                                <label class="fw-bold text-uppercase small text-secondary">Adults (12+)</label>
-                                <div class="traveler-count">
-                                    <button type="button" class="minus">-</button>
-                                    <span id="adultCount">1</span>
-                                    <button type="button" class="plus">+</button>
+                                <div class="row justify-content-between g-4"> 
+                                    <div class="col-md-6">
+                                        <label class="fw-bold text-uppercase small text-secondary">Adults (12+)</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="traveler-count">
+                                           <button type="button" class="minus">-</button>
+                                                <span id="adultCount">1</span>
+                                                <button type="button" class="plus">+</button>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <label class="fw-bold text-uppercase small text-secondary">Children (2–12)</label>
-                                <div class="traveler-count">
-                                    <button type="button" class="minus">-</button>
-                                    <span id="childCount">0</span>
-                                    <button type="button" class="plus">+</button>
+                                <div class="row justify-content-between g-4">
+                                    <div class="col-md-6">
+                                        <label class="fw-bold text-uppercase small text-secondary">Child (2–12)</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="traveler-count">
+                                            <button type="button" class="minus">-</button>
+                                            <span id="childCount">0</span>
+                                            <button type="button" class="plus">+</button>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <label class="fw-bold text-uppercase small text-secondary">Infants (0–2)</label>
-                                <div class="traveler-count">
-                                    <button type="button" class="minus">-</button>
-                                    <span id="infantCount">0</span>
-                                    <button type="button" class="plus">+</button>
+                                
+                                <div class="row justify-content-between g-4">
+                                    <div class="col-md-6">
+                                        <label class="fw-bold text-uppercase small text-secondary">Infants (0–2)</label>
+                                    </div>
+                                    <div class="col-md-6">                                
+                                        <div class="traveler-count">
+                                            <button type="button" class="minus">-</button>
+                                            <span id="infantCount">0</span>
+                                            <button type="button" class="plus">+</button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <hr>
@@ -135,15 +153,16 @@
 <section class="asia-deals-section container">
     <div class="row align-items-center">
 
-        <!-- Left Image -->
+        <div class="col-md-12">
+            <h3 class="fw-bold">Asia</h3>
+            <p class="text-muted">from <strong>$475</strong></p>
+        </div>
+
         <div class="col-md-4">
             <img src="~/assets/img/flight/d-5.webp" alt="Asia" class="img-fluid shadow-sm">
         </div>
          
-        <div class="col-md-8">
-            <h3 class="fw-bold">Asia</h3>
-            <p class="text-muted">from <strong>$475</strong></p>
-
+        <div class="col-md-8"> 
             <div class="row">
                 <div class="col-md-4"><div class="deal-item">Manila <span class="float-end deal-price">$489*</span></div></div>
                 <div class="col-md-4"><div class="deal-item">Cebu <span class="float-end deal-price">$495*</span></div></div>
