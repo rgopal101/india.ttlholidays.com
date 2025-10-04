@@ -2,3 +2,142 @@
 @model india.ttlholidays.com.Pages.FlightModel
 @{
 }
+<link rel="stylesheet" href="~/assets/css/flight_style.css" rel="stylesheet" asp-append-version="true" />
+<section class="newform mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-12 offset-lg-1 offset-0">
+                <div class="row">
+                    <h2 class="mainheading">Book cheap flights and save up to 50% OFF</h2>
+                    <div class="foursections-outer">
+                        <div class="foursections"><span>30+ </span>quotes in seconds</div>
+                        <div class="foursections second"><span>$287+&nbsp;</span>savings on each ticket</div>
+                        <div class="foursections"><span>100% </span>free service</div>
+                        <div class="foursections"><span>3+ mln</span> tickets sold</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tabbtns p-0">
+                        <div class="btn1 tabbtn"><a href="flights.aspx"><img src="assets/img/flight/plane-1.png"> Flights</a></div>
+                        <div class="btn2 tabbtn"><a href="hotels.aspx"><img src="assets/img/flight/hotel-1.png"> Hotels</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="newsearch" method="get" enctype="multipart/form-data" action="resultpage.aspx">
+                        <div class="row mb-3">
+                            <div class="frmtop">
+                                <div class="newformradios">
+                                    <label for="oneway">
+                                        <input type="radio" name="triptype" id="oneway" value="Round Trip" checked class="newround" onClick="newroundtrip()">
+                                        Round Trip
+                                    </label>
+                                    <label for="round" class="ms-2">
+                                        <input type="radio" name="triptype" id="round" value="One Way" class="newoneway" onClick="newone()">
+                                        One Way
+                                    </label>
+                                </div>
+                                <div class="cabinclass">
+                                    <label for="cabin_class">
+                                        Cabin Class:
+                                        <select name="cabin" id="cabin">
+                                            <option value="Economy" selected>Economy</option>
+                                            <option value="Economy">Premium Economy</option>
+                                            <option value="Economy">Business</option>
+                                            <option value="Economy">First</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row frmfields">
+                            <div class="col-md-2 mb-md-0 mb-3">
+                                <label for="tags">
+                                    <span class="floating">Depart from*</span>
+                                    <input type="text" name="depart" id="tags" placeholder="DEL - Delhi, Delhi Indira Gandhi Intl" required>
+                                </label>
+                            </div>
+                            <div class="col-md-2 mb-md-0 mb-3">
+                                <label for="tags2">
+                                    <span class="floating">Arrive at*</span>
+                                    <input type="text" name="arrive" id="tags2" placeholder="JFK - New York, John F Kennedy Intl" required>
+                                </label>
+                            </div>
+                            <div class="col-md-2 mb-md-0 mb-3">
+                                <label for="datepicker" class="dateouter">
+                                    <span class="floating">Journey date*</span>
+                                    <input type="text" name="departdate" id="from" placeholder="05-29-2024" autocomplete='' required>
+                                    <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2 mb-md-0 mb-3">
+                                <label for="datepicker2" class="dateouter">
+                                    <span class="floating">Return date*</span>
+                                    <input type="text" name="returndate" id="to" placeholder="05-29-2024" autocomplete=''>
+                                    <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
+                                </label>
+                            </div>
+                            <div class="col-md-2 mb-md-0 mb-3 diviouterbox">
+                                <label for="radioadult">
+                                    <span class="floating">Passengers*</span>
+                                    <input class="adultinput" type="text" name="radioadult" id="radioadult" onclick="divShow()">
+                                    <div class="all_values"><span id="passensers">1 Passenger</span></div>
+                                </label>
+                                <div class="divMsg" id="diviMsg" style="display: none;">
+                                    <div class="row align-items-center tar">
+                                        <div class="col-sm-4 col-md-4 tar">Adult</div>
+                                        <div class="col-sm-8 col-md-8 tar">
+                                            <div class="number">
+                                                <span class="minus newminus tar">-</span>
+                                                <input type="text" name="adult" id="adult" class="newinput tar" value="1">
+                                                <span class="plus newplus tar">+</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 tar">Child</div>
+                                        <div class="col-sm-8 col-md-8 my-1 tar">
+                                            <div class="number">
+                                                <span class="minus newminus tar">-</span>
+                                                <input type="text" name="child" id="child" class="newinput tar" value="0">
+                                                <span class="plus newplus tar">+</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 tar">Infant</div>
+                                        <div class="col-sm-8 col-md-8 tar">
+                                            <div class="number tar">
+                                                <span class="minus newminus">-</span>
+                                                <input type="text" name="infant" id="infant" class="newinput tar" value="0">
+                                                <span class="plus newplus tar">+</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-12"> <span class="btndiviMsg" onclick="divHide();" aria-hidden="true">Done</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="submit" value="Search Flights" name="Search_New">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row mt-2 afterfrm-content p-0">
+                    <div class="col-md-12 p-0">
+                        <p class="text-white">Dates are for informational purpose only. Fares about to be displayed may not necessarily be for the selected dates.</p>
+                    </div>
+                </div>
+                <div class="row mt-3 alllogos_box">
+                    <div class="col-md-3">
+                        <div class="imgbox"><img src="~/assets/img/flight/01.png" alt="" /> </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="imgbox"><img src="~/assets/img/flight/02.png" alt="" /></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="imgbox"><img src="~/assets/img/flight/03.png" alt="" /></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="imgbox"><img src="~/assets/img/flight/04.png" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

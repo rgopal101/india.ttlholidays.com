@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@ViewData["Title"] - india.ttlholidays.com</title> 
+    <title>@ViewData["Title"] - TTL Holidays</title>
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/jquery-ui.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/bootstrap-icons.css" rel="stylesheet" asp-append-version="true">
@@ -16,6 +16,7 @@
     <link href="~/assets/css/daterangepicker.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/boxicons.min.css" rel="stylesheet" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/style.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/css/custom.css" rel="stylesheet" asp-append-version="true">
     <link rel="icon" href="~/assets/ttl.png" type="image/gif" sizes="20x20">
 
 </head>
@@ -42,7 +43,7 @@
                 </div>
                 <div class="topbar-right">
                     <div class="support-and-language-area">
-                       
+
                         <div class="language-area">
                             <div class="language-btn">
                                 <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +59,8 @@
                             </div>
 
                             <ul class="language-list">
-                                <li><a href="https://www.ttlholidays.com">
+                                <li>
+                                    <a href="https://www.ttlholidays.com">
                                         <img src="~/assets/img/home1/india-flag.png" alt="India"> India
                                     </a>
                                 </li>
@@ -77,8 +79,8 @@
                                         <img src="~/assets/img/home1/us-flag.png" alt="India"> United States
                                     </a>
                                 </li>
-                            </ul> 
-                           
+                            </ul>
+
                         </div>
                     </div>
                     <a href="#" class="primary-btn1 black-bg">
@@ -120,7 +122,7 @@
                 <ul class="menu-list">
                     <li><a href="/">Home</a></li>
                     <li class="menu-item-has-children position-inherit">
-                        <a href="destination-01.html" class="drop-down">
+                        <a asp-page="/Flight" class="drop-down">
                             Flights
                             <i class="bi bi-caret-down-fill"></i>
                         </a>
@@ -185,13 +187,13 @@
                                                 </a>
                                             </li>
                                             <li>
-                                               <a asp-page="/FlightDetail" asp-route-country="Paris">
+                                                <a asp-page="/FlightDetail" asp-route-country="Indonesia">
                                                     <img src="~/assets/img/home1/indonesia-flag.png" alt="">
                                                     Indonesia
                                                 </a>
                                             </li>
                                             <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Indonesia">
+                                                <a asp-page="/FlightDetail" asp-route-country="Thailand">
                                                     <img src="~/assets/img/home1/thailand-flag.png" alt="">
                                                     Thailand
                                                 </a>
@@ -361,7 +363,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                               <a asp-page="/FlightDetail" asp-route-country="Costa Rica">
+                                                <a asp-page="/FlightDetail" asp-route-country="Costa Rica">
                                                     <img src="~/assets/img/home1/costa-rica-flag.png" alt="">
                                                     Costa Rica
                                                 </a>
@@ -373,7 +375,7 @@
                             <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1">
                             <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
                         </div>
-                    </li> 
+                    </li>
                     <li class="menu-item-has-children position-inherit">
                         <a href="destination-01.html" class="drop-down">
                             Holidays
@@ -640,7 +642,7 @@
                             <li><a asp-page="/VisaDetail" asp-route-country="Canada">Visa Package Details</a></li>
                         </ul>
                     </li>
-                    <li><a href="/">Cruises</a></li> 
+                    <li><a href="/">Cruises</a></li>
                     <li class="menu-item-has-children position-inherit">
                         <a href="destination-01.html" class="drop-down">
                             Special Offres
@@ -648,23 +650,23 @@
                         </a>
                         <i class="bi bi-plus dropdown-icon"></i>
                         <div class="mega-menu">
-                            <div class="container"> 
+                            <div class="container">
                                 <div class="swiper home1-offer-slider mb-40">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="travel-package-01.html"><img src="assets/img/home1/home1-offer-img1.jpg" alt=""></a>
+                                            <a href="travel-package-01.html"><img src="~/assets/img/home1/home1-offer-img1.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="assets/img/home1/home1-offer-img2.jpg" alt=""></a>
+                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img2.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="travel-package-01.html"><img src="assets/img/home1/home1-offer-img3.jpg" alt=""></a>
+                                            <a href="travel-package-01.html"><img src="~/assets/img/home1/home1-offer-img3.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="assets/img/home1/home1-offer-img4.jpg" alt=""></a>
+                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img4.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="assets/img/home1/home1-offer-img5.jpg" alt=""></a>
+                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img5.jpg" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -677,8 +679,8 @@
                             <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1">
                             <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
                         </div>
-                    </li> 
-                  
+                    </li>
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="contact-area d-lg-none d-flex">
@@ -765,8 +767,8 @@
                         </li>
                     </ul>
                 </div>
-               
-               
+
+
                 <div class="sidebar-button mobile-menu-btn">
                     <svg width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.29445 2.8421H10.5237C11.2389 2.8421 11.8182 2.2062 11.8182 1.42105C11.8182 0.635903 11.2389 0 10.5237 0H1.29445C0.579249 0 0 0.635903 0 1.42105C0 2.2062 0.579249 2.8421 1.29445 2.8421Z"></path>
@@ -778,9 +780,8 @@
         </div>
     </header>
 
-            @RenderBody()
-        </main>
-    </div>
+    @RenderBody()
+
 
     <div class="partner-section mb-50">
         <div class="container">
@@ -976,7 +977,7 @@
     <script src="~/assets/js/ScrollTrigger.min.js" asp-append-version="true"></script>
     <script src="~/assets/js/jquery.fancybox.min.js" asp-append-version="true"></script>
     <script src="~/assets/js/select-dropdown.js" asp-append-version="true"></script>
-    <script src="~/assets/js/custom.js" asp-append-version="true"></script> 
+    <script src="~/assets/js/custom.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
