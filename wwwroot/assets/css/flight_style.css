@@ -6493,24 +6493,26 @@ textarea {
   border: 1px solid #ccc;
   /*	 border-radius: 5px;*/
 }
-.newsearch .frmfields label .floating {
-  position: absolute;
-  top: -11px;
-  left: 12px;
-  padding: 0 2px;
-  font-size: 12px;
-  background-color: #fff;
-}
-.newsearch .frmfields label input {
-   width: 100%;
-  border: 0;
-  box-shadow: 0;
-  font-size: 14px;
-  padding: 7px 10px;
-  background-color:#fff;
-  height:auto;
- border-radius:0px;
-}
+    .newsearch .frmfields label .floating {
+        position: absolute;
+        top: -11px;
+        left: 12px;
+        padding: 0px 5px;
+        font-size: 12px;
+        background-color: #fff;
+        line-height: 15px;
+    }
+    .newsearch .frmfields label input {
+        width: 100%;
+        border: 0;
+        box-shadow: 0;
+        font-size: 14px;
+        padding: 7px 10px;
+        background-color: #fff;
+        height: auto;
+        border-radius: 0px;
+        line-height: 20px;
+    }
 .newsearch .frmfields label input::placeholder {
   font-size: 13px;
 }
@@ -6638,7 +6640,6 @@ textarea {
 .all_values {
   display: flex;
   justify-content: space-between;
-  top: 30%;
   position: absolute;
   left: 0;
   font-size: 13px;

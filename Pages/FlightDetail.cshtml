@@ -8,7 +8,7 @@
 <div class="container py-5">
         <div class="row justify-content-between g-4">
         <!-- Left side - Deal box -->
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="deal-box">
                 <h5>TODAY'S BEST DEAL FOR </h5>
                     @Model.Country
@@ -37,7 +37,7 @@
 
                 <form>
                     <div class="row g-2 mb-2">
-                        <div class="mb-3 col-5">
+                            <div class="col-md-5 col-sm-12">
                             <select class="form-select">
                                 <option>Round Trip</option>
                                 <option>One Way</option>
@@ -46,17 +46,17 @@
                         </div>
 
                         <!-- Traveler dropdown -->
-                        <div class="mb-3 col-7 traveler-dropdown">
+                            <div class="col-md-7 col-sm-12 traveler-dropdown">
                             <button type="button" class="form-control text-start" id="travelerBtn">
                                 <i class="bi bi-person"></i> <span id="travelerText">1, Economy</span>
                             </button>
 
                             <div class="traveler-menu" id="travelerMenu">
                                 <div class="row justify-content-between g-4"> 
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <label class="fw-bold text-uppercase small text-secondary">Adults (12+)</label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <div class="traveler-count">
                                            <button type="button" class="minus">-</button>
                                                 <span id="adultCount">1</span>
@@ -66,10 +66,10 @@
                                 </div>
 
                                 <div class="row justify-content-between g-4">
-                                    <div class="col-md-6">
+                                    <div class="col-6 ">
                                         <label class="fw-bold text-uppercase small text-secondary">Child (2–12)</label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <div class="traveler-count">
                                             <button type="button" class="minus">-</button>
                                             <span id="childCount">0</span>
@@ -79,10 +79,10 @@
                                 </div>
                                 
                                 <div class="row justify-content-between g-4">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <label class="fw-bold text-uppercase small text-secondary">Infants (0–2)</label>
                                     </div>
-                                    <div class="col-md-6">                                
+                                    <div class="col-6">                                
                                         <div class="traveler-count">
                                             <button type="button" class="minus">-</button>
                                             <span id="infantCount">0</span>
@@ -114,11 +114,11 @@
                     </div>
                         <div class="row g-2  mb-2">
 
-                            <div class="col col-6">
+                            <div class="col-md-6 col-sm-12">
                         <input type="text" class="form-control" placeholder="From *" required>
                     </div>
 
-                            <div class="col col-6">
+                            <div class="col-md-6 col-sm-12">
                         <input type="text" class="form-control" placeholder="To *" required>
                     </div>
                     </div>
@@ -131,15 +131,15 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <input type="email" class="form-control" placeholder="Email *" required>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <input type="tel" class="form-control" placeholder="Phone Number *" required>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <input type="text" class="form-control" placeholder="Your Name (Optional)">
                     </div>
 

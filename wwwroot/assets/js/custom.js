@@ -1845,7 +1845,7 @@
     function animate(timestamp) {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1); // Ensure it doesn't go over 1
+      const progress = Math.min(elapsed / duration, 1); // Ensure it doesnt go over 1
 
       const current = Math.floor(target * progress);
       bar.style.width = current + "%";

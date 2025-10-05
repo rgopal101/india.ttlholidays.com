@@ -644,7 +644,7 @@
                     </li>
                     <li><a href="/">Cruises</a></li>
                     <li class="menu-item-has-children position-inherit">
-                        <a href="destination-01.html" class="drop-down">
+                        <a href="/offers" class="drop-down">
                             Special Offres
                             <i class="bi bi-caret-down-fill"></i>
                         </a>
@@ -654,13 +654,13 @@
                                 <div class="swiper home1-offer-slider mb-40">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="travel-package-01.html"><img src="~/assets/img/home1/home1-offer-img1.jpg" alt=""></a>
+                                            <a asp-page="/pages" asp-route-country="aboutus"><img src="~/assets/img/home1/home1-offer-img1.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
                                             <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img2.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="travel-package-01.html"><img src="~/assets/img/home1/home1-offer-img3.jpg" alt=""></a>
+                                            <a asp-page="/pages" asp-route-country="aboutus"><img src="~/assets/img/home1/home1-offer-img3.jpg" alt=""></a>
                                         </div>
                                         <div class="swiper-slide">
                                             <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img4.jpg" alt=""></a>
@@ -681,7 +681,7 @@
                         </div>
                     </li>
 
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/Contact">Contact</a></li>
                 </ul>
                 <div class="contact-area d-lg-none d-flex">
                     <div class="single-contact">
@@ -783,7 +783,7 @@
     @RenderBody()
 
 
-    <div class="partner-section mb-50">
+    <div class="partner-section mb-50 mt-50">
         <div class="container">
             <div class="partner-title wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <h5>Our certications and Tourism Partners. Click here for details!</h5>
@@ -876,10 +876,10 @@
                                 <a href="#">SCF No 3, New Jawahar Nagar Market, Near APJ College, Jalandhar PB. 144001 </a>
                             </div>
                             <ul class="social-list">
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                <li><a href="https://www.linkedin.com/"><i class="bx bxl-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com/TTLholidays/"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="https://x.com/TTLTravellers"><i class="bx bxl-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/"><i class="bx bxl-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram-alt"></i></a></li>
+                                <li><a href="https://www.instagram.com/ttlholidays/"><i class="bx bxl-instagram-alt"></i></a></li>
                             </ul>
 
                         </div>
@@ -887,54 +887,55 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-md-end">
                         <div class="footer-widget">
                             <div class="widget-title">
-                                <h5>Top Destination</h5>
+                                <h5>Useful Links</h5>
                             </div>
                             <ul class="widget-list">
-                                <li><a href="travel-package-01.html">Maldives Tour</a></li>
-                                <li><a href="travel-package-01.html">Bali, Indonesia Tour</a></li>
-                                <li><a href="travel-package-01.html">Thailand Tour</a></li>
-                                <li><a href="travel-package-01.html">Philippines Tour</a></li>
-                                <li><a href="travel-package-01.html">Hawaii, USA Tour</a></li>
-                                <li><a href="travel-package-01.html">Switzerland Tour</a></li>
-                                <li><a href="travel-package-01.html">New Zealand Tour </a></li>
-                                <li><a href="travel-package-01.html">Costa Rica Tour</a></li>
+                                <li><a asp-page="/Pages" asp-route-pagename="aboutus">About Us</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Carrer</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Disclaimer</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Contact Us</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Privacy Policy</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Returns Policy </a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Terms & Conditions  </a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Faq</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-md-end">
                         <div class="footer-widget">
                             <div class="widget-title">
-                                <h5>Popular Search</h5>
+                                <h5>Indian Holidays</h5>
                             </div>
                             <ul class="widget-list">
-                                <li><a href="travel-package-02.html">Adventure</a></li>
-                                <li><a href="travel-package-02.html">Hiking & Stiking</a></li>
-                                <li><a href="travel-package-02.html">Holiday Packages</a></li>
-                                <li><a href="travel-package-02.html">Flights And Hotels</a></li>
-                                <li><a href="travel-package-02.html">Honeymoon Trip</a></li>
-                                <li><a href="travel-package-02.html">Bali Vacation Package</a></li>
-                                <li><a href="travel-package-02.html">Desert Safari</a></li>
-                                <li><a href="travel-package-02.html">Last-Minute Deals</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Amritsar">Amritsar</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Agra">Agra</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Kerala">Kerala</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Jaipur">Jaipur</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Goa">Goa</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Gujarat">Gujarat</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Kerala">Kerala</a></li>
+                                <li><a asp-page="/packages" asp-route-package="Jaipur">Jaipur</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 d-flex justify-content-lg-end">
                         <div class="footer-widget">
                             <div class="widget-title">
-                                <h5>Resources</h5>
+                                <h5>International Holidays</h5>
                             </div>
                             <ul class="widget-list">
-                                <li><a href="about.html">About TTL Holidays</a></li>
-                                <li><a href="#">Health & Safety Measure</a></li>
-                                <li><a href="visa.html">Visa Processing</a></li>
-                                <li><a href="contact.html">Customize Tour</a></li>
-                                <li><a href="travel-inspiration-01.html">Travel Inspirations</a></li>
-                                <li><a href="#">Traveler Reviews</a></li>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="https://www.google.com/maps">Sitemap</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="asia">Asia</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="africa">Africa</a></li>
+                                <li><a asp-page="/packages" asp-route-packages="australia">Australia</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="Middle_East">Middle East</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="Indian_Ocean">Indian Ocean</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="North_America">North America</a></li>
+                                <li><a asp-page="/packages" asp-route-packages="australia">Australia</a></li>
+                                <li><a asp-page="/destination" asp-route-destination="Middle_East">Middle East</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>                    
+                    <p class="disclaimer"><b>Disclaimer:</b> The information displayed on Airline Special offers for cheap flights tickets and cheap air fares are one way, INCLUSIVE of TAXES and without any HIDDEN COST; But do not confirm the availability of seats. This information provides some of best air fares for flights from INDIA which are subject to availability. Please do let us know, once you have picked the fare of your choice to confirm the availability of seats for a specified date. </p>
                 </div>
             </div>
         </div>
