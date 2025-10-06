@@ -24396,7 +24396,7 @@ header.style-3.two .main-menu > ul > li.active > a i {
   position: relative;
   text-align: center;
   z-index: 1;
-  max-width: 710px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
 }
@@ -24437,8 +24437,8 @@ header.style-3.two .main-menu > ul > li.active > a i {
 .breadcrumb-section .banner-content h1 {
   color: var(--white-color);
   font-family: var(--font-poppins);
-  font-weight: 600;
-  font-size: 50px;
+  font-weight: 400;
+  font-size: 36px;
   line-height: 1.2;
   margin-bottom: 25px;
 }
@@ -24615,7 +24615,7 @@ header.style-3.two .main-menu > ul > li.active > a i {
 }
 .breadcrumb-section.two .banner-content-wrap {
   position: absolute;
-  top: 0;
+  top: 10rem;
   left: 0;
   width: 100%;
   padding: 175px 0;

@@ -1,4 +1,485 @@
 ﻿@page
 @model india.ttlholidays.com.Pages.offerModel
 @{
+    ViewData["Title"] = "Special Offers";
 }
+
+<!-- Breadcrumb section Start-->
+<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/@Model.bgimage);">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Special Offers</h1>             
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb section End-->
+<!-- Package Grid Page Start-->
+<div class="package-grid-page pt-50 mb-100">
+    <div class="container">
+      
+        <div class="row">
+
+            <div class="col-lg-12 mb-4">
+                <div class="section-title">
+                    <h2>@Model.OfferCount</strong> Offers Await!</h2>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-8">
+              
+                <div class="list-grid-product-wrap mt-5">
+                    <div class="row gy-md-5 gy-4">
+
+                        @if (Model.OffersRoot.ValueKind == System.Text.Json.JsonValueKind.Object)
+                        {
+                           
+                                @foreach (var offer in Model.OffersRoot.EnumerateObject())
+                                {
+                                    var offerData = offer.Value;
+                                    var title = offerData.GetProperty("Title").GetString();
+                                    var desc = offerData.GetProperty("shortDesc").GetString();
+                                    var image = offerData.GetProperty("imagePath").GetString();
+                                    var url = offerData.GetProperty("Url").GetString(); 
+                                    <div class="col-md-6 my-2 item wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                        <div class="package-card">
+                                            <div class="package-img-wrap">
+                                                <a asp-page="/offerDetails" asp-route-offer_name="@url" class="package-img">
+                                                    <img src="@($"https://ttlholidays.com{image}")" alt="">
+                                                </a>
+                                                <div class="batch">
+                                                    <span>Hot Sale!</span>
+                                                </div>
+                                            </div>
+                                            <div class="package-content">
+                                                <h5><a asp-page="/offerDetails" asp-route-offer_name="@url">@title</a></h5>
+                                                <div class="location-and-time">
+                                                <p class="disclaimer">@desc</p>
+                                                </div>
+                                                
+                                                <div class="btn-and-price-area">
+                                                 <a asp-page="/offerDetails" asp-route-offer_name="@url" class="primary-btn1 w-100">
+                                                        <span>
+                                                            Read More
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span>
+                                                            Read More
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z" />
+                                                            </svg>
+                                                        </span>
+                                                    </a> 
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                             
+                        }
+                        else
+                        {
+                            <p>No offers found.</p>
+                        }
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="package-sidebar-area">
+                    <div class="sidebar-wrapper">
+                        <div class="title-area">
+                            <h5>Filter</h5>
+                            <span id="clear-filters">Clear All</span>
+                        </div>
+                        <div class="single-widgets">
+                            <div class="widget-title">
+                                <h5>Destinations</h5>
+                            </div>
+                            <div class="checkbox-container">
+                                <ul>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>Europe</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Paris, France</span> <span>08</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Rome, Italy</span> <span>12</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>United Kingdom</span> <span>15</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Netherlands</span> <span>02</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Portugal</span> <span>10</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Germany</span> <span>12</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon active"></i>
+                                    </li>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>Asia</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Tokyo, Japan</span> <span>15</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Indonesia</span> <span>07</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Thailand</span> <span>18</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Malaysia</span> <span>08</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Hanoi, Vietnam</span> <span>10</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon"></i>
+                                    </li>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>Africa</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Egypt</span> <span>05</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>South Africa</span> <span>07</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Thailand</span> <span>18</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Zimbabwe</span> <span>02</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Morocco</span> <span>12</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon"></i>
+                                    </li>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>North America</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>United States</span> <span>20</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Canada</span> <span>08</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Mexico</span> <span>13</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Costa Rica</span> <span>06</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon"></i>
+                                    </li>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>Oceania</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Australia</span> <span>12</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>New Zealand</span> <span>08</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Papua New Guinea</span> <span>14</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon"></i>
+                                    </li>
+                                    <li class="sidebar-category-dropdown">
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong>Middle East</strong>
+                                        </label>
+                                        <ul class="sub-category">
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>United Arab Emirates</span> <span>04</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Qatar</span> <span>06</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Saudi Arabia</span> <span>13</span></strong>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="containerss">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                    <strong><span>Jordan</span> <span>03</span></strong>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <i class="bi bi-caret-right-fill sidebar-category-icon"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-widgets">
+                            <div class="widget-title">
+                                <h5>Tour Type</h5>
+                            </div>
+                            <ul class="tour-type">
+                                <li>Group Tours</li>
+                                <li>Small Group</li>
+                                <li>Family</li>
+                                <li>Single Tours</li>
+                                <li>Private Tours</li>
+                            </ul>
+                        </div>
+                        <div class="single-widgets">
+                            <div class="widget-title">
+                                <h5>Pricing</h5>
+                            </div>
+                            <div class="range-wrap">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <form>
+                                            <input type="hidden" name="min-value" value="">
+                                            <input type="hidden" name="max-value" value="">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                                <div class="slider-labels">
+                                    <div class="caption">
+                                        <span id="slider-range-value1"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <span id="slider-range-value2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-widgets">
+                            <div class="widget-title">
+                                <h5>Activities</h5>
+                            </div>
+                            <div class="checkbox-container two">
+                                <ul class="experience">
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Hiking & Trekking</span> <span>04</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Rock Climbing</span> <span>06</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Zip-lining</span> <span>02</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Bungee Jumping</span> <span>07</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Paragliding</span> <span>12</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Skydiving</span> <span>06</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Surfing</span> <span>08</span></strong>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <span class="expand">See More +</span>
+                            </div>
+                        </div>
+                        <div class="single-widgets">
+                            <div class="widget-title">
+                                <h5>Discount & Offer</h5>
+                            </div>
+                            <div class="checkbox-container two">
+                                <ul>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Special Offer</span> <span>04</span></strong>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="containerss">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <strong><span>Last Minutes Deal</span> <span>06</span></strong>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Package Grid Page End-->
