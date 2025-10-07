@@ -14,9 +14,13 @@
     <link href="~/assets/css/slick.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/slick-theme.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/daterangepicker.css" rel="stylesheet" asp-append-version="true">
-    <link href="~/assets/css/boxicons.min.css" rel="stylesheet" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/css/boxicons.min.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/style.css" rel="stylesheet" asp-append-version="true">
     <link href="~/assets/css/custom.css" rel="stylesheet" asp-append-version="true">
+    <meta name="description" content="@ViewData["Description"]" />
+    <meta name="keywords" content="@ViewData["keywords"]" />
+    <meta name="author" content="TTL Holidays" />
+
     <link rel="icon" href="~/assets/ttl.png" type="image/gif" sizes="20x20">
 
 </head>
@@ -377,7 +381,7 @@
                         </div>
                     </li>
                     <li class="menu-item-has-children position-inherit">
-                        <a href="destination-01.html" class="drop-down">
+                        <a href="/Holidays" class="drop-down">
                             Holidays
                             <i class="bi bi-caret-down-fill"></i>
                         </a>
@@ -891,13 +895,13 @@
                             </div>
                             <ul class="widget-list">
                                 <li><a asp-page="/Pages" asp-route-pagename="aboutus">About Us</a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Carrer</a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Disclaimer</a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Contact Us</a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Privacy Policy</a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Returns Policy </a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Terms & Conditions  </a></li>
-                                <li><a asp-page="/pages" asp-route-pagename="aboutus">Faq</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="carrer">Carrer</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="disclaimer">Disclaimer</a></li>
+                                <li><a asp-page="/Contact">Contact Us</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="privacypolicy">Privacy Policy</a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="returns-policy">Returns Policy </a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="termsandconditions">Terms & Conditions  </a></li>
+                                <li><a asp-page="/pages" asp-route-pagename="faq">Faq</a></li>
                             </ul>
                         </div>
                     </div>

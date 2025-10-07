@@ -5,7 +5,7 @@
 }
 
 <!-- Breadcrumb section Start-->
-<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/@Model.bgimage);">
+<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@Model.bgimage);">
     <div class="container">
         <div class="banner-content">
             <h1>Special Offers</h1>             
@@ -45,7 +45,7 @@
                                         <div class="package-card">
                                             <div class="package-img-wrap">
                                                 <a asp-page="/offerDetails" asp-route-offer_name="@url" class="package-img">
-                                                    <img src="@($"https://ttlholidays.com{image}")" alt="">
+                                                    <img src="@($"{image}")" alt="">
                                                 </a>
                                                 <div class="batch">
                                                     <span>Hot Sale!</span>

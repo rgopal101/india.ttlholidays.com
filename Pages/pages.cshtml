@@ -1,4 +1,22 @@
 ﻿@page "{pagename}"
 @model india.ttlholidays.com.Pages.pagesModel
 @{
-}
+    ViewData["Title"] = @Model.pageTitle;
+    ViewData["Description"] = @Model.metaDesc;
+    ViewData["keywords"] = @Model.metaTags;
+} 
+<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/innerpages/breadcrumb-bg2.jpg);">
+    <div class="container">
+        <div class="banner-content">
+            <h1>@Model.pageTitle</h1>
+        </div>
+    </div>
+</div> 
+<div class="about-section pt-50 mb-50">
+    <div class="container">
+        <div class="about-wrapper">
+            <h2>@Model.pageTitle</h2>
+            @Html.Raw(Model.pageContent)
+        </div>
+    </div>
+</div>
