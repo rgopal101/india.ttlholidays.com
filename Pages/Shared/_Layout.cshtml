@@ -124,569 +124,125 @@
                     </div>
                 </div>
                 <ul class="menu-list">
-                    <li><a href="/">Home</a></li>
-                    <li class="menu-item-has-children position-inherit">
-                        <a asp-page="/Flight" class="drop-down">
-                            Flights
-                            <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <div class="mega-menu">
-                            <div class="container">
-                                <div class="menu-row">
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Europe</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Paris">
-                                                    <img src="~/assets/img/home1/france-flag.png" alt="">
-                                                    Paris, France
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="United Kingdom">
-                                                    <img src="~/assets/img/home1/uk-flag.png" alt="">
-                                                    United Kingdom
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Netherlands">
-                                                    <img src="~/assets/img/home1/netherland-flag.png" alt="">
-                                                    Netherlands
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Italy">
-                                                    <img src="~/assets/img/home1/italy-flag.png" alt="">
-                                                    Italy
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Greece">
-                                                    <img src="~/assets/img/home1/greece-flag.png" alt="">
-                                                    Greece
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Romania">
-                                                    <img src="~/assets/img/home1/romania-flag.png" alt="">
-                                                    Romania
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Asia</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Tokyo">
-                                                    <img src="~/assets/img/home1/japan-flag2.png" alt="">
-                                                    Tokyo, Japan
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Indonesia">
-                                                    <img src="~/assets/img/home1/indonesia-flag.png" alt="">
-                                                    Indonesia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Thailand">
-                                                    <img src="~/assets/img/home1/thailand-flag.png" alt="">
-                                                    Thailand
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Malaysia">
-                                                    <img src="~/assets/img/home1/malaysia-flag.png" alt="">
-                                                    Malaysia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Hanoi">
-                                                    <img src="~/assets/img/home1/vietnam-flag.png" alt="">
-                                                    Hanoi, Vietnam
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="India">
-                                                    <img src="~/assets/img/home1/india-flag.png" alt="">
-                                                    India
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Africa</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Egypt">
-                                                    <img src="~/assets/img/home1/egypt-flag.png" alt="">
-                                                    Egypt
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="South Africa">
-                                                    <img src="~/assets/img/home1/south-africa-flag.png" alt="">
-                                                    South Africa
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Zimbabwe">
-                                                    <img src="~/assets/img/home1/zimbabwe-flag.png" alt="">
-                                                    Zimbabwe
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Kenya">
-                                                    <img src="~/assets/img/home1/kenya-flag.png" alt="">
-                                                    Kenya
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Morocco">
-                                                    <img src="~/assets/img/home1/morocco-flag.png" alt="">
-                                                    Morocco
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Senegal">
-                                                    <img src="~/assets/img/home1/senegal-flag.png" alt="">
-                                                    Senegal
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Oceania</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Australia">
-                                                    <img src="~/assets/img/home1/australia-flag.png" alt="">
-                                                    Australia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="New Zealand">
-                                                    <img src="~/assets/img/home1/south-africa-flag.png" alt="">
-                                                    New Zealand
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Papua New Guinea">
-                                                    <img src="~/assets/img/home1/papua-new-guinea-flag.png" alt="">
-                                                    Papua New Guinea
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Middle East</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="United Arab Emirates">
-                                                    <img src="~/assets/img/home1/uae-flag.png" alt="">
-                                                    United Arab Emirates
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Qatar">
-                                                    <img src="~/assets/img/home1/qatar-flag.png" alt="">
-                                                    Qatar
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Bahrain">
-                                                    <img src="~/assets/img/home1/bahrain-flag.png" alt="">
-                                                    Bahrain
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Saudi Arabia">
-                                                    <img src="~/assets/img/home1/saudi-arabia-flag.png" alt="">
-                                                    Saudi Arabia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Jordan">
-                                                    <img src="~/assets/img/home1/jordan-flag.png" alt="">
-                                                    Jordan
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Palestine">
-                                                    <img src="~/assets/img/home1/palestine-flag.png" alt="">
-                                                    Palestine
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>North America</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="United States">
-                                                    <img src="~/assets/img/home1/us-flag.png" alt="">
-                                                    United States
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Canada">
-                                                    <img src="~/assets/img/home1/canada-flag.png" alt="">
-                                                    Canada
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Mexico">
-                                                    <img src="~/assets/img/home1/mexico-flag.png" alt="">
-                                                    Mexico
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Jamaica">
-                                                    <img src="~/assets/img/home1/jamaica-flag.png" alt="">
-                                                    Jamaica
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a asp-page="/FlightDetail" asp-route-country="Costa Rica">
-                                                    <img src="~/assets/img/home1/costa-rica-flag.png" alt="">
-                                                    Costa Rica
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1">
-                            <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
+    <li><a href="/">Home</a></li>
+    <li class="menu-item-has-children position-inherit">
+        <a asp-page="/Flight" class="drop-down"> Flights <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
+        <div class="mega-menu">
+            <div class="container">
+                <div class="menu-row">
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>Europe</h5>
                         </div>
-                    </li>
-                    <li class="menu-item-has-children position-inherit">
-                        <a href="/Holidays" class="drop-down">
-                            Holidays
-                            <i class="bi bi-caret-down-fill"></i>
-                        </a>
                         <i class="bi bi-plus dropdown-icon"></i>
-                        <div class="mega-menu">
-                            <div class="container">
-                                <div class="menu-row">
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Europe</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/france-flag.png" alt="">
-                                                    Paris, France
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/uk-flag.png" alt="">
-                                                    United Kingdom
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/netherland-flag.png" alt="">
-                                                    Netherlands
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/italy-flag.png" alt="">
-                                                    Italy
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/greece-flag.png" alt="">
-                                                    Greece
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/romania-flag.png" alt="">
-                                                    Romania
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Asia</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/japan-flag2.png" alt="">
-                                                    Tokyo, Japan
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/indonesia-flag.png" alt="">
-                                                    Indonesia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/thailand-flag.png" alt="">
-                                                    Thailand
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/malaysia-flag.png" alt="">
-                                                    Malaysia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/vietnam-flag.png" alt="">
-                                                    Hanoi, Vietnam
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/india-flag.png" alt="">
-                                                    India
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Africa</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/egypt-flag.png" alt="">
-                                                    Egypt
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/south-africa-flag.png" alt="">
-                                                    South Africa
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/zimbabwe-flag.png" alt="">
-                                                    Zimbabwe
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/kenya-flag.png" alt="">
-                                                    Kenya
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/morocco-flag.png" alt="">
-                                                    Morocco
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/senegal-flag.png" alt="">
-                                                    Senegal
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Oceania</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/australia-flag.png" alt="">
-                                                    Australia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/south-africa-flag.png" alt="">
-                                                    New Zealand
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/papua-new-guinea-flag.png" alt="">
-                                                    Papua New Guinea
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Middle East</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/uae-flag.png" alt="">
-                                                    United Arab Emirates
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/qatar-flag.png" alt="">
-                                                    Qatar
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/bahrain-flag.png" alt="">
-                                                    Bahrain
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/saudi-arabia-flag.png" alt="">
-                                                    Saudi Arabia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/jordan-flag.png" alt="">
-                                                    Jordan
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/palestine-flag.png" alt="">
-                                                    Palestine
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>North America</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/us-flag.png" alt="">
-                                                    United States
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/canada-flag.png" alt="">
-                                                    Canada
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/mexico-flag.png" alt="">
-                                                    Mexico
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/jamaica-flag.png" alt="">
-                                                    Jamaica
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="destination-details.html">
-                                                    <img src="~/assets/img/home1/costa-rica-flag.png" alt="">
-                                                    Costa Rica
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1">
-                            <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
-                        </div>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a asp-page="/Visa" class="drop-down">
-                            Visa
-                            <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <ul class="sub-menu">
-                            <li><a asp-page="/Visa">Visa Package</a></li>
-                            <li><a asp-page="/VisaDetail" asp-route-country="Canada">Visa Package Details</a></li>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Paris"> <img src="~/assets/img/home1/france-flag.png" alt=""> Paris, France </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="United Kingdom"> <img src="~/assets/img/home1/uk-flag.png" alt=""> United Kingdom </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Netherlands"> <img src="~/assets/img/home1/netherland-flag.png" alt=""> Netherlands </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Italy"> <img src="~/assets/img/home1/italy-flag.png" alt=""> Italy </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Greece"> <img src="~/assets/img/home1/greece-flag.png" alt=""> Greece </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Romania"> <img src="~/assets/img/home1/romania-flag.png" alt=""> Romania </a> </li>
                         </ul>
-                    </li>
-                    <li><a href="/">Cruises</a></li>
-                    <li class="menu-item-has-children position-inherit">
-                        <a href="/offers" class="drop-down">
-                            Special Offres
-                            <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <div class="mega-menu">
-                            <div class="container">
-                                <div class="swiper home1-offer-slider mb-40">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a asp-page="/pages" asp-route-country="aboutus"><img src="~/assets/img/home1/home1-offer-img1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a asp-page="/pages" asp-route-country="aboutus"><img src="~/assets/img/home1/home1-offer-img3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img4.jpg" alt=""></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="travel-package-details.html"><img src="~/assets/img/home1/home1-offer-img5.jpg" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <div class="swiper-pagination1 paginations"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1">
-                            <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
+                    </div>
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>Asia</h5>
                         </div>
-                    </li>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Tokyo"> <img src="~/assets/img/home1/japan-flag2.png" alt=""> Tokyo, Japan </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Indonesia"> <img src="~/assets/img/home1/indonesia-flag.png" alt=""> Indonesia </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Thailand"> <img src="~/assets/img/home1/thailand-flag.png" alt=""> Thailand </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Malaysia"> <img src="~/assets/img/home1/malaysia-flag.png" alt=""> Malaysia </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Hanoi"> <img src="~/assets/img/home1/vietnam-flag.png" alt=""> Hanoi, Vietnam </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="India"> <img src="~/assets/img/home1/india-flag.png" alt=""> India </a> </li>
+                        </ul>
+                    </div>
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>Africa</h5>
+                        </div>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Egypt"> <img src="~/assets/img/home1/egypt-flag.png" alt=""> Egypt </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="South Africa"> <img src="~/assets/img/home1/south-africa-flag.png" alt=""> South Africa </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Zimbabwe"> <img src="~/assets/img/home1/zimbabwe-flag.png" alt=""> Zimbabwe </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Kenya"> <img src="~/assets/img/home1/kenya-flag.png" alt=""> Kenya </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Morocco"> <img src="~/assets/img/home1/morocco-flag.png" alt=""> Morocco </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Senegal"> <img src="~/assets/img/home1/senegal-flag.png" alt=""> Senegal </a> </li>
+                        </ul>
+                    </div>
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>Oceania</h5>
+                        </div>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Australia"> <img src="~/assets/img/home1/australia-flag.png" alt=""> Australia </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="New Zealand"> <img src="~/assets/img/home1/south-africa-flag.png" alt=""> New Zealand </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Papua New Guinea"> <img src="~/assets/img/home1/papua-new-guinea-flag.png" alt=""> Papua New Guinea </a> </li>
+                        </ul>
+                    </div>
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>Middle East</h5>
+                        </div>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="United Arab Emirates"> <img src="~/assets/img/home1/uae-flag.png" alt=""> United Arab Emirates </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Qatar"> <img src="~/assets/img/home1/qatar-flag.png" alt=""> Qatar </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Bahrain"> <img src="~/assets/img/home1/bahrain-flag.png" alt=""> Bahrain </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Saudi Arabia"> <img src="~/assets/img/home1/saudi-arabia-flag.png" alt=""> Saudi Arabia </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Jordan"> <img src="~/assets/img/home1/jordan-flag.png" alt=""> Jordan </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Palestine"> <img src="~/assets/img/home1/palestine-flag.png" alt=""> Palestine </a> </li>
+                        </ul>
+                    </div>
+                    <div class="menu-single-item">
+                        <div class="menu-title">
+                            <h5>North America</h5>
+                        </div>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="United States"> <img src="~/assets/img/home1/us-flag.png" alt=""> United States </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Canada"> <img src="~/assets/img/home1/canada-flag.png" alt=""> Canada </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Mexico"> <img src="~/assets/img/home1/mexico-flag.png" alt=""> Mexico </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Jamaica"> <img src="~/assets/img/home1/jamaica-flag.png" alt=""> Jamaica </a> </li>
+                            <li> <a asp-page="/FlightDetail" asp-route-country="Costa Rica"> <img src="~/assets/img/home1/costa-rica-flag.png" alt=""> Costa Rica </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1"> <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
+        </div>
+    </li>
+    <li class="menu-item-has-children position-inherit">
+        <a href="/Holidays" class="drop-down"> Holidays <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
+        <div class="mega-menu">
+            <div class="container">
+                <div class="row">
+                       @await Component.InvokeAsync("PackageMenu")
+                </div>
+            </div>
+            <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1"> <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
+        </div>
+    </li>
+    <li class="menu-item-has-children">
+        <a asp-page="/Visa" class="drop-down"> Visa <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
+        <ul class="sub-menu">
+            <li><a asp-page="/Visa">Visa Package</a></li>
+            <li><a asp-page="/VisaDetail" asp-route-country="Canada">Visa Package Details</a></li>
+        </ul>
+    </li>
+    <li><a href="/">Cruises</a></li>
+    <li class="menu-item-has-children position-inherit">
+        <a href="/offers" class="drop-down"> Special Offres <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
+          @await Component.InvokeAsync("OffersMenu")
+    </li>
+    <li><a href="/Contact">Contact</a></li>
+</ul>
 
-                    <li><a href="/Contact">Contact</a></li>
-                </ul>
+
+             
                 <div class="contact-area d-lg-none d-flex">
                     <div class="single-contact">
                         <div class="icon">

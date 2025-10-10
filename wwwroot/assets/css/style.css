@@ -414,7 +414,7 @@ h5 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 28px;
 }
@@ -3242,18 +3242,43 @@ header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li
 header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li:last-child {
   margin-bottom: 0;
 }
-header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li > a {
-  color: var(--text-color);
-  font-family: var(--font-roboto);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1;
-  transition: 0.5s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+header.style-1 .main-menu .container .row .col-lg-3 a {
+    color: var(--text-color);
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    transition: 0.5s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
+
+header.style-1 .main-menu .container .row .col-lg-3 a:hover {
+        color: var(--primary-color1);
+     
+}
+
+    header.style-1 .main-menu .container .row .col-lg-3 a svg {
+        fill: var(--primary-color1);
+        min-width: 16px;
+        margin-top: 6px;
+    }
+
+
+header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li > a {
+    color: var(--text-color);
+    font-family: var(--font-roboto);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    transition: 0.5s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) 
+{
   header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li > a {
     font-size: 14px;
   }
@@ -9347,7 +9372,8 @@ header.style-3.two .main-menu > ul > li.active > a i {
   }
 }
 .package-card .package-content .btn-and-price-area .price-area span del {
-  font-size: 18px;
+    font-size: 17px;
+    color: red;
 }
 .package-card .package-content .divider {
   fill: var(--borders-color);
@@ -24615,7 +24641,7 @@ header.style-3.two .main-menu > ul > li.active > a i {
 }
 .breadcrumb-section.two .banner-content-wrap {
   position: absolute;
-  top: 10rem;
+  top: 5rem;
   left: 0;
   width: 100%;
   padding: 175px 0;
