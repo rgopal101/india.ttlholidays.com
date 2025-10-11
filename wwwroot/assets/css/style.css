@@ -31346,9 +31346,9 @@ header.style-3.two .main-menu > ul > li.active > a i {
   width: 100%;
   line-height: 1;
   border: 1px solid var(--borders-color);
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 14px 20px;
-  margin-bottom: 30px;
+  margin-bottom: -1px;
 }
 @media (max-width: 576px) {
   .product-details-page .product-description-and-review-area .nav2 {
@@ -31357,14 +31357,14 @@ header.style-3.two .main-menu > ul > li.active > a i {
   }
 }
 .product-details-page .product-description-and-review-area .nav2 .nav-link {
-  color: var(--text-color);
-  font-family: var(--font-poppins);
-  font-size: 16px;
-  font-weight: 500;
-  padding: 6px 15px;
-  border-radius: 15px;
-  line-height: 1;
-  background-color: transparent;
+    color: var(--text-color);
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1;
+    background-color: #F2F2FF;
 }
 @media (max-width: 576px) {
   .product-details-page .product-description-and-review-area .nav2 .nav-link {
@@ -31373,7 +31373,7 @@ header.style-3.two .main-menu > ul > li.active > a i {
   }
 }
 .product-details-page .product-description-and-review-area .nav2 .nav-link.active {
-  background-color: var(--black-color);
+  background-color: var(--primary-color1);
   color: var(--white-color);
 }
 .product-details-page .product-description-and-review-area .tab-content2 .description p {
@@ -34352,12 +34352,20 @@ header.style-3.two .main-menu > ul > li.active > a i {
   gap: 60px;
   row-gap: 50px;
 }
+
+.facilities-wrap {
+    padding: 30px;
+    border: 1px solid var(--borders-color);
+    border-radius: 20px;
+   
+}
 @media (max-width: 1399px) {
   .hotel-details-page .hotel-details-wrapper .hotel-dt-facilities-area .facilities-wrap {
     padding: 30px 20px;
     gap: 30px;
     row-gap: 45px;
   }
+
 }
 @media (max-width: 767px) {
   .hotel-details-page .hotel-details-wrapper .hotel-dt-facilities-area .facilities-wrap {
