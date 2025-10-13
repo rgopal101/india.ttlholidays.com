@@ -2,29 +2,13 @@
 @model india.ttlholidays.com.Pages.destinationModel
 @{
     ViewData["Title"] = @Model.Pagetitle;
-}
-
-<div class="home2-banner-section">
-    <div class="swiper home2-banner-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="banner-wrapper">
-                    <div class="banner-video-area">
-                        <video autoplay loop muted playsinline src="assets/video/home1-banner-video.mp4"></video>
-                    </div>
-                    <div class="banner-content-wrap">
-                        <div class="container">
-                            <div class="banner-content">
-                                <h1>Holidays Packages.</h1>
-                                <p>Highlights convenience and simplicity, Best for agencies with online & mobile-friendly services.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+} 
+<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@Model.bgimage);">
+    <div class="container">
+        <div class="banner-content">
+            <h1> @Model.Pagetitle</h1>
         </div>
     </div>
-
 </div>
 <div class="package-grid-page pt-50 mb-100">
     <div class="container"> 
@@ -35,13 +19,13 @@
                     <div class="row gy-md-5 gy-4">
 
                         @if (Model.CityRoot.ValueKind == System.Text.Json.JsonValueKind.Object)
-                        {
-
+                        { 
                             @foreach (var city in Model.CityRoot.EnumerateObject())
                             {
                                 var CityData = city.Value;
                                 var cityName = CityData.GetProperty("cityName").GetString();
                                 var image = CityData.GetProperty("imagePath").GetString();
+                                var pkg_count = CityData.GetProperty("pkg_count").GetInt32();
                                 var url = ""; 
                                 var packagePrice = ""; 
                                 decimal packagePriceValue = 0; 
@@ -55,7 +39,7 @@
                                             <div class="swiper package-card-img-slider">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
-                                                        <a asp-page="/packageDetails" asp-route-pkg_name="@url" class="package-img">
+                                                        <a asp-page="/packages" asp-route-cityname="@cityName" class="package-img">
                                                             <img src="@($"{image}")" alt="">
                                                         </a>
                                                     </div>
@@ -67,25 +51,24 @@
                                              
                                         </div>
                                         <div class="package-content">
-                                            <h5> <a asp-page="/packageDetails" asp-route-pkg_name="@url">@cityName</a></h5>
-                                            <div class="btn-and-price-area">
-                                                <a asp-page="/packageDetails" asp-route-pkg_name="@url" class="primary-btn1">
+                                            <h5> <a asp-page="/packages" asp-route-cityname="@cityName">@cityName</a></h5>
+                                            <div class="btn-and-price-area w-100">
+                                                <a asp-page="/packages" asp-route-cityname="@cityName" class="primary-btn1">
                                                     <span>
-                                                        Book Now
+                                                        View Packages
                                                         <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z" />
                                                         </svg>
                                                     </span>
                                                     <span>
-                                                        Book Now
+                                                        View Packages
                                                         <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z" />
                                                         </svg>
                                                     </span>
                                                 </a>
                                                 <div class="price-area">
-                                                    <h6>Price</h6>
-                                                    <span><del>@packagePriceValue</del>Rs.@packagePrice</span>
+                                                    <h6>@pkg_count Package</h6> 
                                                 </div>
                                             </div> 
                                         </div>

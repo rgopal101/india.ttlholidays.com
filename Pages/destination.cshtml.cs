@@ -20,7 +20,7 @@ namespace india.ttlholidays.com.Pages
             _config = config;
         }
         
-        public string bgimage = "assets/img/innerpages/breadcrumb-bg3.jpg";
+        public string bgimage = "/assets/img/innerpages/breadcrumb-bg3.jpg";
         public int PackageCount { get; set; }
         public JsonElement CityRoot { get; set; }
         public string IMGURL { get; set; } = string.Empty;
@@ -30,6 +30,7 @@ namespace india.ttlholidays.com.Pages
         {
             IMGURL = _config["AppSettings:IMGURL"] ?? string.Empty;
             APIURL = _config["AppSettings:APIURL"] ?? string.Empty;
+            Pagetitle = !string.IsNullOrEmpty(destination) ? destination.Replace("_", " ") : " "; // Default title if destination is null or empty
             var apiUrl = $"{APIURL}get_destination_listing.php?destination={System.Net.WebUtility.UrlEncode(destination)}";
 
             using var client = new HttpClient();

@@ -9081,12 +9081,13 @@ header.style-3.two .main-menu > ul > li.active > a i {
 .package-card .package-img-wrap {
   position: relative;
 }
-.package-card .package-img-wrap .package-img {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  border-radius: 10px;
-}
+    .package-card .package-img-wrap .package-img {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        border-radius: 10px;
+        max-height: 227px;
+    }
 .package-card .package-img-wrap .package-img img {
   border-radius: 10px;
   min-height: 200px;

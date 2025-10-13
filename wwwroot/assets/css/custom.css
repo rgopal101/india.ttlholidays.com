@@ -204,4 +204,31 @@ img {
                 }
 
 
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+    .price li {
+        border-bottom: 1px solid rgb(238, 238, 238);
+        padding: 20px;
+        text-align: justify;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+    }
+    .price .header {
+        background-color: #017CC2;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    .price li img {
+        margin: 0 auto;
+    }
+
+
      
