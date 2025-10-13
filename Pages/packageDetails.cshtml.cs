@@ -37,11 +37,8 @@ namespace india.ttlholidays.com.Pages
         public string itinerary { get; set; } = string.Empty;
         public string inclusion { get; set; } = string.Empty;
         public string packageType { get; set; } = string.Empty;
-
         public string rootdata { get; set; }
-
         public  decimal packagePriceValue = 0;
-
         public string IMGURL { get; set; } = string.Empty;
         public string APIURL { get; set; } = string.Empty;
 
