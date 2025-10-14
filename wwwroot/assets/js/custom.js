@@ -2661,3 +2661,261 @@ $(document).ready(function () {
         }
     });
 });
+
+// Initialize Flight Search list
+(function () {
+
+    // ✅ Debounce helper
+    function debounce(func, delay) {
+        let timer;
+        return function (...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    // ✅ Initialize autocomplete on all inputs with .airport-input
+    document.querySelectorAll('.airport-input').forEach(input => {
+        // Create suggestions list
+        let suggestions = document.createElement('ul');
+        suggestions.className = 'list-group airport-suggestions';
+        suggestions.style.position = 'absolute';
+        suggestions.style.zIndex = '1000';
+        suggestions.style.width = 'auto';
+        suggestions.style.fontSize = '13px';
+        suggestions.style.overflowY = 'auto';
+        suggestions.style.display = 'none';
+        suggestions.style.marginTop = '0';
+        suggestions.style.cursor = 'pointer';
+        document.body.appendChild(suggestions);
+
+        // Create CSS spinner
+        let loader = document.createElement('span');
+        loader.className = 'airport-loader';
+        loader.style.position = 'absolute';
+        loader.style.right = '10px';
+        loader.style.top = '25%';
+        loader.style.transform = 'translateY(-50%)';
+        loader.style.width = '16px';
+        loader.style.height = '16px';
+        loader.style.border = '2px solid transparent';
+        loader.style.borderTop = '2px solid rgb(177, 141, 8)';
+        loader.style.borderRight = '2px solid rgb(95, 153, 7)';
+        loader.style.borderBottom = '2px solid rgb(13, 103, 155)';
+        loader.style.borderRadius = '50%';
+        loader.style.animation = 'spin 0.6s linear infinite';
+        loader.style.display = 'none';
+        loader.style.pointerEvents = 'none';
+        input.parentNode.style.position = 'relative';
+        input.parentNode.appendChild(loader);
+
+        let currentIndex = -1;
+        let currentList = [];
+
+        // ✅ Add spinner animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ✅ Position suggestions under input
+        function updatePosition() {
+            const rect = input.getBoundingClientRect();
+            suggestions.style.top = (rect.bottom + window.scrollY) + 'px';
+            suggestions.style.left = (rect.left + window.scrollX) + 'px';
+            suggestions.style.width = rect.width + 'px';
+        }
+
+        window.addEventListener('resize', updatePosition);
+        input.addEventListener('focus', updatePosition);
+
+        // ✅ Fetch airports
+        const fetchAirports = debounce(async function () {
+            const term = input.value.trim();
+            if (term.length < 2) {
+                suggestions.innerHTML = '';
+                suggestions.style.display = 'none';
+                loader.style.display = 'none';
+                currentList = [];
+                return;
+            }
+
+            loader.style.display = 'block'; // Show spinner
+
+            try {
+                const resp = await fetch(`https://docket.ttlholidays.com/api/india/get_airport.php?term=${encodeURIComponent(term)}`);
+                if (!resp.ok) throw new Error('Network error');
+                const data = await resp.json();
+
+                suggestions.innerHTML = '';
+                currentList = data;
+                currentIndex = -1;
+
+                if (data.length === 0) {
+                    suggestions.style.display = 'none';
+                    loader.style.display = 'none';
+                    return;
+                }
+
+                data.forEach((item, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item list-group-item-action';
+                    li.textContent = item.label || `${item.name} (${item.code}) - ${item.city}, ${item.country}`;
+                    li.dataset.index = index;
+                    li.addEventListener('click', () => selectAirport(index));
+                    suggestions.appendChild(li);
+                });
+
+                suggestions.style.display = 'block';
+                loader.style.display = 'none'; // Hide spinner
+                updatePosition();
+            } catch (err) {
+                console.error(err);
+                suggestions.innerHTML = '';
+                suggestions.style.display = 'none';
+                loader.style.display = 'none';
+            }
+        }, 300);
+
+        input.addEventListener('input', fetchAirports);
+
+        // ✅ Keyboard navigation
+        input.addEventListener('keydown', function (e) {
+            const items = suggestions.querySelectorAll('li');
+            if (!items.length) return;
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                currentIndex = (currentIndex + 1) % items.length;
+                highlightItem(items);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                highlightItem(items);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (currentIndex >= 0 && currentList[currentIndex]) {
+                    selectAirport(currentIndex);
+                }
+            }
+        });
+
+        function highlightItem(items) {
+            items.forEach(li => li.classList.remove('active'));
+            if (currentIndex >= 0 && items[currentIndex]) {
+                items[currentIndex].classList.add('active');
+                items[currentIndex].scrollIntoView({ block: 'nearest' });
+            }
+        }
+
+        function selectAirport(index) {
+            const selected = currentList[index];
+            if (!selected) return;
+            input.value = selected.value || selected.code || selected.label;
+            suggestions.innerHTML = '';
+            suggestions.style.display = 'none';
+            loader.style.display = 'none';
+            currentIndex = -1;
+        }
+
+        // ✅ Close list when clicking outside
+        document.addEventListener('click', function (e) {
+            if (e.target !== input && !suggestions.contains(e.target)) {
+                suggestions.innerHTML = '';
+                suggestions.style.display = 'none';
+                loader.style.display = 'none';
+                currentIndex = -1;
+            }
+        });
+    });
+
+})();
+
+
+
+$(document).ready(function() {
+    let today = moment().startOf('day'); 
+    // Start datepicker
+    $('#startDate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minDate: today,
+        autoApply: true,           // <-- no apply button
+        autoUpdateInput: true,     // auto fill input
+        locale: { format: 'DD-MM-YYYY' }
+    }).on('apply.daterangepicker', function(ev, picker) {
+        // Update end date min date
+        let endPicker = $('#endDate').data('daterangepicker');
+        endPicker.minDate = picker.startDate.clone().add(1, 'days'); // at least 1 day after start
+        $('#endDate').val(''); // clear old end date
+    });
+
+    // End datepicker
+    $('#endDate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minDate: today,
+        autoApply: true,           // <-- no apply button
+        autoUpdateInput: true,
+        locale: { format: 'DD-MM-YYYY' }
+    });
+ 
+
+ 
+        $('.newminus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            count = count < 0 ? 0 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.newplus').click(function () {
+            var $input = $(this).parent().find('input');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        });
+    
+
+
+});
+
+
+function divShow() {
+    document.getElementById("diviMsg").style.display = "block";
+}
+
+function divHide() {
+    $("#diviMsg").hide();
+}
+
+$('#adult').on('change', function () {
+    get_all_pass();
+});
+$('#child').on('change', function () {
+    get_all_pass();
+});
+$('#infant').on('change', function () {
+    get_all_pass();
+});
+
+function get_all_pass() {
+    var adult = $("#adult").val();
+    adult = parseInt(adult);
+    if (adult <= 0) { adult = 1; $("#adult").val(adult); }
+
+    var child = $("#child").val();
+    child = parseInt(child);
+
+    var infant = $("#infant").val();
+    infant = parseInt(infant);
+    var passengers = adult + child + infant;
+    passengers = parseInt(passengers);
+    $("#passensers").html(passengers + " Passengers");
+}
+

@@ -6608,7 +6608,7 @@ textarea {
 }
 #diviMsg .newminus, #diviMsg .newplus {
   border: 1px solid #e5e5e5;
-  padding: 5px 15px;
+  padding: 0px 15px;
   background: transparent !important;
   display: inline-block;
   vertical-align: middle;

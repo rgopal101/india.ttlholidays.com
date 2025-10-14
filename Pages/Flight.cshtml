@@ -4,6 +4,9 @@
     ViewData["Title"] = "Flight";
 }
 <link rel="stylesheet" href="~/assets/css/flight_style.css" rel="stylesheet" asp-append-version="true" />
+ 
+ 
+ 
 <section class="newform mb-50">
     <div class="container">
         <div class="row">
@@ -54,26 +57,26 @@
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="tags">
                                     <span class="floating">Depart from*</span>
-                                    <input type="text" name="depart" id="tags" placeholder="DEL - Delhi, Delhi Indira Gandhi Intl" required>
+                                    <input type="text" name="depart" class="airport-input" placeholder="DEL - Delhi, Delhi Indira Gandhi Intl" autocomplete="off" required>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="tags2">
                                     <span class="floating">Arrive at*</span>
-                                    <input type="text" name="arrive" id="tags2" placeholder="JFK - New York, John F Kennedy Intl" required>
+                                    <input type="text" name="arrive" class="airport-input" placeholder="JFK - New York, John F Kennedy Intl" autocomplete="off" required>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="datepicker" class="dateouter">
                                     <span class="floating">Journey date*</span>
-                                    <input type="text" name="departdate" id="from" placeholder="05-29-2024" autocomplete='' required>
+                                    <input type="text" name="departdate"  id="startDate" placeholder="05-29-2024" autocomplete='' required>
                                     <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="datepicker2" class="dateouter">
                                     <span class="floating">Return date*</span>
-                                    <input type="text" name="returndate" id="to" placeholder="05-29-2024" autocomplete=''>
+                                    <input type="text" name="returndate"  id="endDate" placeholder="05-29-2024" autocomplete=''>
                                     <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
                                 </label>
                             </div>
@@ -88,25 +91,25 @@
                                         <div class="col-sm-4 col-md-4 tar">Adult</div>
                                         <div class="col-sm-8 col-md-8 tar">
                                             <div class="number">
-                                                <span class="minus newminus tar">-</span>
+                                                <span class="  newminus tar">-</span>
                                                 <input type="text" name="adult" id="adult" class="newinput tar" value="1">
-                                                <span class="plus newplus tar">+</span>
+                                                <span class=" newplus tar">+</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 col-md-4 tar">Child</div>
                                         <div class="col-sm-8 col-md-8 my-1 tar">
                                             <div class="number">
-                                                <span class="minus newminus tar">-</span>
+                                                <span class=" newminus tar">-</span>
                                                 <input type="text" name="child" id="child" class="newinput tar" value="0">
-                                                <span class="plus newplus tar">+</span>
+                                                <span class=" newplus tar">+</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 col-md-4 tar">Infant</div>
                                         <div class="col-sm-8 col-md-8 tar">
                                             <div class="number tar">
-                                                <span class="minus newminus">-</span>
+                                                <span class=" newminus">-</span>
                                                 <input type="text" name="infant" id="infant" class="newinput tar" value="0">
-                                                <span class="plus newplus tar">+</span>
+                                                <span class=" newplus tar">+</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-xs-12"> <span class="btndiviMsg" onclick="divHide();" aria-hidden="true">Done</span> </div>

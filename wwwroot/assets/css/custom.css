@@ -231,4 +231,19 @@ img {
     }
 
 
-     
+
+.list-group.airport-suggestions {
+    width: auto !important;
+}
+
+.list-group-item.list-group-item-action {
+    line-height: 18px;
+    padding: 5px;
+}
+
+.list-group-item-action:focus, .list-group-item-action:hover {
+    z-index: 2;
+    color: var(--bs-list-group-active-color);
+    background-color: var(--bs-list-group-active-bg);
+    border-color: var(--bs-list-group-active-border-color);
+}

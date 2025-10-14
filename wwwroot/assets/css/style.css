@@ -1454,7 +1454,7 @@ body.tt-magic-cursor #magic-cursor {
     font-family: inherit;
     font-size: 14px;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 30px;
     text-align: left !important;
     white-space: nowrap;
 }
