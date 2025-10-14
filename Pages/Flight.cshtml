@@ -22,12 +22,12 @@
                 </div>
                 <div class="row">
                     <div class="tabbtns p-0">
-                        <div class="btn1 tabbtn"><a href="flights.aspx"><img src="assets/img/flight/plane-1.png"> Flights</a></div>
+                        <div class="btn1 tabbtn"><a asp-page="/flight"><img src="assets/img/flight/plane-1.png"> Flights</a></div>
                         <div class="btn2 tabbtn"><a href="hotels.aspx"><img src="assets/img/flight/hotel-1.png"> Hotels</a></div>
                     </div>
                 </div>
                 <div class="row">
-                    <form class="newsearch" method="get" enctype="multipart/form-data" action="resultpage.aspx">
+                    <form class="newsearch" method="get" enctype="multipart/form-data" asp-page="/FlightDetail" asp-route-country="Search"> 
                         <div class="row mb-3">
                             <div class="frmtop">
                                 <div class="newformradios">
@@ -57,26 +57,26 @@
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="tags">
                                     <span class="floating">Depart from*</span>
-                                    <input type="text" name="depart" class="airport-input" placeholder="DEL - Delhi, Delhi Indira Gandhi Intl" autocomplete="off" required>
+                                    <input type="text" name="depart" class="airport-input" placeholder="type for orgin" autocomplete="off" required>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="tags2">
                                     <span class="floating">Arrive at*</span>
-                                    <input type="text" name="arrive" class="airport-input" placeholder="JFK - New York, John F Kennedy Intl" autocomplete="off" required>
+                                    <input type="text" name="arrive" class="airport-input" placeholder="type for destination" autocomplete="off" required>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="datepicker" class="dateouter">
                                     <span class="floating">Journey date*</span>
-                                    <input type="text" name="departdate"  id="startDate" placeholder="05-29-2024" autocomplete='' required>
+                                    <input type="text" name="departdate"  id="startDate" placeholder="" autocomplete='' required>
                                     <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
                                 </label>
                             </div>
                             <div class="col-md-2 mb-md-0 mb-3">
                                 <label for="datepicker2" class="dateouter">
                                     <span class="floating">Return date*</span>
-                                    <input type="text" name="returndate"  id="endDate" placeholder="05-29-2024" autocomplete=''>
+                                    <input type="text" name="returndate"  id="endDate" placeholder="" autocomplete=''>
                                     <span class="calandericon"><i class="fas fa-calendar-alt"></i></span>
                                 </label>
                             </div>
