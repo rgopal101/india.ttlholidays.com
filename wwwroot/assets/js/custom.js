@@ -2918,4 +2918,15 @@ function get_all_pass() {
     passengers = parseInt(passengers);
     $("#passensers").html(passengers + " Passengers");
 }
+function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+}
 
+
+$(document).ready(function () {
+
+// Optional: Open popup after 2 seconds
+setTimeout(() => {
+    document.getElementById('popupOverlay').style.display = 'flex';
+}, 5000);
+});

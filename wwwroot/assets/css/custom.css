@@ -247,3 +247,164 @@ img {
     background-color: var(--bs-list-group-active-bg);
     border-color: var(--bs-list-group-active-border-color);
 }
+
+
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Popup box */
+.popup {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Popup content */
+.popup-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left image */
+.popup-left img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Right content */
+.popup-right {
+    flex: 1;
+}
+
+.popup-right h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup-right .highlight {
+    color: #FF5733;
+}
+
+.popup-right .subtext {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Offers */
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.offer {
+    flex: 1 1 45%;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+.offer.green {
+    background: #4CAF50;
+}
+
+.offer.yellow {
+    background: #FFC107;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.feature {
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .popup-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .popup-left img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .offers {
+        flex-direction: column;
+    }
+
+    .offer {
+        flex: 1 1 100%;
+    }
+
+    .popup-right h2 {
+        font-size: 20px;
+    }
+
+    .popup-right .subtext {
+        font-size: 14px;
+    }
+
+    .feature {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 5px;
+        right: 10px;
+    }
+}

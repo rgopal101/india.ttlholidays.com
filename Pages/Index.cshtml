@@ -4,6 +4,41 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div id="popupOverlay" class="overlay">
+    <div class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <div class="popup-content">
+            <!-- Left Image -->
+            <div class="popup-left">
+                <img src="~/assets/img/support.png" alt="Agent" />
+            </div>
+
+            <!-- Right Info -->
+            <div class="popup-right">
+                <h2>Looking for the <span class="highlight">lowest</span> price?</h2>
+                <p class="subtext">Save an average of <strong>$287</strong> per ticket vs online rates!</p>
+
+                <div class="offers">
+                    <div class="offer green">
+                        <p>Call us now and save even more</p>
+                        <h3>+91 785 287 8528</h3>
+                    </div>
+                    <div class="offer yellow">
+                        <p>$30 OFF Voucher code</p>
+                        <h3>TTLH30</h3>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div class="feature">✔ Free tailored flight options</div>
+                    <div class="feature">✔ Option to lock the lowest price</div>
+                    <div class="feature">✔ Flexible payment plans</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- home2 Banner Section Start-->
 <div class="home2-banner-section">
     <div class="swiper home2-banner-slider">
