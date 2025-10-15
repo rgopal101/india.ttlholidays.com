@@ -408,3 +408,14 @@ img {
         right: 10px;
     }
 }
+.menu_slide img { 
+    height: auto;
+    max-height: 195px;
+    width: 100%;
+}
+
+.home_offer_slide img {
+    height: auto;
+    max-height: 150px;
+    width: 100%;
+}

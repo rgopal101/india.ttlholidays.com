@@ -139,13 +139,13 @@
         slidesPerView: 2,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 4,
       },
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 4,
       },
       1400: {
-        slidesPerView: 3,
+        slidesPerView: 4,
       },
     },
   });
@@ -2922,11 +2922,11 @@ function closePopup() {
     document.getElementById('popupOverlay').style.display = 'none';
 }
 
-
-$(document).ready(function () {
-
 // Optional: Open popup after 2 seconds
-setTimeout(() => {
-    document.getElementById('popupOverlay').style.display = 'flex';
-}, 5000);
-});
+//$(document).ready(function () {
+
+
+//setTimeout(() => {
+//    document.getElementById('popupOverlay').style.display = 'flex';
+//}, 5000);
+//});

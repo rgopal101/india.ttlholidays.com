@@ -284,9 +284,7 @@ width: 50%;
 .theme_search_form_area .form-control{
     border: none !important;
 }
-.form-control:focus{
-    border: none;
-}
+ 
 .divMsg label{
     display: flex;
     justify-content: space-between;
