@@ -862,7 +862,7 @@
 <!-- home2 Banner Section End-->
 @if (Model.OffersRoot.ValueKind == System.Text.Json.JsonValueKind.Object)
 {
-    <div class="home1-offer-section mt-5 mb-100">
+    <div class="home1-offer-section mt-5 mb-50">
         <div class="container">
             <div class="row justify-content-center mb-20 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="col-lg-6">
@@ -896,7 +896,7 @@
 }
 <!-- home1 destination Section Start-->
 <!-- home1 destination Section Start-->
-<div class="home1-destination-section mb-100">
+<div class="home1-destination-section mb-50">
     <div class="container">
         <div class="row justify-content-center mb-60 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="col-lg-10">
@@ -926,7 +926,9 @@
                                 var CityData = city.Value;
                                 var cityName = CityData.GetProperty("cityName").GetString();
                                 var image = CityData.GetProperty("imagePath").GetString();
-                                var pkg_count = CityData.GetProperty("pkg_count").GetInt32(); 
+                                var pkg_count = CityData.GetProperty("pkg_count").GetInt32();
+                                var random = new Random();
+                                int randomNumber = random.Next(100, 300);
                                 <div class="swiper-slide">
                             <div class="destination-card">
                                 <a  asp-page="/packages" asp-route-cityname="@cityName" class="destination-img">
@@ -941,7 +943,7 @@
                                                 @cityName
                                     </a>
                                     <div class="content">
-                                        <p>@pkg_count tours | 240 departure.</p>
+                                                <p>@pkg_count package | @randomNumber trips.</p>
                                     </div>
                                 </div>
                             </div>
@@ -966,6 +968,8 @@
                                 var cityName = CityData.GetProperty("cityName").GetString();
                                 var image = CityData.GetProperty("imagePath").GetString();
                                 var pkg_count = CityData.GetProperty("pkg_count").GetInt32();
+                                var random = new Random();
+                                int randomNumber = random.Next(100, 300);
                                 <div class="swiper-slide">
                                     <div class="destination-card">
                                         <a asp-page="/packages" asp-route-cityname="@cityName" class="destination-img">
@@ -980,7 +984,7 @@
                                                 @cityName
                                             </a>
                                             <div class="content">
-                                                <p>@pkg_count tours | 240 departure.</p>
+                                                <p>@pkg_count packages | @randomNumber departure.</p>
                                             </div>
                                         </div>
                                     </div>
