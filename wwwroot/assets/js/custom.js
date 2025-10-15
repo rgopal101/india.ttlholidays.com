@@ -201,6 +201,110 @@
         });
       }, 0);
     });
+
+    document
+        .querySelectorAll(".india-destination-slider")
+        .forEach((slider, index) => {
+            // Add unique pagination class
+            $(slider)
+                .next(".slider-pagi-wrap")
+                .children(".india-destination-pagi")
+                .addClass(`india-destination-pagi-${index}`);
+
+            setTimeout(() => {
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    speed: 1500,
+                    spaceBetween: 24,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    pagination: {
+                        el: `.home1-destination-pagi-${index}`,
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        280: {
+                            slidesPerView: 1,
+                        },
+                        386: {
+                            slidesPerView: 1,
+                        },
+                        576: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 15,
+                        },
+                        992: {
+                            slidesPerView: 5,
+                            spaceBetween: 15,
+                        },
+                        1200: {
+                            slidesPerView: 5,
+                        },
+                        1400: {
+                            slidesPerView: 5,
+                        },
+                    },
+                });
+            }, 0);
+        });
+
+    document
+        .querySelectorAll(".international-destination-slider")
+        .forEach((slider, index) => {
+            // Add unique pagination class
+            $(slider)
+                .next(".slider-pagi-wrap")
+                .children(".international-destination-pagi")
+                .addClass(`international-destination-pagi-${index}`);
+
+            setTimeout(() => {
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    speed: 1500,
+                    spaceBetween: 24,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    pagination: {
+                        el: `.home1-destination-pagi-${index}`,
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        280: {
+                            slidesPerView: 1,
+                        },
+                        386: {
+                            slidesPerView: 1,
+                        },
+                        576: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 15,
+                        },
+                        992: {
+                            slidesPerView: 5,
+                            spaceBetween: 15,
+                        },
+                        1200: {
+                            slidesPerView: 5,
+                        },
+                        1400: {
+                            slidesPerView: 5,
+                        },
+                    },
+                });
+            }, 0);
+        });
   // Select all slider elements with the same class
   document
     .querySelectorAll(".package-card-img-slider")
