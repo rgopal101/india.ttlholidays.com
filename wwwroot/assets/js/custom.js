@@ -149,7 +149,47 @@
       },
     },
   });
-  // Select all slider elements with the same class
+    // Select all slider elements with the same class
+
+    // Home1 Offer Slider
+    var swiper = new Swiper(".home1-pkg-slider", {
+        slidesPerView: 1,
+        speed: 1500,
+        spaceBetween: 24,
+        autoplay: {
+            delay: 2500, // Autoplay duration in milliseconds
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination1",
+            clickable: true,
+        },
+        breakpoints: {
+            280: {
+                slidesPerView: 1,
+            },
+            386: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1400: {
+                slidesPerView: 3,
+            },
+        },
+    });
+    // Select all slider elements with the same class
+
   document
     .querySelectorAll(".home1-destination-slider")
     .forEach((slider, index) => {

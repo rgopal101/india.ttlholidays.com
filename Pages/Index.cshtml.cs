@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace india.ttlholidays.com.Pages
 {
@@ -23,6 +24,7 @@ namespace india.ttlholidays.com.Pages
         public JsonElement OffersRoot { get; set; }
         public JsonElement IndiaRoot { get; set; }
         public JsonElement InternationalRoot { get; set; }
+        public JsonElement PackageRoot { get; set; }
         public string IMGURL { get; set; } = string.Empty;
         public string APIURL { get; set; } = string.Empty;
 
@@ -31,11 +33,14 @@ namespace india.ttlholidays.com.Pages
             await LoadOffersListAsync();
             await LoadIndiaListAsync();
             await LoadInternationalListAsync();
+            await LoadPackagesListAsync();
         }
 
         private async Task LoadOffersListAsync()
         {
-            var apiUrl = "https://docket.ttlholidays.com/api/india/get_offers_listing.php";
+            IMGURL = _config["AppSettings:IMGURL"] ?? string.Empty;
+            APIURL = _config["AppSettings:APIURL"] ?? string.Empty;
+            var apiUrl = $"{APIURL}get_offers_listing.php";  
             using var client = new HttpClient();
             try
             {
@@ -47,6 +52,26 @@ namespace india.ttlholidays.com.Pages
             catch (Exception ex)
             {
                 _logger.LogError("API call failed for offers: {0}", ex.Message);
+            }
+        }
+
+        private async Task LoadPackagesListAsync()
+        {
+            IMGURL = _config["AppSettings:IMGURL"] ?? string.Empty;
+            APIURL = _config["AppSettings:APIURL"] ?? string.Empty;
+            var apiUrl = $"{APIURL}get_package_listing.php?limit={System.Net.WebUtility.UrlEncode("10")}";
+            using var client = new HttpClient();
+            try
+            {
+                var json = await client.GetStringAsync(apiUrl);
+                json = System.Text.Encoding.UTF8.GetString(System.Text.Encoding.Default.GetBytes(json));
+                var root = JsonDocument.Parse(json).RootElement; 
+                PackageRoot = root.GetProperty("packages");
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("API call failed for packages: {0}", ex.Message);
             }
         }
 
@@ -68,13 +93,11 @@ namespace india.ttlholidays.com.Pages
             {
                 _logger.LogError("API call failed for India destinations: {0}", ex.Message);
             }
-        }
-
+        } 
         private async Task LoadInternationalListAsync()
         {
             IMGURL = _config["AppSettings:IMGURL"] ?? string.Empty;
-            APIURL = _config["AppSettings:APIURL"] ?? string.Empty;
-
+            APIURL = _config["AppSettings:APIURL"] ?? string.Empty; 
             var apiUrl = $"{APIURL}get_destination_listing.php?destination={System.Net.WebUtility.UrlEncode("International")}";
             using var client = new HttpClient();
             try

@@ -402,7 +402,7 @@ img {
         padding: 10px;
     }
 
-    .close-btn {
+    .close-btn { 
         font-size: 24px;
         top: 5px;
         right: 10px;
@@ -419,3 +419,4 @@ img {
     max-height: 150px;
     width: 100%;
 }
+

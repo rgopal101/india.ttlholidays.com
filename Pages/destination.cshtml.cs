@@ -42,7 +42,6 @@ namespace india.ttlholidays.com.Pages
                 //Pagetitle= root.TryGetProperty("destination", out var titleProp) ? titleProp.GetString(): string.Empty;
                 PackageCount = root.TryGetProperty("count", out var countProp) ? countProp.GetInt32() : 0;
                 CityRoot = root.GetProperty("citydata");
-
             }
             catch (Exception ex)
             {
