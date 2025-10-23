@@ -4,7 +4,9 @@
 builder.Services.AddRazorPages();
 
 // ✅ This line is REQUIRED for IHttpClientFactory
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient(); 
+builder.Services.AddMemoryCache();
+
 
 var app = builder.Build();
 
