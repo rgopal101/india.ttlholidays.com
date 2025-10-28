@@ -1,130 +1,329 @@
 ﻿@page
 @model india.ttlholidays.com.Pages.VisaModel
 @{
-
+    ViewData["Title"] ="Visa";
 }
 
  
-<div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/innerpages/breadcrumb-bg5.jpg);">
+<div class="home8-feature-section">
     <div class="container">
-        <div class="banner-content">
-            <h1>Visa</h1> 
+        <div class="section-title text-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <h2>Trust Badges & Highlights</h2>
         </div>
-    </div>
-</div>
-<!-- Breadcrumb section End-->
-<!-- Visa Package Grid Section Start-->
-<div class="visa-package-grid-section mb-100">
-    <div class="container">
         <div class="row gy-5">
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="Australia">
-                <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img1.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>Australia</h5>
-                        <span>Processing Time - <strong>(15 - 30) Days</strong></span>
-                    </div>
+            <div class="col-lg-4 col-sm-6 d-flex justify-content-lg-center wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="single-feature">
+                    <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path d="M50.0003 25C50.0003 26.7257 48.6007 28.1248 46.875 28.1248C45.1455 28.1248 43.7498 26.7258 43.7498 25.0001C43.7498 23.2749 45.1455 21.8749 46.875 21.8749C48.6007 21.8749 50.0003 23.2748 50.0003 25ZM43.7498 9.375C43.7498 11.0999 42.3508 12.4998 40.6251 12.4998C38.8956 12.4998 37.4999 11.0999 37.4999 9.37512C37.4999 7.6499 38.8956 6.24988 40.6251 6.24988C42.3507 6.24988 43.7498 7.64978 43.7498 9.375ZM40.625 43.7498C38.8975 43.7498 37.5 42.3527 37.5 40.6251C37.5 38.8956 38.8975 37.4999 40.625 37.4999C42.3507 37.4999 43.7498 38.8956 43.7498 40.6251C43.7498 42.3507 42.3508 43.7498 40.6251 43.7498H40.625ZM22.5344 27.0829C21.6727 29.5044 19.3839 31.25 16.6669 31.25C13.2156 31.25 10.4169 28.4504 10.4169 25C10.4169 21.5492 13.2156 18.7502 16.6669 18.7502C19.3844 18.7502 21.6732 20.4954 22.5344 22.9168H29.6874L35.4171 0L0 25L35.4171 50.0003L29.6874 27.0829H22.5344Z" />
+                        </g>
+                    </svg>
+                    <h4>99% Approval Rate</h4>
+                    <p>Fast & Hassle-Free Visa Processing – <span>99% Approval Rate.</span></p>
                 </div>
-                </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="Canada">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img2.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>Canada</h5>
-                        <span>Processing Time - <strong>(10 - 20) Days</strong></span>
-                    </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="United Kingdom">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img3.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>United Kingdom</h5>
-                        <span>Processing Time - <strong>(01 - 02) Months</strong></span>
-                    </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="United State">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img4.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>United State</h5>
-                        <span>Processing Time- <strong>(01 - 03) Months</strong></span>
-                    </div>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="France">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img5.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>France</h5>
-                        <span>Processing Time - <strong>(01 - 02) Months</strong></span>
-                    </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="Germany">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img6.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>Germany</h5>
-                        <span>Processing Time - <strong>(15 - 30) Days</strong></span>
-                    </div>
+            <div class="col-lg-4 col-sm-6 d-flex justify-content-lg-center wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <div class="single-feature">
+                    <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.25 29.2502H47.9996V48.0001H29.25V29.2502Z" />
+                        <path d="M25.4997 44.2498C15.1442 44.2498 6.75014 35.8545 6.75014 25.5C6.75014 15.1433 15.1448 6.75019 25.4997 6.75019C35.8541 6.75019 44.2493 15.1438 44.2493 25.5H47.9995C47.9995 13.0744 37.9252 3 25.4997 3C13.0737 3 3 13.0744 3 25.5C3 37.9256 13.0737 48 25.4997 48V44.2498Z" />
+                        <path d="M25.4992 36.7501C19.2859 36.7501 14.2493 31.7129 14.2493 25.5001C14.2493 19.2856 19.2859 14.2501 25.4992 14.2501C31.712 14.2501 36.7491 19.2856 36.7491 25.5001H40.4992C40.4992 17.2161 33.7831 10.4999 25.4992 10.4999C17.2148 10.4999 10.4992 17.2161 10.4992 25.5001C10.4992 33.784 17.2148 40.5003 25.4992 40.5003V36.7501Z" />
+                        <path d="M25.5007 29.2502C24.759 29.2502 24.0339 29.0303 23.4172 28.6182C22.8005 28.2062 22.3199 27.6205 22.036 26.9352C21.7522 26.2499 21.6779 25.4959 21.8226 24.7684C21.9673 24.041 22.3245 23.3727 22.8489 22.8483C23.3734 22.3238 24.0416 21.9666 24.7691 21.8219C25.4965 21.6772 26.2506 21.7515 26.9358 22.0353C27.6211 22.3192 28.2068 22.7998 28.6188 23.4166C29.0309 24.0333 29.2508 24.7583 29.2508 25.5001H33.0004C33.0004 21.3584 29.6423 18.0002 25.5007 18.0002C21.3579 18.0002 18.001 21.3584 18.001 25.5001C18.001 29.6417 21.3579 32.9999 25.5007 32.9999V29.2502Z" />
+                    </svg>
+                    <h4>Processing in 48 Hours</h4>
+                    <p>Get your visa processed and approved within just <span>48 hours.</span></p>
                 </div>
-                </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="Qatar">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img7.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>Qatar</h5>
-                        <span>Processing Time - <strong>(15 - 25) Days</strong></span>
-                    </div>
+            <div class="col-lg-4 col-sm-6 d-flex justify-content-lg-center wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <div class="single-feature">
+                    <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 25V45.2148H18.8477V31.1523H5.66406V25H25ZM12.6953 37.3047H5.66406V45.2148H12.6953V37.3047ZM44.3359 25V18.8477H31.1523V4.78516H25V25H44.3359ZM37.3047 12.6953H44.3359V4.78516H37.3047V12.6953Z" />
+                    </svg>
+                    <h4>Global Visa Experts</h4>
+                    <p>Trusted Global Visa Experts – Simplifying Travel for <span>100+ Countries!</span></p>
                 </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <a asp-page="/VisaDetail" asp-route-country="Switzerland">
-                    <div class="visa-package-card">
-                    <div class="visa-package-img">
-                        <img src="~/assets/img/innerpages/visa-package-img8.jpg" alt="">
-                    </div>
-                    <div class="visa-package-content">
-                        <h5>Switzerland</h5>
-                        <span>Processing Time - <strong>(10 - 20) Days</strong></span>
-                    </div>
-                </div>
-                </a>
             </div>
         </div>
     </div>
 </div>
-<!-- Visa Package Grid Section End-->
-<!-- Why Choose Visa Section Start-->
+<div class="filter-wrapper three mb-100">
+    <div class="container">
+        <div class="filter-input-wrap">
+            <h6>Check Your Eligibility</h6>
+            <form class="filter-input two show">
+                <div class="single-search-box">
+                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path d="M12.5944 8.99987C12.5944 10.988 10.9826 12.5998 8.99443 12.5998C7.00627 12.5998 5.39465 10.988 5.39465 8.99987C5.39465 7.0117 7.00627 5.40009 8.99443 5.40009C10.9826 5.40009 12.5944 7.0117 12.5944 8.99987Z" />
+                            <path d="M17.4601 8.4599H16.2564C15.9858 4.86535 13.1291 2.00812 9.53458 1.7372V0.539976C9.53458 0.241723 9.29268 0 8.9946 0C8.69635 0 8.45462 0.241723 8.45462 0.539976V1.7372C4.85986 2.00812 2.00297 4.86535 1.73235 8.4599H0.540018C0.241723 8.4599 0 8.7017 0 8.99987C0 9.29813 0.241723 9.53985 0.539976 9.53985H1.73239C2.00297 13.1344 4.85991 15.9916 8.45441 16.2625V17.4601C8.45441 17.7583 8.69614 18 8.99439 18C9.29251 18 9.53428 17.7583 9.53428 17.4601V16.2625C13.1289 15.9918 15.9858 13.1346 16.2564 9.53985H17.4601C17.7583 9.53985 18 9.29813 18 8.99987C18 8.70175 17.7583 8.4599 17.4601 8.4599ZM8.99443 15.2096C5.56504 15.2094 2.78509 12.4291 2.78509 8.9997C2.78522 5.57014 5.56554 2.7902 8.99494 2.7902C12.4245 2.7902 15.2046 5.57048 15.2046 8.99987C15.2005 12.428 12.4225 15.2058 8.99443 15.2096Z" />
+                        </g>
+                    </svg>
+                    <div class="custom-select-dropdown">
+                        <input type="text" readonly value="Bangladesh">
+                        <span>Country</span>
+                    </div>
+                    <div class="custom-select-wrap">
+                        <div class="custom-select-search-area">
+                            <i class='bx bx-search'></i>
+                            <input type="text" placeholder="Type Your Destination">
+                        </div>
+                        <ul class="option-list visa-list">
+                            <li>
+                                <div class="destination">
+                                    <h6>Bangladesh</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-bd-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Indonesia</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-indo-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Nepal</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-nepal-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>India</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-india-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Brazil</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-brazil-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Thailand</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-thailand-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Spain</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-spain-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>Dubai</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-uae-flag.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="destination">
+                                    <h6>United States</h6>
+                                </div>
+                                <div class="flag">
+                                    <img src="assets/img/home1/filter-usa-flag.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-search-box">
+                    <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11.3652 14.3217C11.3652 14.4501 11.2588 14.5565 11.1304 14.5565H2.9913C2.86295 14.5565 2.75651 14.4501 2.75651 14.3217C2.75651 14.1934 2.86295 14.087 2.9913 14.087H11.1304C11.2588 14.087 11.3652 14.1934 11.3652 14.3217ZM15.7478 1.17391V16.8261C15.7478 17.136 15.6226 17.4365 15.4035 17.6557C15.1843 17.8748 14.8838 18 14.5739 18H1.42608C1.11617 18 0.815645 17.8748 0.596515 17.6557C0.374254 17.4365 0.252167 17.136 0.252167 16.8261V1.17391C0.252167 0.86087 0.374254 0.563478 0.596515 0.344348C0.815645 0.122087 1.11617 0 1.42608 0H14.5739C14.8838 0 15.1843 0.122087 15.4035 0.344348C15.6226 0.563478 15.7478 0.86087 15.7478 1.17391ZM13.4 1.17391C13.4 0.986087 13.3249 0.807652 13.1934 0.676174C13.0619 0.544696 12.8835 0.469565 12.6956 0.469565H1.42608C1.23825 0.469565 1.05982 0.544696 0.928341 0.676174C0.796862 0.807652 0.721732 0.986087 0.721732 1.17391V16.8261C0.721732 17.0139 0.796862 17.1923 0.928341 17.3238C1.05982 17.4553 1.23825 17.5304 1.42608 17.5304H12.6956C12.8835 17.5304 13.0619 17.4553 13.1934 17.3238C13.3249 17.1923 13.4 17.0139 13.4 16.8261V1.17391ZM3.06956 5.86957C3.06956 3.66574 4.85704 1.87826 7.06086 1.87826C9.26469 1.87826 11.0522 3.66574 11.0522 5.86957C11.0522 8.07339 9.26469 9.86087 7.06086 9.86087C4.85704 9.86087 3.06956 8.07339 3.06956 5.86957ZM7.97495 8.76835C8.22225 8.40522 8.41947 7.92 8.54782 7.35652H5.57391C5.70225 7.92 5.89947 8.40522 6.14678 8.76835C6.4066 9.15026 6.71338 9.3913 7.06086 9.3913C7.40834 9.3913 7.71512 9.15026 7.97495 8.76835ZM8.63234 6.88696C8.6793 6.56452 8.70434 6.2233 8.70434 5.86957C8.70434 5.51583 8.6793 5.17461 8.63234 4.85217H5.48938C5.44243 5.17461 5.41738 5.51583 5.41738 5.86957C5.41738 6.2233 5.44243 6.56452 5.48938 6.88696H8.63234ZM10.2539 7.35652H9.02678C8.88591 8.02956 8.65425 8.6087 8.36312 9.03444C8.32869 9.08452 8.29112 9.13461 8.25356 9.1847C9.13947 8.86539 9.85947 8.20174 10.2539 7.35652ZM10.4323 4.85217H9.10504C9.14886 5.17774 9.17391 5.51896 9.17391 5.86957C9.17391 6.22017 9.14886 6.56139 9.10504 6.88696H10.4323C10.6324 6.22345 10.6324 5.51568 10.4323 4.85217ZM8.25356 2.55443C8.29112 2.60452 8.32869 2.65461 8.36312 2.7047C8.65425 3.13043 8.88591 3.70957 9.02678 4.38261H10.2539C9.85947 3.53739 9.13947 2.87374 8.25356 2.55443ZM6.14678 2.97078C5.89947 3.33391 5.70225 3.81913 5.57391 4.38261H8.54782C8.41947 3.81913 8.22225 3.33391 7.97495 2.97078C7.71512 2.58887 7.40834 2.34783 7.06086 2.34783C6.71338 2.34783 6.4066 2.58887 6.14678 2.97078ZM3.86782 4.38261H5.09808C5.23582 3.70957 5.46747 3.13043 5.7586 2.7047C5.79304 2.65461 5.8306 2.60452 5.86817 2.55443C5.43091 2.71266 5.02915 2.95557 4.6859 3.26928C4.34265 3.58298 4.06465 3.96132 3.86782 4.38261ZM3.68938 6.88696H5.01669C4.97286 6.56139 4.94782 6.22017 4.94782 5.86957C4.94782 5.51896 4.97286 5.17774 5.01669 4.85217H3.68938C3.48929 5.51568 3.48929 6.22345 3.68938 6.88696ZM3.86782 7.35652C4.26225 8.20174 4.98225 8.86539 5.86817 9.1847C5.8306 9.13461 5.79304 9.08452 5.7586 9.03444C5.46747 8.6087 5.23582 8.02956 5.09808 7.35652H3.86782ZM11.1304 15.3391H2.9913C2.86295 15.3391 2.75651 15.4456 2.75651 15.5739C2.75651 15.7023 2.86295 15.8087 2.9913 15.8087H11.1304C11.2588 15.8087 11.3652 15.7023 11.3652 15.5739C11.3652 15.4456 11.2588 15.3391 11.1304 15.3391Z" />
+                    </svg>
+                    <div class="custom-select-dropdown">
+                        <input type="text" readonly value="Travel Visa">
+                        <span>Visa Category</span>
+                    </div>
+                    <div class="custom-select-wrap two">
+                        <ul class="option-list">
+                            <li class="single-item">
+                                <h6>Travel Visa</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Business Visa</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Student Visa</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Work Visa</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Medical Visa</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-search-box">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.99951 18.953V11.2665H5.79922V18.2603C6.18401 18.5168 6.58494 18.7482 6.99951 18.953ZM18.9648 10.0663C18.9823 9.81608 18.9917 9.56482 18.9917 9.3128V2.25086H18.1173C15.2575 2.25087 12.4516 1.47279 10.0002 0C7.54886 1.47279 4.74297 2.25086 1.8832 2.25086H1.00879V9.31283C1.00879 9.56486 1.01811 9.81612 1.03572 10.0663H18.9648V10.0663ZM14.8014 6.45995H16.0017V7.66024H14.8014V6.45995ZM8.84963 3.84288L10.0022 1.87621L11.152 3.84444L13.3786 4.33288L11.862 6.03469L12.0855 8.30319L9.99835 7.38669L7.90993 8.30031L8.13662 6.03209L6.62238 4.3282L8.84963 3.84288ZM3.99879 6.45995H5.19908V7.66024H3.99879V6.45995Z" />
+                        <path d="M9.30806 6.37848L9.99902 6.07621L10.6896 6.37948L10.6157 5.62886L11.1175 5.06576L10.3808 4.90417L10.0003 4.25293L9.61893 4.90365L8.88199 5.06424L9.38303 5.62802L9.30806 6.37848ZM9.39984 11.2665H8.19955V19.4849L9.39984 20V11.2665ZM11.8004 11.2665H10.6001V20L11.8004 19.4849V11.2665ZM4.59869 11.2665H1.18799C1.47349 12.8124 2.09453 14.2769 3.00734 15.5568C3.47033 16.2058 4.00406 16.8013 4.59869 17.3323V11.2665ZM15.4013 11.2665V17.3323C15.9959 16.8013 16.5296 16.2058 16.9926 15.5568C17.9054 14.2769 18.5265 12.8124 18.812 11.2665H15.4013ZM14.201 11.2665H13.0007V18.953C13.4153 18.7482 13.8162 18.5168 14.201 18.2603V11.2665Z" />
+                    </svg>
+                    <div class="custom-select-dropdown">
+                        <input type="text" readonly value="Australian">
+                        <span>Citizenship</span>
+                    </div>
+                    <div class="custom-select-wrap four">
+                        <div class="custom-select-search-area">
+                            <i class='bx bx-search'></i>
+                            <input type="text" placeholder="Type Your Destination">
+                        </div>
+                        <ul class="option-list">
+                            <li class="single-item">
+                                <h6>Bangladeshi</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Indian</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Brazilian</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Australian</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>American</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Canadian</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Chinese</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Japanese</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Pakistani</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Russian</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-search-box">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path d="M15.3998 7.57539L7.58413 3.92737L-0.232422 7.57539L-0.0544699 7.95176L7.54053 4.40428C7.55525 4.39725 7.57137 4.3936 7.58769 4.3936C7.604 4.3936 7.62012 4.39725 7.63484 4.40428L15.2263 7.95354L15.3998 7.57539Z" />
+                            <path d="M0.666504 7.85924V9.86476L7.53724 6.65539C7.55208 6.64876 7.56814 6.64534 7.58439 6.64534C7.60065 6.64534 7.61671 6.64876 7.63155 6.65539L14.5023 9.86476V7.85924L7.58439 4.62762L0.666504 7.85924Z" />
+                            <path d="M15.3998 10.5339L14.5661 10.1451L7.58413 6.88324L0.602174 10.1407L-0.232422 10.5339L-0.0544699 10.9112L7.54053 7.36282C7.55537 7.3562 7.57144 7.35277 7.58769 7.35277C7.60394 7.35277 7.62001 7.3562 7.63484 7.36282L15.2298 10.9112L15.3998 10.5339ZM1.67078 13.2966H4.93086V20.0001H1.67078V13.2966Z" />
+                            <path d="M7.6957 1.10241V3.73166L15.595 7.41972C15.6216 7.43226 15.6422 7.45484 15.6522 7.48253C15.6622 7.51022 15.6608 7.54074 15.6484 7.56741L15.3815 8.14487C15.3755 8.15812 15.3669 8.17002 15.3562 8.17982C15.3455 8.18961 15.3329 8.1971 15.3192 8.20181C15.2906 8.21294 15.2588 8.21294 15.2302 8.20181L14.7212 7.96425V9.96888L15.5914 10.3755C15.6181 10.388 15.6386 10.4106 15.6487 10.4383C15.6587 10.466 15.6573 10.4965 15.6448 10.5232L15.3779 11.1015C15.372 11.1149 15.3634 11.1269 15.3527 11.1369C15.342 11.1468 15.3294 11.1545 15.3156 11.1594C15.3015 11.1653 15.2864 11.1684 15.2711 11.1684C15.2558 11.1684 15.2407 11.1653 15.2266 11.1594L14.7177 10.9218V20H18.5881V6.18829L10.873 2.58564L7.6957 1.10241ZM6.83797 0L6.66357 0.376369L9.29104 1.60157L18.7536 6.01478L18.7554 6.01834L20.058 6.62605L20.2324 6.24968L6.83797 0Z" />
+                            <path d="M10.502 12.6124H11.906V14.0155H10.502V12.6124ZM10.502 14.3287H11.906V15.7319H10.502V14.3287ZM12.2014 12.6124H13.6054V14.0155H12.2014V12.6124ZM12.2014 14.3287H13.6054V15.7319H12.2014V14.3287Z" />
+                            <path d="M7.69535 20.0001H14.502V10.8133L7.69535 7.63416V20.0001ZM8.14023 8.33262L14.0571 11.0962V19.5552H8.14023V8.33262ZM0.666244 20.0001H1.44834V13.1854C1.44834 13.1559 1.46006 13.1276 1.48092 13.1067C1.50178 13.0859 1.53007 13.0742 1.55956 13.0742H5.04209C5.07159 13.0742 5.09987 13.0859 5.12073 13.1067C5.14159 13.1276 5.15331 13.1559 5.15331 13.1854V20.0001H7.42576V7.6564L0.663574 10.8133L0.666244 20.0001Z" />
+                        </g>
+                    </svg>
+                    <div class="custom-select-dropdown">
+                        <input type="text" readonly value="Canada">
+                        <span>Live in</span>
+                    </div>
+                    <div class="custom-select-wrap four">
+                        <div class="custom-select-search-area">
+                            <i class='bx bx-search'></i>
+                            <input type="text" placeholder="Type Your Destination">
+                        </div>
+                        <ul class="option-list">
+                            <li class="single-item">
+                                <h6>Canada</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Bangladesh</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>India</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Brazil</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Australia</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>United States</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>United Kingdom</h6>
+                            </li>
+                            <li class="single-item">
+                                <h6>Japan</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" class="primary-btn1 white-bg">
+                    <span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.48145 7.38148L8.29394 10.194L12.5127 5.97523" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            <g>
+                                <path d="M16.0283 6.84001C16.0283 11.4137 13.2437 15.5443 8.99705 17.2429C4.75043 15.5443 1.96582 11.4137 1.96582 6.84001V2.1082L8.99705 0.719531L16.0283 2.1082V6.84001Z" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            </g>
+                        </svg>
+                        Check Info
+                    </span>
+                    <span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.48145 7.38148L8.29394 10.194L12.5127 5.97523" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            <g>
+                                <path d="M16.0283 6.84001C16.0283 11.4137 13.2437 15.5443 8.99705 17.2429C4.75043 15.5443 1.96582 11.4137 1.96582 6.84001V2.1082L8.99705 0.719531L16.0283 2.1082V6.84001Z" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            </g>
+                        </svg>
+                        Check Info
+                    </span>
+                </button>
+            </form>
+            <p>Can’t find what you’re looking for? <a href="contact.html">Contact us</a> for a details info.</p>
+        </div>
+    </div>
+</div> 
+
+<div class="home1-destination-section mb-50">
+    <div class="container">
+        <div class="row justify-content-center mb-60 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="col-lg-10">
+                <div class="section-title text-center">
+                    <h2>Choose your Destination</h2>
+                </div>
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-tourist-tab" data-bs-toggle="pill" data-bs-target="#pills-tourist" type="button" role="tab" aria-controls="pills-tourist" aria-selected="true">Tourist Visa</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-study-tab" data-bs-toggle="pill" data-bs-target="#pills-study" type="button" role="tab" aria-controls="pills-study" aria-selected="false">Study Visa</button>
+                    </li> 
+
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-tourist" role="tabpanel" aria-labelledby="pills-tourist-tab">
+                tourist
+            </div>
+            <div class="tab-pane fade" id="pills-study" role="tabpanel" aria-labelledby="pills-study-tab">
+                study
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="why-choose-visa-section mb-100">
     <div class="container">
         <div class="row justify-content-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -135,7 +334,7 @@
                 </div>
             </div>
         </div>
-        <div class="row g-xl-4 g-lg-3 g-4">
+        <div class="row g-xl-4 g-lg-3 g-4 text-center">
             <div class="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="why-choose-card">
                     <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -180,42 +379,7 @@
             </div>
         </div>
     </div>
-</div>
-<!-- Why Choose Visa Section End-->
-<!-- home8 contact Section Start-->
-<div class="home8-contact-section mb-100">
-    <div class="container">
-        <div class="contact-wrapper">
-            <div class="contact-content">
-                <div class="section-title">
-                    <span>Need Visa Assitance?</span>
-                    <h2>To Get Visa Assistance, Join Schedule a Meeting.</h2>
-                </div>
-                <a href="contact.html" class="primary-btn1 five">
-                    <span>
-                        Schedule a Consultation
-                        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z">
-                            </path>
-                        </svg>
-                    </span>
-                    <span>
-                        Schedule a Consultation
-                        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z">
-                            </path>
-                        </svg>
-                    </span>
-                </a>
-            </div>
-            <div class="contact-img">
-                <img src="~/assets/img/home8/home8-contact-img.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- home8 contact Section End-->
-<!-- home8 process Section Start-->
+</div> 
 <div class="home8-process-section two mb-100">
     <div class="container">
         <div class="row justify-content-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -295,116 +459,5 @@
         <img src="~/assets/img/home8/home8-process-section-vector.png" alt="">
     </div>
 </div>
-<!-- home8 process Section End-->
-<!-- Faq Section Start-->
-<div class="home1-faq-section mb-100">
-    <div class="container">
-        <div class="row justify-content-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <div class="col-xl-6 col-lg-8">
-                <div class="section-title text-center">
-                    <h2>Questions & Answer</h2>
-                    <p>We’re committed to offering more than just products—we provide exceptional experiences.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10">
-                <div class="faq-wrap">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
-                                    What Services Does Your Travel Agency Provide?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    A travel agency typically provides a wide range of services to ensure a smooth and enjoyable travel experience. As like- <span>Hotel booking, Flight Booking, Visa & Customized Travel Pakcge etc.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                        aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Do You Offer Customized Travel Packages?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    Absolutely! We offer fully customized travel packages based on your interests, budget, and schedule. Whether you're planning <span>a solo adventure, a family vacation, a romantic getaway, or a group tour</span>, our team will tailor every detail to create a personalized travel experience just for you.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                        aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Can I Book Flights, Hotels, and Tours Separately?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                 aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    Yes, you can! We provide the flexibility to book <span>flights, hotels, and tours separately</span> based on your specific needs. Whether you need just a flight, only accommodation, or want to add a tour later — we’re here to help you plan each part of your trip your way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingFour">
-                                <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                        aria-expanded="false" aria-controls="flush-collapseFour">
-                                    Do You Provide Visa Assistance?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                 aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    Yes, we do! Our team offers complete <span>visa assistance services</span> to help you navigate the application process smoothly. From providing guidance on required documents to scheduling appointments and submitting applications, we're here to support you every step of the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingFive">
-                                <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
-                                        aria-expanded="false" aria-controls="flush-collapseFive">
-                                    What Payment Methods Do You Accept?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                 aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    We accept a variety of <span>payment methods</span> to make your booking process easy and convenient. These include <span>cash, bank transfers, mobile payments (such as bKash, Nagad), and major debit/credit cards</span>. If you have a preferred payment option, feel free to let us know!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <h5 class="accordion-header" id="flush-headingSix">
-                                <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
-                                        aria-expanded="false" aria-controls="flush-collapseSix">
-                                    What Travel Documents are Required for International Travel?
-                                </button>
-                            </h5>
-                            <div id="flush-collapseSix" class="accordion-collapse collapse"
-                                 aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    For international travel, you’ll typically need several important <span>travel documents</span>, including a <span>valid passport, visa (if required), airline tickets, travel insurance, and any COVID-19 related health certificates</span>. Depending on your destination, additional documents may be necessary. Our team will guide you through the specific requirements for your trip.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Faq Section End-->
+ 
+ 

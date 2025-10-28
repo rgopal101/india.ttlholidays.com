@@ -408,10 +408,11 @@ img {
         right: 10px;
     }
 }
-.menu_slide img { 
+.menu_slide img {
     height: auto;
     max-height: 195px;
     width: 100%;
+    min-height: 195px;
 }
 
 .home_offer_slide img {

@@ -2982,32 +2982,54 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    let today = moment().startOf('day'); 
+    let today = moment().startOf('day');
+
     // Start datepicker
     $('#startDate').daterangepicker({
         singleDatePicker: true,
         showDropdowns: true,
         minDate: today,
-        autoApply: true,           // <-- no apply button
-        autoUpdateInput: true,     // auto fill input
+        autoApply: true,
+        autoUpdateInput: true,
         locale: { format: 'DD-MM-YYYY' }
-    }).on('apply.daterangepicker', function(ev, picker) {
+    }).on('apply.daterangepicker', function (ev, picker) {
         // Update end date min date
         let endPicker = $('#endDate').data('daterangepicker');
         endPicker.minDate = picker.startDate.clone().add(1, 'days'); // at least 1 day after start
         $('#endDate').val(''); // clear old end date
-    });
-
+    }); 
     // End datepicker
     $('#endDate').daterangepicker({
         singleDatePicker: true,
         showDropdowns: true,
-        minDate: today,
-        autoApply: true,           // <-- no apply button
-        autoUpdateInput: true,
+        autoApply: true,
+        autoUpdateInput: false, // don't fill automatically
         locale: { format: 'DD-MM-YYYY' }
+    }, function (start) {
+        // Do nothing on initialization to avoid setting default date
     });
- 
+
+    // Prevent today from being preselected or highlighted
+    $('#endDate').on('show.daterangepicker', function (ev, picker) {
+        picker.container.find('.calendar-table td.active').removeClass('active');
+        picker.container.find('.calendar-table td.today').removeClass('active');
+    });
+
+    // Validate end date
+    $('#endDate').on('apply.daterangepicker', function (ev, picker) {
+        let startDate = $('#startDate').data('daterangepicker').startDate;
+        $('#endDate').val('');
+        // Ensure selected end date > start date
+        if (picker.startDate.isAfter(startDate, 'day')) {
+            $(this).val(picker.startDate.format('DD-MM-YYYY'));
+        } else {
+            alert('End date must be after start date.');
+            $(this).val('');
+        }
+    });
+
+    $('#endDate').val('');
+
 
  
         $('.newminus').click(function () {

@@ -230,11 +230,13 @@
     <li class="menu-item-has-children">
         <a asp-page="/Visa" class="drop-down"> Visa <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
         <ul class="sub-menu">
-            <li><a asp-page="/Visa">Visa Package</a></li>
-            <li><a asp-page="/VisaDetail" asp-route-country="Canada">Visa Package Details</a></li>
+            <li><a asp-page="/Visa">Travel Visa</a></li>
+            <li><a asp-page="/Visa">Business Visa</a></li>
+            <li><a asp-page="/Visa">Student Visa</a></li>
+            <li><a asp-page="/Visa">Medical Visa</a></li>           
         </ul>
     </li>
-    <li><a href="/">Cruises</a></li>
+                    <li> <a asp-page="/Cruise">Cruises</a></li>
     <li class="menu-item-has-children position-inherit">
         <a href="/offers" class="drop-down"> Special Offres <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
           @await Component.InvokeAsync("OffersMenu")

@@ -7380,20 +7380,36 @@ header.style-3.two .main-menu > ul > li.active > a i {
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
+.filter-wrapper .filter-input-wrap-home {
+    padding: 30px 40px 30px;
+}
+
+
 @media (max-width: 1399px) {
-  .filter-wrapper .filter-input-wrap {
+    .filter-wrapper .filter-input-wrap {
     padding: 60px 30px 30px;
   }
+    .filter-wrapper .filter-input-wrap-home {
+        padding: 30px 30px 30px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .filter-wrapper .filter-input-wrap {
     padding: 60px 20px 30px;
   }
+
+    .filter-wrapper .filter-input-wrap-home {
+        padding: 30px 20px 30px;
+    }
 }
 @media (max-width: 767px) {
   .filter-wrapper .filter-input-wrap {
     padding: 50px 20px 30px;
   }
+
+    .filter-wrapper .filter-input-wrap-home {
+        padding: 30px 20px 30px;
+    }
 }
 @media (max-width: 576px) {
   .filter-wrapper .filter-input-wrap {
@@ -7418,26 +7434,40 @@ header.style-3.two .main-menu > ul > li.active > a i {
   .filter-wrapper .filter-input-wrap .filter-input {
     grid-template-columns: 29% 24% 24% 16%;
   }
+
+    .filter-wrapper .filter-input-wrap .newsearch {
+        display: grid;
+        grid-template-columns: none;
+        gap: 0px !important;
+        display: none;
+    }
+
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .filter-wrapper .filter-input-wrap .filter-input {
     gap: 16px;
-    grid-template-columns: 28% 24% 24% 18%;
+    grid-template-columns:auto;
   }
+    .filter-wrapper .filter-input-wrap .newsearch {
+        display: grid;
+        grid-template-columns: none;
+        gap: 0px !important;
+        display: none;
+    }
 }
 @media (max-width: 991px) {
-  .filter-wrapper .filter-input-wrap .filter-input {
-    grid-template-columns: repeat(2, 1fr);
-    /* 3 items in first row */
-    grid-auto-rows: auto;
-  }
+    .filter-wrapper .filter-input-wrap .filter-input {
+        grid-template-columns: auto;
+        /* 3 items in first row */
+        grid-auto-rows: auto;
+    }
 }
 @media (max-width: 767px) {
-  .filter-wrapper .filter-input-wrap .filter-input {
-    grid-template-columns: repeat(1, 1fr);
-    /* 3 items in first row */
-    grid-auto-rows: auto;
-  }
+    .filter-wrapper .filter-input-wrap .filter-input {
+        grid-template-columns: auto;
+        /* 3 items in first row */
+        grid-auto-rows: auto;
+    }
 }
 .filter-wrapper .filter-input-wrap .filter-input.show {
   display: grid;
