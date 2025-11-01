@@ -1,10 +1,10 @@
 ﻿@page
 @model india.ttlholidays.com.Pages.VisaModel
 @{
-    ViewData["Title"] ="Visa";
+    ViewData["Title"] = "Visa";
 }
 
- 
+
 <div class="home8-feature-section">
     <div class="container">
         <div class="section-title text-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -292,7 +292,7 @@
             <p>Can’t find what you’re looking for? <a href="contact.html">Contact us</a> for a details info.</p>
         </div>
     </div>
-</div> 
+</div>
 
 <div class="home1-destination-section mb-50">
     <div class="container">
@@ -307,17 +307,94 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-study-tab" data-bs-toggle="pill" data-bs-target="#pills-study" type="button" role="tab" aria-controls="pills-study" aria-selected="false">Study Visa</button>
-                    </li> 
+                    </li>
 
                 </ul>
             </div>
         </div>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-tourist" role="tabpanel" aria-labelledby="pills-tourist-tab">
-                tourist
+                @if (Model.TouristVisaDestinations.Any())
+                {
+                    <div class="list-grid-product-wrap mt-5">
+                        <div class="row gy-md-5 gy-4">
+                            @foreach (var dest in Model.TouristVisaDestinations)
+                            {
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="package-card">
+                                        <div class="package-img-wrap">
+                                            <div class="swiper package-card-img-slider">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="package-img">
+                                                            <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slider-pagi-wrap">
+                                                <div class="package-card-img-pagi paginations"></div>
+                                            </div>
+                                            <div class="batch">
+                                                <span class="discount">"@dest.Name</span>
+                                            </div>
+                                        </div>
+                                        <div class="package-content pb-0">
+                                            <h5> <a asp-page="/VisaDetail" asp-route-country="@dest.Name">@dest.Name</a><small class="float-end text-primary" >@dest.ProcessingDays Days</small></h5>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>No destinations found.</p>
+                }
             </div>
             <div class="tab-pane fade" id="pills-study" role="tabpanel" aria-labelledby="pills-study-tab">
-                study
+                @if (Model.StudyVisaDestinations.Any())
+                {
+                    <div class="list-grid-product-wrap mt-5">
+                        <div class="row gy-md-5 gy-4">
+                            @foreach (var dest in Model.StudyVisaDestinations)
+                            {
+
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="package-card">
+                                        <div class="package-img-wrap">
+                                            <div class="swiper package-card-img-slider">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="package-img">
+                                                            <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slider-pagi-wrap">
+                                                <div class="package-card-img-pagi paginations"></div>
+                                            </div>
+                                            <div class="batch">
+                                                <span class="discount">"@dest.Name</span>
+                                            </div>
+                                        </div>
+                                        <div class="package-content pb-0">
+                                            <h5> <a asp-page="/VisaDetail" asp-route-country="@dest.Name">@dest.Name</a><small class="float-end text-primary">@dest.ProcessingDays Days</small></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>No study visa destinations found.</p>
+                }
             </div>
 
         </div>
@@ -379,7 +456,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 <div class="home8-process-section two mb-100">
     <div class="container">
         <div class="row justify-content-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -439,7 +516,7 @@
                 </div>
             </div>
             <strong>OR</strong>
-            <a href="contact.html" class="primary-btn1 two">
+            <a href="/Contact" class="primary-btn1 two">
                 <span>
                     Apply Online
                     <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -459,5 +536,5 @@
         <img src="~/assets/img/home8/home8-process-section-vector.png" alt="">
     </div>
 </div>
- 
- 
+
+

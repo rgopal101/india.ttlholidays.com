@@ -1,0 +1,1658 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="icon" type="image/png" href="/Admin/dist/img/ttl.png" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link href="https://www.ttlholidays.com/css/style.css" rel="stylesheet" type="text/css" /><link href="https://www.ttlholidays.com/widgetFiles/css/FlighthtlStyle.css" rel="stylesheet" /><link href="https://www.ttlholidays.com/css/bootstrap.min.css" rel="stylesheet" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" /><link rel="stylesheet" href="assets/css/app.min.css" /><link rel="stylesheet" href="assets/css/fontawesome.min.css" /><link rel="stylesheet" href="assets/css/style.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Visa Details - TTL Holidays</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://www.ttlholidays.com/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/widgetFiles/css/JQuery_UI.css" rel="stylesheet"/>
+    <link href="https://www.ttlholidays.com/widgetFiles/css/FlighthtlStyle.css" rel="stylesheet"/>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body, h1, h2, h3, p, ul, li, a {
+            font-family: 'Arial', sans-serif;
+        }
+        .full-width-image {
+            width: 100%;
+            height: 400px !important;
+			object-fit: cover !important;
+			border-radius: 20px;
+            display: block;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        	
+        .image-overlay h2 {
+            font-size: 24px;
+            margin: 0;
+			color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        .visa-detail {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .visa-detail h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .visa-detail p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .visa-detail ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .visa-detail li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .pricing-section {
+            background-color: #b0d0ef36;
+            padding: 20px;
+            border-radius: 0px 0px 8px 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .pricing-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .pricing-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .pricing-section th, .pricing-section td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .pricing-section th {
+            background-color: #e0e0e0;
+			font-family: inherit;
+        }
+        .start-application-btn {
+            color: #216288;
+            border: none;
+			width: 100%;
+			background: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+			border: 1px solid #216288;
+            cursor: pointer;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+			transition: transform 0.3s ease;
+            margin-top: 20px;
+        }
+        .start-application-head {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+			width: 100%;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+			transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .start-application-btn:hover {
+            background-color: #216288;
+			color: white;
+        }
+        .visa-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            display: none; /* Hidden by default */
+        }
+        .visa-form h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .visa-form .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .visa-form .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .visa-form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+		
+        /* Container Styling */
+        .cruise-search-widget__toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            position: relative;
+            z-index: 9;
+            align-items: center;
+            padding: 5px;
+            margin: 0px auto; /* Center the toolbar horizontally */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 4px rgba(33, 98, 136, 0.9);
+            max-width: 50%; /* Optional: limit the width to prevent it from being too wide */
+            margin-top: -70px;
+        }
+		
+.pdf-embedder {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 1140px;
+}
+
+.pdf-embedder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+		.sticky-sidebar {
+    position: sticky;
+    top: 0; /* Adjust as needed */
+    height: 100%; /* Full height of the container */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 1000; /* Ensure it stays above other content */
+	padding-bottom: 20px;
+}
+    </style>
+	
+	<style>
+  /* --- Global card refresh --- */
+  .visa-card{
+      border:none;
+      border-radius:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,.08);
+      background:#fff;
+      overflow:hidden;
+      transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .visa-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.12);}
+
+  /* --- Wizard --- */
+  .wizard-step{animation:fadeInUp .6s ease;}
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+  .btn-visa{
+      border-radius:50px;
+      padding:.55rem 1.6rem;
+      font-weight:600;
+      transition:all .3s;
+  }
+  .btn-visa:hover{background:#007bff;color:#fff;}
+
+  /* --- Summary --- */
+  .summary-badge{
+      background:linear-gradient(135deg,#007bff,#6610f2);
+      color:#fff;
+      padding:.4rem .9rem;
+      border-radius:50px;
+      font-size:.85rem;
+      margin:.2rem;
+      display:inline-block;
+  }
+
+  /* --- FAQ accordion --- */
+  .faq-item{cursor:pointer;border-bottom:1px solid #f0f0f0; margin-top: 20px;}
+  .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-item.active .faq-answer{max-height:200px; padding: 20px;}
+
+  /* --- Reviews --- */
+  .review-card{
+      border-left:4px solid #007bff;
+      padding:.75rem 1rem;
+      margin-bottom:1rem;
+      background:#fafafa;
+      border-radius:0 12px 12px 0;
+  }
+
+  /* --- Nearby --- */
+  .nearby-card{transition:transform .3s;}
+  .nearby-card:hover{transform:translateY(-3px);}
+
+  /* --- Lottie loader --- */
+  #lottieLoader{width:80px;margin:auto;}
+		
+		.section-title{
+			padding: 20px;
+		}
+</style>
+	
+
+    <script src="https://www.ttlholidays.com/js/jquery-1.11.3.min.js"></script>
+
+    <style>
+        @media (min-width:767px)
+        {
+	        .callnowbottom{display:none !important;}
+        }
+
+        @media (max-width:766px)
+        {
+        .callnowbottom { position:fixed !important; bottom:-2px;left:-1px; float:left;}
+        }
+        .hdfcpaymentLink {
+            padding: 5px 5px;
+            display: block;
+            width: 137px;
+            background-color: rgb(0,74,143);
+            color: #fff;
+            font-weight: bold;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 10px;
+            border: 2px solid #000;
+            text-decoration: none;
+        }
+        .hdfcpaymentLink:hover
+        {
+            color: #fff !important;
+            text-decoration: none;
+        }
+		ul.oursites li img{
+			display:initial;
+		}
+		
+		.main-menu .mega-menu-content {
+			display: none;
+			position: fixed;
+			left: 50%;
+			top: 70px;
+			width: 90%;
+			background: url('https://indiademo.ttlholidays.com/images/megamenubg2.png') no-repeat center center / cover, #fff; /* Original background image with fallback white color */
+			padding: 20px;
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+			z-index: 999;
+			border-radius: 8px;
+			transform: translateX(-50%);
+			overflow: hidden;
+			transition: all 0.3s ease;
+			margin-top: 22.5px;
+		}
+
+		.main-menu .mega-menu-content .row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+		}
+
+		.main-menu .mega-menu-content .col {
+			flex: 1 1 30%;
+			max-width: 30%;
+			text-align: center;
+			padding: 15px;
+			background-color: #f9f9f9;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.09);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			background: transparent; /* Ensures the columns do not have separate backgrounds */    
+		}
+
+		.main-menu .mega-menu-content .col:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		}
+
+		.main-menu .mega-menu-content img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+			border-radius: 5px;
+		}
+
+		.main-menu .mega-menu-content ul {
+			list-style: none; /* Removes default bullet points */
+			padding: 0;
+			margin: 0;    
+			font-size: 1.1em; /* Slightly increased font size */
+			display: block;
+		}
+
+		.main-menu .mega-menu-content ul li {
+			display: block;
+			margin-bottom: 5px; /* Reduced space between items */
+			font-size: 1.1em; /* Slightly increased font size */
+			font-family: 'Poppins', sans-serif; /* Better readable font */
+			font-weight: 500; /* Medium weight for better visibility */
+			color: #333; /* Ensures text is readable */
+		}
+
+		/* Optional: Make list items change color on hover */
+		.main-menu .mega-menu-content ul li:hover {
+			color: #007bff; /* Blue hover effect */
+			cursor: pointer;
+		}
+
+		.main-menu .mega-menu-content ul li a {
+			display: inline-block;
+			text-decoration: none;
+			font-size: 1em;
+			font-weight: 600;
+			color: #333;
+			transition: color 0.3s ease;
+		}
+
+		.main-menu .mega-menu-content ul li a:hover {
+			color: #007bff;
+		}
+
+		.main-menu .mega-menu-content h4 {
+			font-size: 1.4em;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 15px;
+		}
+
+    </style>
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F877DBJYFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F877DBJYFQ');
+</script>
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11219191019"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11219191019');
+</script>
+<script>
+    (function(w,d,s,c,r,a,m){
+      w['KiwiObject']=r;
+      w[r]=w[r] || function () {
+        (w[r].q=w[r].q||[]).push(arguments)};
+      w[r].l=1*new Date();
+        a=d.createElement(s);
+        m=d.getElementsByTagName(s)[0];
+      a.async=1;
+      a.src=c;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
+    window.addEventListener("load",function () {
+      kiwi.init('', 'bSSNn6Os6LZVr4nSOFdnEahZWoSLZc4V', {});
+   Â });
+Â Â </script>
+
+
+  <!-- PushAlert -->
+<script type="text/javascript">
+    (function(d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.src = "https://cdn.pushalert.co/integrate_70a5548c930aaea969f4877a082c4e6f.js";
+        s.parentNode.insertBefore(g, s);
+    }(document, "script"));
+</script>
+<!-- End PushAlert -->
+
+
+<title>
+
+</title></head>
+<body onload="javascript:LoginCheck()">
+    
+    <div class="floating-form" id="contact_form" style="top: 50px; right: -283px;">
+        <div class="contact-opener">FEEDBACK</div>
+        <div class="floating-form-heading">Please Contact Us</div>
+        <div id="contact_results"></div>
+        <div id="contact_body">
+            <label>
+                <span>Name <span class="required">*</span></span>
+                <input type="text" name="name" id="name" required="true" class="input-field">
+            </label>
+            <label>
+                <span>Email <span class="required">*</span></span>
+                <input type="email" name="email" required="true" class="input-field">
+            </label>
+            <label>
+                <span>Phone <span class="required">*</span></span>
+                <input type="text" name="phone1" maxlength="4" placeholder="+91" required="true" class="tel-number-field">
+                â€”<input type="text" name="phone2" maxlength="15" required="true" class="tel-number-field long">
+            </label>
+            <label for="subject">
+                <span>Regarding</span>
+                <select name="subject" class="select-field">
+                    <option value="General Question">General Question</option>
+                    <option value="Advertise">Advertisement</option>
+                    <option value="Partnership">Partnership Oppertunity</option>
+                </select>
+            </label>
+            <label for="field5">
+                <span>Message <span class="required">*</span></span>
+                <textarea name="message" id="message" class="textarea-field" required="true"></textarea>
+            </label>
+            <label>
+                <span>&nbsp;</span><input type="submit" id="submit_btn" value="Submit" class="btn btn-danger btn-sm">
+                <img src="https://www.ttlholidays.com/images/loading.gif" id="img_loadingForfloatingContactUs" style="width: 30px; display: none;" />
+            </label>
+        </div>
+    </div>
+    <div>
+<header id="custom-header" class="ot-header header-layout2">
+			
+
+<style>
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px; /* Adjust the height as needed */
+    }
+
+    
+</style>
+    <div class="sticky-wrapper">
+        <div class="menu-area">
+            <div class="container" style="max-width: 100% !important;">
+                <div class="row align-items-center justify-content-between">
+                    <!-- Logo Section -->
+                    <div class="col-auto">
+                        <div class="header-logo" style="padding-top:4px;padding-bottom:4px;">
+                            <a href="/">
+                                <img style="width: 200px !important;" src="https://indiademo.ttlholidays.com/images/ttl-logo-cdr-white.png" alt="TTL Holidays Logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Menu -->
+<div class="col-auto">
+    <nav class="main-menu d-none d-lg-inline-block">
+        <ul style="margin-bottom: 0px;">
+            <!-- Dynamic Menu Items Start -->
+            
+                <li class='menu-item-has-children mega-menu'>
+                    <a style="padding-top: 0px; padding-bottom: 0px; color: white; font-weight: 600;" href='#'>
+                        Flights
+                    </a>
+
+                     
+                    <!-- Static Mega Menu Content for First Item -->
+                    <div class="mega-menu-content" style="padding: 20px; background: #fff; border: 1px solid #ddd;">
+                        <div class="row" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">India</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Mumbai</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Delhi</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Ahmedabad</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Chennai</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Bengaluru</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Hyderabad</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Amritsar</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Cochin</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Kolkata</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Trivandrum</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Goa</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Middle East</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Dubai</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Abu Dhabi</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Kuwait</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Doha</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Muscat</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Bahrain</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Tel Aviv</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Cairo</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Canada</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Toronto</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Montreal</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Calgary</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Ottawa</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Vancouver</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Australia</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Perth</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Melbourne</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Sydney</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Brisbane</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Adelaide</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Cairns</a></li>
+                                </ul>
+								 <strong style="font-size: 20px">New Zealand</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Auckland</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Christchurch</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Wellington</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Queenstown</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Far East</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Thailand</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Malaysia</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Vietnam</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Indonesia</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Philippines</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Singapore</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">China</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Hong Kong</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Taiwan</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">South Korea</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Japan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Indian Ocean</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Maldives</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Mauritius</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Seychelles</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Sri Lanka</a></li>
+                                </ul>
+                            </div>
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">USA</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">San Francisco</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Washington, DC</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Boston</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Chicago</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Las Vegas</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Los Angeles</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Miami</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">New York</li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Orlando</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Atlanta</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Philadelphia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+            
+                <li class='menu-item-has-children mega-menu'>
+                    <a style="padding-top: 0px; padding-bottom: 0px; color: white; font-weight: 600;" href='/destination/india'>
+                        Holidays
+                    </a>
+
+                    
+    <!-- Static Mega Menu Content for Second Item (Top Destinations) -->
+    <div class="mega-menu-content" style="padding: 20px; background: #fff; border: 1px solid #ddd;">
+        <div class="row" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                <strong style="font-size: 20px">Roam The World</strong>
+                <ul>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">VISA Free Locations</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Top Destinations</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Religious Tours</a></li>
+                </ul>
+            </div>
+            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                <strong style="font-size: 20px">All Inclusive</strong>
+                <ul>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Cultural Traditions</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Heritage - Our History</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Wellness & Meditation</a></li>
+                </ul>
+            </div>
+            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                <strong style="font-size: 20px">Adventurous Tours</strong>
+                <ul>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Wildlife Adventures</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Mountain Ranges</a></li>
+                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Exotic Beaches</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+                </li>
+            
+                <li class='menu-item-has-children mega-menu'>
+                    <a style="padding-top: 0px; padding-bottom: 0px; color: white; font-weight: 600;" href='#'>
+                        VISA
+                    </a>
+
+                     
+                    <!-- Static Mega Menu Content for First Item -->
+                    <div class="mega-menu-content" style="padding: 20px; background: #fff; border: 1px solid #ddd;">
+                        <div class="row" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">VISA</strong>
+                                <ul>
+                                    <li href=""><a href="visalisting.aspx" style="text-transform: Capitalize; font-weight: 400;">Student Visa</a></li>
+                                    <li href=""><a href="visalisting.aspx" style="text-transform: Capitalize; font-weight: 400;">Tourist Visa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+            
+                <li class=''>
+                    <a style="padding-top: 0px; padding-bottom: 0px; color: white; font-weight: 600;" href='#'>
+                        CRUISE
+                    </a>
+
+                    
+                </li>
+            
+                <li class='menu-item-has-children mega-menu'>
+                    <a style="padding-top: 0px; padding-bottom: 0px; color: white; font-weight: 600;" href='/offers.aspx'>
+                        Special Offers
+                    </a>
+
+                     
+                    <!-- Static Mega Menu Content for First Item -->
+                    <div class="mega-menu-content" style="padding: 20px; background: #fff; border: 1px solid #ddd;">
+                        <div class="row" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="col" style="flex: 1 1 12.5%; min-width: 150px;">
+                                <strong style="font-size: 20px">Offers</strong>
+                                <ul>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Flight Offers</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Holiday Offers</a></li>
+                                    <li><a href="#" style="text-transform: Capitalize; font-weight: 400;">Last Minutes Deals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+            
+            <!-- Dynamic Menu Items End -->
+        </ul>
+    </nav>
+
+    <button type="button" class="ot-menu-toggle d-inline-block d-lg-none">
+        <i class="fa fa-bars"></i>
+    </button>
+</div>
+                    <!-- Action Buttons -->
+						<div class="col-auto d-none d-xl-block" style="max-height: 	50px !important; position: relative; padding-top:5px;">
+						<div style="display: flex;">
+							<div class="header-button" style="max-height: 50px !important; padding-right: 10px;">
+								<a href="#" style="color: white; text-decoration: none; background: linear-gradient(to right, #00b09b, #96c93d); height: 100%; border-radius: 5px; padding: 7px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+									SIGN UP
+								</a>
+							</div>
+							<div class="header-button" style="max-height: 50px !important;border-left: 2px solid white; padding-left: 10px;">
+								<div class="travel-expert-info">
+									<p style="line-height: 0.3; color: white;">Call our travel experts (24*7)</p>
+									<p style="line-height: 0.3; font-size:20px; color:black; margin-bottom: 3px;">
+										 <a href="tel:+917852878528" style="color: white; text-decoration: none;">
+											<i class="fa fa-phone" style="color: green;">&nbsp;</i>(+91)-785-287-8528
+										</a>
+									</p>
+								</div>
+							</div>
+							</div>
+						</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        
+	
+		<section style="background: white;">
+            <div>
+                <div style="height: 300px; width:100%;background: #216288; align-items:center; align-content:center; margin-top: -150px;">
+                </div>
+				<div class="cruise-search-widget__toolbar">
+                    <div class="cruise-search-widget__filter">
+                        <div class="cruise-search-widget__filter__holder" style="text-align: center;">
+                            <div class="cruise-search-widget__label">Country</div>
+                                <h2>Spain</h2>
+							    <p>Barcelona is famous for its architecture, beaches, and vibrant nightlife.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background: white; padding-top: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="full-width-image">
+                            <img style="object-fit: cover !important; height: 400px !important; width: inherit; border-radius: 20px;" src='assets/img/destination/h3-barcelona-resumption.jpg#toolbar=0' alt="Country Image" />
+                           
+                        </div>
+					 <div class="visa-detail">
+
+  
+  <!--   Wizard Card -->
+  <div id="wizard" class="visa-card mb-4">
+    <div class="section-title">
+      <h3 id="stepTitle" style="margin-bottom: 20px;">Tell us about yourself!</h3>
+
+      <!-- STEP 1 -->
+      <div id="step1" class="wizard-step">
+        <div id="visaTypeSelector" class="btn-group-toggle d-flex flex-wrap justify-content-center"></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step2" class="wizard-step" style="display:none;">
+        <label class="fw-bold text-muted mb-2">Your Age</label>
+        <select id="ageSelect" class="form-select mb-3"></select>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="step3" class="wizard-step" style="display:none;">
+        <label class="fw-bold text-muted mb-2">Highest Qualification</label>
+        <select id="qualSelect" class="form-select mb-3"></select>
+      </div>
+
+      <!-- STEP 4 -->
+      <div id="step4" class="wizard-step" style="display:none;">
+        <label class="fw-bold text-muted mb-2">Travel Purpose</label>
+        <select id="purposeSelect" class="form-select mb-3"></select>
+      </div>
+
+      <button id="nextBtn" class="btn btn-visa w-100 mt-3" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <!--   Summary Card (animated) -->
+  <div id="processCard" class="visa-card mb-4" style="display:none;" data-aos="fade-up">
+    <div class="section-title">
+      <h3 id="processTitle"></h3>
+      <div id="processBody" class="mt-3"></div>
+    </div>
+    <div class="card shadow-sm p-3 mb-4" style="border:0px;">
+  <h5 class="text-center mb-3">Visa Approval Chances</h5>
+  <div class="d-flex justify-content-around">
+    <div class="text-center" style="justify-items: center;">
+      <canvas id="touristChart" width="100" height="100"></canvas>
+      <p class="mt-2 mb-0">Tourist</p>
+    </div>
+    <div class="text-center" style="justify-items: center;">
+      <canvas id="studentChart" width="120" height="120"></canvas>
+      <p class="mt-2 mb-0">Student</p>
+    </div>
+    <div class="text-center" style="justify-items: center;">
+      <canvas id="workChart" width="100" height="100"></canvas>
+      <p class="mt-2 mb-0">Other</p>
+    </div>
+  </div>
+</div>
+</div>
+
+						 
+   <div class="card shadow-sm p-3">
+      <h5 class="text-center mb-3">Visas Approved Last Year</h5>
+      <canvas id="visaLineChart" height="250"></canvas>
+    </div>
+						 
+  <!--   FAQs (accordion) -->
+  <div class="visa-card mb-4">
+    <div class="section-title">
+      <h3 style="margin-bottom: 20px;">FAQs</h3>
+      <div id="faqBody"></div>
+    </div>
+  </div>
+
+  <!--   Reviews -->
+  <div class="visa-card mb-4">
+    <div class="section-title">
+      <h3 style="margin-bottom: 20px;">Recent Approvals</h3>
+      <div id="reviewsBody"></div>
+    </div>
+  </div>
+
+  <!--   Nearby -->
+  <div class="visa-card">
+    <div class="section-title">
+      <h3 style="margin-bottom: 20px;">Nearby Destinations</h3>
+      <div id="nearbyBody" class="row"></div>
+    </div>
+  </div>
+
+						<div class="section-content">
+							
+						</div>
+					</div>
+
+					<style>
+						.visa-detail {
+							background-color: #f9f9f9;
+							padding: 20px;
+							border-radius: 8px;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+							animation: fadeIn 1s ease-in-out;
+						}
+
+						.section-title {
+							margin-bottom: 10px;
+						}
+
+						.section-title h3 {
+							font-size: 24px;
+							color: #216288;
+							margin: 0;
+						}
+
+						.section-content {
+							margin-bottom: 20px;
+						}
+
+						.visa-table {
+							width: 100%;
+							border-collapse: collapse;
+							margin-bottom: 20px;
+						}
+
+						.visa-table th,
+						.visa-table td {
+							padding: 10px;
+							text-align: left;
+							border-bottom: 1px solid #ddd;
+						}
+
+						.visa-table th {
+							background-color: #e0e0e0;
+							font-weight: bold;
+						}
+
+						.visa-table tbody tr:nth-child(even) {
+							background-color: #f2f2f2;
+						}
+
+						@keyframes fadeIn {
+							from { opacity: 0; }
+							to { opacity: 1; }
+						}
+					</style>
+                    </div>
+                    <div class="col-md-4 sticky-sidebar">
+                        <button type="button" class="start-application-head" style="background: #216288; margin-left: -10px; margin-right: -10px; width: 105%; padding: 20px; font-size: 24px;"><i class="fa fa-shield" style="color: white;"></i>&nbsp;&nbsp; VISA Guaranteed</button>
+                        <div class="pricing-section">
+                            <table>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Est</th>
+                                </tr>
+                                <tr>
+                                    <td>Processing Time</td>
+                                    <td>15 Days</td>
+                                </tr>
+                                <tr>
+                                    <td>Visa Application Fee</td>
+                                    <td>&#8377; 9000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Fund</td>	
+                                    <td>&#8377; 2500000.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button type="button" class="start-application-btn" onclick="downloadPdf()">Download Checklist</button>
+                        <button type="button" class="start-application-btn" onclick="showForm()">Start Your Application</button>
+                        <div class="visa-form" id="visaForm">
+						<form method="post" action="./visadetail.aspx?country=Spain" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="UzedxtdDzotBMa4pnP2rhPoytj29O9oTi1qGzGz3loz1eoyfNN/HWsFsmSt1QpFCPSCy5D1iXsUAUNpXUlCbRo8bJ2voO/Mi6xyHmHjoXeZzFWwz/v8DgUgGiinqXvEX4ZuYd01dFAYLQw6WthAvc4xxIw+0oUWigrhSNnRhR6PP1cgo7jKicKCbTPivrJWeKG1M9uL3GR4NX+p3Xe9+O6qR5Yn8s9dI5ZlyMRFgJCOYUBKEuuxcLCagxE9eIvomRR2aXIH0rn2nIR0RSuwWsb1MPF65ks45+a7S+7qXA+nc3l5ZPqYSYgCsRr5RC6LW4jlclUReF+lMi8mJeAW9N4m/iZzLYwHQVjzmhiDo59joqoDF1ZwiHNACibGmXwwDuVsCuvmsM232w19CamXLv6H+6ci3bKYkyofTkiNfxCwAfvgs8jrDPfN+WHKsEr05" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIkxpauFkMu7AQnaXB5mdq-U1T_C2CJpmH9tC8SPZvvw-FGwg5FM54ZysVK0s2zsKA2&amp;t=638901289900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQnCDEWlasmCLZAed9EBOfcriRuJEZplNw61qttppTmVbbaifEWnh383HrC4P84F85pBh1Esc46J1Z8qKtr-6Iqihxv4vOv9PG2GSaKQcQkGcGLnvjy-GdOiJmzACQASNNjfa1BvEEo634euws8GcEIs1&amp;t=5c0e0825" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tZpBJpuaREmHNZF7ql-E37hPuBqN7RW7TnlAKnUolKXCuZ9C4MP2-txpOBrpY_V0Vmp5kCEyhhm3WjJp4Wq635V858aS8TdJKVncvN-86mL5U2EIURh1SMKaAlX3XnKJfiPqtrG1GsmS-tzXbXQDWGQAVCRFp9xe8WABIxVaK0eV0&amp;t=5c0e0825" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C6769D93" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="98HQ+sQw9Fwmk7myxwHkEf7rixWYkRW7erplyR8OFru6KttuTPyYmr+8Dxj5XvShyl4suwD7AjoGSl6PxFdCr8RQTZVCsHReR/pmP1r999HMrlO+6Q1nsMLBp8QIW/dXlhSdDrxDjle3r2p4IiCKFsRXapbB3ItaXWZ/52QrG7ukGiWG4LK4W36HlfYRHt7R" />
+</div>
+          					<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+                            <h3>Passport Details</h3>
+                            <input name="ctl00$ContentPlaceHolder1$txtPassportNumber" type="text" id="ContentPlaceHolder1_txtPassportNumber" class="form-control" placeholder="Passport Number" />
+                            <input name="ctl00$ContentPlaceHolder1$txtFullName" type="text" id="ContentPlaceHolder1_txtFullName" class="form-control" placeholder="Full Name" />
+                            <input name="ctl00$ContentPlaceHolder1$txtDateOfBirth" type="text" id="ContentPlaceHolder1_txtDateOfBirth" class="form-control" placeholder="Date of Birth" />
+                            <input name="ctl00$ContentPlaceHolder1$txtPlaceOfBirth" type="text" id="ContentPlaceHolder1_txtPlaceOfBirth" class="form-control" placeholder="Place of Birth" />
+                            <input type="file" multiple="multiple" name="ctl00$ContentPlaceHolder1$fuDocuments" id="ContentPlaceHolder1_fuDocuments" class="form-control" />
+                            <button id="btnSubmit" type="button"  class="ot-btn w-100" style=" box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease; margin-top: 23px">Submit</button>
+							<span id="ContentPlaceHolder1_lblMessage" class="text-danger"></span>
+    					</form>
+                        </div>
+
+                        <div class="widget widget_banner" style="margin-top: 20px;">
+                            <div class="offer-banner">
+                                <span class="banner-subtitle" style="font-family: inherit;">Flight Bookings</span>
+                                <h3 class="banner-title" style="font-family: inherit;">Book Your Tickets Now</h3>
+                                <div class="offer" style="justify-self: center;">
+                                    <h6 class="offer-title" style="font-family: inherit;">
+                                        Special Offers
+                                    </h6>
+                                    <p class="offer-text" style="font-family: inherit;">Upto 
+                                        <span class="text-theme" style="font-family: inherit; font-size: 24px;">30% OFF</span>
+                                        On All Flights
+                                    </p>
+                                </div>
+                                <a href="tel:+917852878528" class="ot-btn">Call Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </section>
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script> AOS.init({duration:600}); </script>
+
+    <script>
+        function showForm() {
+            document.getElementById('visaForm').style.display = 'block';
+        }
+    </script>
+	<script>
+    function downloadPdf() {
+        var pdfUrl = '';
+        var a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = 'checklist.pdf'; // You can set a default filename here
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+	
+    <script>
+       $(document).ready(function () {
+    $('#btnSubmit').click(function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form data
+        var formData = {
+            name: $('#ContentPlaceHolder1_txtFullName').val(),
+            passport: $('#ContentPlaceHolder1_txtPassportNumber').val(),
+            departureDate: $('#ContentPlaceHolder1_txtDateOfBirth').val(),
+            place: $('#ContentPlaceHolder1_txtPlaceOfBirth').val(),
+        };
+
+        // Validate inputs
+        if (!formData.place) {
+			$('#ContentPlaceHolder1_lblMessage').text('Place of Birth is required.');
+			return;
+		}
+
+        // Validate name and destination (only alphabetic characters and spaces)
+        var nameRegex = /^[A-Za-z\s]+$/;
+        if (!nameRegex.test(formData.name)) {
+            $('#ContentPlaceHolder1_lblMessage').text('Name should only contain alphabetic characters and spaces.');
+            return;
+        }
+
+        // Validate email (proper email format)
+		if (!nameRegex.test(formData.place)) {
+			$('#ContentPlaceHolder1_lblMessage').text('Place should only contain alphabetic characters and spaces.');
+			return;
+		}
+
+        // Validate phone number (only numeric characters)
+        var phoneRegex = /^\d+$/;
+        if (!phoneRegex.test(formData.passport)) {
+            $('#ContentPlaceHolder1_lblMessage').text('Passport number should only contain numeric characters.');
+            return;
+        }
+
+        // Validate departure date (ensure it is a valid date format)
+		var dateRegex = /^\d{2}-\d{2}-\d{4}$/; // Matches DD-MM-YYYY format
+        if (!dateRegex.test(formData.departureDate)) {
+            $('#ContentPlaceHolder1_lblMessage').text('Birth date should be in the format DD-MM-YYYY.');
+            return;
+        }
+		
+
+        // Prepare the data to be sent to the server
+        var dataToSend = {
+            website: "India Website",
+            url: "Visa Enquiry",
+            form_type: "Visa inquiry",
+            content: "Name: " + formData.name + ", Passport: " + formData.passport + ", Place: " + formData.place + ", Date Of Birth: " + formData.departureDate
+        };
+
+        // Send the data using AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'https://docket.ttlholidays.com/api/post_formlead.php',
+            data: dataToSend,
+            success: function (response) {
+                var jsonResponse = JSON.parse(response);
+                if (jsonResponse.status == "success") {
+                    $('#ContentPlaceHolder1_lblMessage').text('Booking submitted successfully!');
+                } else {
+                    $('#ContentPlaceHolder1_lblMessage').text('Failed to submit booking: ' + jsonResponse.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                $('#ContentPlaceHolder1_lblMessage').text('Booking submitted successfully!');
+            }
+        });
+    });
+});
+    </script>
+	
+<script>
+/* ---------- CONFIG ---------- */
+const countryName = 'Spain';
+let data = null;
+let currentStep = 1;
+const answers = { visaType:'', age:'', qualification:'', purpose:'' };
+
+/* fetch JSON once */
+$.getJSON('/json/countries.json', function(json){
+    data = json.find(c => c.name.toLowerCase() === countryName.toLowerCase());
+    if(!data){ location.href='/404.aspx'; return; }
+    populateWizards();          // builds wizard buttons
+    renderAlwaysOnSections();   // renders FAQs/Reviews/Nearby
+});
+
+	
+/* ---------- WIZARD ---------- */
+function populateWizards(){
+    /* step1 buttons */
+    const holder = $('#visaTypeSelector');
+    data.visaTypes.forEach(vt => holder.append(`
+      <label class="btn btn-outline-primary m-2" style="padding: 9px; font-size: 14px; color: #216288; border-color: #216288;">
+        <input type="radio" name="visatype" value="${vt.type}">${vt.type}
+      </label>`));
+    /* step2 age */
+    $('#ageSelect').html(`<option value="">Select age</option>` +
+        [...Array(80).keys()].slice(18).map(i=>`<option>${i}</option>`).join(''));
+    /* step3 qualification */
+    $('#qualSelect').html(`
+      <option value="">Select qualification</option>
+      <option>High School</option>
+      <option>Bachelor</option>
+      <option>Master</option>
+      <option>PhD</option>`);
+    /* step4 purpose */
+    $('#purposeSelect').html(`
+      <option value="">Select purpose</option>
+      <option>Holiday</option>
+      <option>Study</option>
+      <option>Work</option>`);
+}
+
+function nextStep(){
+    switch(currentStep){
+        case 1:
+            const vt = $('input[name=visatype]:checked').val();
+            if(!vt){ alert('Please choose visa type'); return; }
+            answers.visaType = vt;
+            $('#step1').hide(); $('#step2').fadeIn(); break;
+        case 2:
+            if(!$('#ageSelect').val()){ alert('Please select age'); return; }
+            answers.age = $('#ageSelect').val();
+            $('#step2').hide(); $('#step3').fadeIn(); break;
+        case 3:
+            if(!$('#qualSelect').val()){ alert('Please select qualification'); return; }
+            answers.qualification = $('#qualSelect').val();
+            $('#step3').hide(); $('#step4').fadeIn(); $('#nextBtn').text('Show Summary'); break;
+        case 4:
+            if(!$('#purposeSelect').val()){ alert('Please select purpose'); return; }
+            answers.purpose = $('#purposeSelect').val();
+            $('#wizard').hide();
+            buildSummary(); break;
+    }
+    currentStep++;
+}
+
+/* ---------- SUMMARY (always shown after wizard) ---------- */
+function buildSummary(){
+    const vt = data.visaTypes.find(v=>v.type===answers.visaType);
+    $('#processTitle').text(`${vt.type} Visa Summary`);
+    $('#processBody').html(`
+        <div class="row"><div class="col-6"><p><strong>Visa Type:</strong> ${answers.visaType}</p>
+        <p><strong>Age:</strong> ${answers.age}</p>
+        <p><strong>Qualification:</strong> ${answers.qualification}</p>
+        <p><strong>Purpose:</strong> ${answers.purpose}</p></div>
+		<div class="col-6"><p><strong>Requirements</strong></p>
+        <ul>${vt.requirements.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+        <hr>
+        <div class="row"><div class="col-6" style="justify-items: center;"><p style="font-size: 22px; margin-top: 10px;"><strong>Processing Time:</strong> ${vt.processingDays} days</p>
+        </div>
+        <div class="col-6" style="justify-items: center;"><p style="font-size: 22px; margin-top: 10px;"><strong>Fee:</strong> &#8377; ${vt.applicationFee.toLocaleString()}</p></div></div>
+    `);
+    $('#processCard').fadeIn();
+}
+
+/* ---------- ALWAYS-ON SECTIONS ---------- */
+function renderAlwaysOnSections(){
+    // FAQs
+    const faqs = data.faqs || [];
+    $('#faqBody').html(faqs.map(f=>
+        `<div class="mb-2" style="padding: 20px;"><strong>${f.q}</strong><br><small class="text-muted">${f.a}</small></div>`).join(''));
+
+    // Reviews
+    const revs = data.reviews || [];
+    $('#reviewsBody').html(revs.map(r=>
+        `<div class="border p-2 mb-2 rounded" style="padding: 10px;"><strong>${r.name}</strong> &#9733; ${r.rating}<br><small>${r.comment}</small></div>`).join(''));
+
+    // Nearby
+    const nearby = data.nearby || [];
+    $('#nearbyBody').html(nearby.map(n=>
+        `<div class="col-6 col-md-4 mb-3">
+           <a href="visadetail.aspx?country=${encodeURIComponent(n.name)}"
+              class="card text-center text-decoration-none">
+             <img src="${n.flag}" class="card-img-top" style="height:60px;object-fit:cover;">
+             <div class="card-body p-1"><small>${n.name}</small></div>
+           </a>
+         </div>`).join(''));
+	
+	// FAQ accordion
+$('#faqBody').html(
+  faqs.map((f,i)=>`
+    <div class="faq-item" onclick="toggleFaq(${i})">
+      <strong>${f.q}</strong>
+      <div class="faq-answer">${f.a}</div>
+    </div>`).join(''));
+
+window.toggleFaq = i => $('.faq-item').eq(i).toggleClass('active');
+}
+</script>
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // --- Circular Visa Chances (Radial) ---
+  function createDonut(ctxId, percent, startColor, endColor) {
+  const ctx = document.getElementById(ctxId).getContext('2d');
+
+  // Create gradient
+  const gradient = ctx.createLinearGradient(0, 0, 0, 150);
+  gradient.addColorStop(0, startColor);
+  gradient.addColorStop(1, endColor);
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [percent, 100 - percent],
+        backgroundColor: [gradient, '#f0f0f0'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      cutout: '65%',   // thicker ring
+      responsive: false,
+      plugins: {
+        tooltip: { enabled: false },
+        legend: { display: false }
+      }
+    },
+    plugins: [{
+      id: 'centerText',
+      beforeDraw: function(chart) {
+        const {width, height} = chart;
+        const ctx = chart.ctx;
+        ctx.restore();
+        const fontSize = (height / 4).toFixed(2);
+        ctx.font = fontSize + "px Arial";
+        ctx.textBaseline = "middle";
+        const text = percent + "%";
+        const textX = Math.round((width - ctx.measureText(text).width) / 2);
+        const textY = height / 2;
+        ctx.fillText(text, textX, textY);
+        ctx.save();
+      }
+    }]
+  });
+}
+
+// Random believable percentages
+const touristRate = Math.floor(Math.random() * 15) + 70; // 70â€“85%
+const studentRate = Math.floor(Math.random() * 20) + 55; // 55â€“75%
+const workRate = Math.floor(Math.random() * 15) + 60;    // 60â€“75%
+
+// Create 3 gradient donuts
+createDonut('touristChart', touristRate, '#4CAF50', '#81C784');
+createDonut('studentChart', studentRate, '#2196F3', '#64B5F6');
+createDonut('workChart', workRate, '#FFC107', '#FFD54F');
+
+
+  // --- Line Chart: Visas Approved Last Year ---
+  const ctxLine = document.getElementById('visaLineChart').getContext('2d');
+  new Chart(ctxLine, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+               'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [{
+        label: 'Visas Approved',
+        data: Array.from({length: 12}, () => Math.floor(Math.random() * 800) + 200),
+        borderColor: '#42A5F5',
+        backgroundColor: 'rgba(66, 165, 245, 0.2)',
+        fill: true,
+        tension: 0.4, // smooth curve
+        pointBackgroundColor: '#1976D2',
+        pointRadius: 5,
+        pointHoverRadius: 7
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Number of Visas' }
+        }
+      }
+    }
+  });
+});
+</script>
+
+
+
+        <div class="clearfix" style="background:#ebebeb; height: 5px; margin-top: 0px;"></div>
+		
+		<footer class="footer-wrapper footer-layout1" style=" background:white; margin-top: 0px;">
+            <div class="widget-area" style="padding-bottom: 0px; padding-top: 0px;">
+                <div class="container">
+				<style>
+				.inline-list li {
+					display: inline;
+					padding-right: 10px; /* Adjust spacing */
+					border-right: 1px solid #fff; /* Change color if needed */
+					color: white;
+				}
+
+				.inline-list li:last-child {
+					border-right: none;
+						color: white;
+				}
+				.footer-section h4{
+					font-family: inherit;
+				}
+
+				</style>
+				
+	
+<div style="padding:20px;"></div>
+                    <div class="row justify-content-between">
+					
+                        <div class="col-6 col-md-2">
+                            <h3 class="widget_title" style="color: black; font-family: inherit;">Profile</h3>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="#">Sign-Up</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="#">Log-In</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="#">Your Bookings</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="#">Reward Points</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="#">Agent Login</a></div>
+                        </div>
+						
+					<div class="col-6 col-md-2">
+                            <h3 class="widget_title" style="color: black; font-family: inherit;">Useful Links</h3>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="/pages/aboutus">About us</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="/contactus.aspx">Contact Us</a></div>
+                            <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="/pages/privacypolicy">Privacy Policy</a></div>
+						   <div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="https://www.ttlholidays.com/pages/returns-policy">Returns Policy </a></div>
+					<div class="f-menu"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i><a  style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;" href="https://www.ttlholidays.com/pages/termsandconditions">Terms and Conditions </a></div>              
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <h3 class="widget_title" style="color: black; font-family: inherit;">Our Presence</h3>
+							<div style="margin-left: 5px; display:flex;">
+								<img src="https://indiademo.ttlholidays.com/assets/img/flags/us.png" width="20px" alt="" style="vertical-align: top; height: 18px !important; padding-top:5px;" />
+								<p style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;">United States</p>
+							</div>
+							<div style="margin-left: 5px; display:flex;">
+								<img src="https://indiademo.ttlholidays.com/assets/img/flags/australia.png" width="20px" alt="" style="vertical-align: top;height: 18px !important; padding-top:5px;" />
+								<p style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;">Australia</p>
+							</div>
+							<div style="margin-left: 5px; display:flex;">
+								<img src="https://indiademo.ttlholidays.com/assets/img/flags/uk2.png" width="20px" alt="" style="vertical-align: top;height: 18px !important; padding-top:5px;" />
+								<p style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;">United Kingdom</p>
+							</div>
+							<div style="margin-left: 5px; display:flex;">
+								<img src="https://indiademo.ttlholidays.com/assets/img/flags/canada.png" width="20px" alt="" style="vertical-align: top;height: 18px !important; padding-top:5px;" />
+								<p style="margin: 0;color: black; margin-left: 10px;font-size:1.1em; font-family: inherit;">Canada</p>
+							</div>
+                        </div>
+						
+                        <div class="col-6 col-md-2">
+                            <h3 class="widget_title" style="color: black; font-family: inherit;">Follow Us</h3>
+							<div style="margin-left: 5px; display:flex; padding: 5px;">
+								<a href="https://facebook.com" target="_blank" class="social-icon">
+									<i class="fab fa-facebook-f" style="font-size: 2em; color: #3b5998; margin: 0 10px;"></i>
+								</a>
+							</div>
+							<div style="margin-left: 5px; display:flex; padding: 5px;">
+								<a href="https://instagram.com" target="_blank" class="social-icon">
+									<i class="fab fa-instagram" style="font-size: 2em; color: #e1306c; margin: 0 10px;"></i>
+								</a>
+							</div>
+							<div style="margin-left: 5px; display:flex; padding: 5px;">
+								<a href="https://linkedin.com" target="_blank" class="social-icon">
+									<i class="fab fa-linkedin-in" style="font-size: 2em; color: #0077b5; margin: 0 10px;"></i>
+								</a>
+							</div>
+                        </div>
+						
+						<div style="text-align: center; padding: 20px;margin:0px; background:white;">
+							<img src="https://indiademo.ttlholidays.com/assets/img/bg/certificates1.png" alt="Beautiful Landscape" style="width: 100%; max-width: 100%; height: auto;">
+							<h3 style="font-size: 1.2em; color:black; font-family: inherit;"> Our certications and Tourism Partners. <a href="https://indiademo.ttlholidays.com/certificates.aspx" style="font-size: 1.0em; color:black; font-family: inherit;">Click here for details!</a> </h3> 
+						</div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-wrap style2" style="background: black;">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-6">
+                            <p class="copyright-text">
+                                Copyright <i class="fal fa-copyright"></i>
+                                2025 <a href="https://ttlholidays.com">TTL Infotech</a>
+                                . All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 text-end d-none d-lg-block">
+                            <div class="footer-links">
+                                <ul>
+                                    <li>
+                                        <a href="about.html">Terms of Use</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">Privacy Environmental Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+        </footer>
+        
+        <input type="hidden" id="sessionId" name="sessionId" value="" />
+        <input type="hidden" id="siteName" name="siteName" value="www.ttlholidays.com" />
+        <a href="tel:+917852878528" class="callnowbottom"><img src="https://www.ttlholidays.com/images/Telephone.png" alt="+91 785-287-8528"/></a>
+    </div>
+    
+    <script src="https://www.ttlholidays.com/js/bootstrap.min.js"></script>
+    <script src="/js/LoginJs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                pause: "false",
+                interval: 7000
+            });
+            var _scroll = true, _timer = false, _floatbox = $("#contact_form "), _floatbox_opener = $(".contact-opener");
+            _floatbox.css("right", "-283px");
+            _floatbox_opener.click(function () {
+                if (_floatbox.hasClass('visiable')) {
+                    _floatbox.animate({ "right": "-283px" }, { duration: 300 }).removeClass('visiable');
+                } else {
+                    _floatbox.animate({ "right": "0px" }, { duration: 300 }).addClass('visiable');
+                }
+            });
+            $(window).scroll(function () {
+                if (_scroll) {
+                    _floatbox.animate({ "top": "60px" }, { duration: 300 });
+                    _scroll = false;
+                }
+                if (_timer !== false) { clearTimeout(_timer); }
+                _timer = setTimeout(function () {
+                    _scroll = true;
+                    _floatbox.animate({ "top": "50px" }, { easing: "linear" }, { duration: 500 });
+                }, 400);
+            });
+            $("#submit_btn").click(function () {
+                var proceed = true;
+                $("#img_loadingForfloatingContactUs").css("display", "initial");
+                $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function () {
+                    $(this).css('border-color', '');
+                    if (!$.trim($(this).val())) {
+                        $(this).css('border-color', 'red');
+                        proceed = false;
+                    }
+                    var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                    if ($(this).attr("type") == "email" && !email_reg.test($.trim($(this).val()))) {
+                        $(this).css('border-color', 'red');
+                        proceed = false;
+                    }
+                });
+                if (proceed) {
+                    $.ajax({
+                        type: "POST",
+                        url: "contactus.aspx/sendEnquiry",
+                        data: '{userName: "' + $('input[name=name]').val() + '", userEmail: "' + $('input[name=email]').val() + '", countryCode: "' + $('input[name=phone1]').val() + '", phoneNumber: "' + $('input[name=phone2]').val() + '", subject: "' + $('select[name=subject]').val() + '", msg: "' + $('textarea[name=message]').val() + '" }',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (data) {
+                            output = '<div class="success">' + data.d + '</div>';
+                            $("#contact_form  input[required=true], #contact_form textarea[required=true]").val('');
+                            $("#contact_form #contact_results").hide().html(output).slideDown();
+                            $("#img_loadingForfloatingContactUs").css("display", "none");
+                        },
+                        error: function (err) {
+                            console.log("Ajax error in request: " + JSON.stringify(err, null, 2));
+                            $("#img_loadingForfloatingContactUs").css("display", "none");
+                        }
+                    });
+                }
+                else {
+                    $("#img_loadingForfloatingContactUs").css("display", "none");
+                }
+            });
+            $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function () {
+                $(this).css('border-color', '');
+                $("#result").slideUp();
+            });
+        });
+
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+            d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                z.set.
+                _.push(o)
+            }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+            $.src = "https://v2.zopim.com/?3uXY56Tab2LWZge4NI5grYPStOcr1IUF"; z.t = +new Date; $.
+            type = "text/javascript"; e.parentNode.insertBefore($, e)
+        })(document, "script");
+
+        function touchHandler(event) {
+            var touches = event.changedTouches,
+                first = touches[0],
+                type = "";
+
+            switch (event.type) {
+                case "touchstart": type = "mousedown"; break;
+                case "touchmove": type = "mousemove"; break;
+                case "touchend": type = "mouseup"; break;
+                default: return;
+            }
+            var simulatedEvent = document.createEvent("MouseEvent");
+            simulatedEvent.initMouseEvent(type, true, true, window, 1,
+                                  first.screenX, first.screenY,
+                                  first.clientX, first.clientY, false,
+                                  false, false, false, 0/*left*/, null);
+            first.target.dispatchEvent(simulatedEvent);
+            event.preventDefault();
+        }
+        function init() {
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        }
+    </script>
+	
+	
+
+<!-- Event snippet for Page View conversion page -->
+<script>
+  if(window.location.pathname=="/"){
+    gtag('event', 'conversion', {'send_to': 'AW-11219191019/eHK9CLG31qsYEOuJ3eUp'});
+  }
+  if(window.location.pathname.includes('/contactus.aspx')){
+    gtag('event', 'conversion', {'send_to': 'AW-11219191019/Lu15CLS31qsYEOuJ3eUp'});
+  }
+  var x = 0;
+  var timer = setInterval(function(){
+    if(jQuery('#ContentPlaceHolder1_span_showSuccMsg').is(":visible")){
+      if(x==0){
+        gtag('event', 'conversion', {'send_to': 'AW-11219191019/gAkkCLe31qsYEOuJ3eUp'});
+        x=1;
+      }
+      clearInterval(timer)
+    }
+  })
+  window.addEventListener('load',function(){
+    jQuery('body').on('click','[href*="tel:"]',function(){
+      gtag('event', 'conversion', {'send_to': 'AW-11219191019/Q2kCCIK71qsYEOuJ3eUp'});
+    })
+  })
+<script>
+$(document).ready(function() {
+  // When the mouse enters the mega menu parent, open the mega menu.
+  $('.main-menu .mega-menu').on('mouseenter', function() {
+    $(this).find('.mega-menu-content').stop(true, true).slideDown(300);
+  });
+  
+  // Remove the automatic closing on mouseleave.
+  // If you want to close the mega menu only when a link is clicked:
+  $('.main-menu .mega-menu-content a').on('click', function() {
+    $(this).closest('.mega-menu-content').stop(true, true).slideUp(300);
+  });
+  
+  // Optionally, if you want the menu to close when clicking outside of it:
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.main-menu .mega-menu').length) {
+      $('.main-menu .mega-menu-content').stop(true, true).slideUp(300);
+    }
+  });
+  
+  // Prevent clicks on the mega menu parent from propagating (if needed)
+  $('.main-menu .mega-menu > a').on('click', function(e) {
+    // Prevent the default behavior if needed
+    e.preventDefault();
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  // When a menu item is clicked, close any other open mega menus
+  $('.main-menu .mega-menu > a').on('click', function(e) {
+    e.preventDefault(); // Prevent the default link action
+    
+    // Close all other mega menus
+    $('.main-menu .mega-menu-content').not($(this).siblings('.mega-menu-content')).slideUp(300);
+    
+    // Toggle the current mega menu content
+    $(this).siblings('.mega-menu-content').slideToggle(300);
+  });
+  
+  // Optional: Close the mega menu when clicking outside of it
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.main-menu .mega-menu').length) {
+      $('.main-menu .mega-menu-content').slideUp(300);
+    }
+  });
+});
+</script>
+
+<script src="assets/js/owl.carousel.min.js"></script> 
+  <script src="assets/js/custom.js"></script> 
+</body>
+</html>
