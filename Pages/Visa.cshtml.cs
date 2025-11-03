@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace india.ttlholidays.com.Pages
 {
-    public class VisaModel : PageModel
+    public class VisaModel : PageModel   
     {
         [BindProperty]
         public string SearchQuery { get; set; } = string.Empty;
