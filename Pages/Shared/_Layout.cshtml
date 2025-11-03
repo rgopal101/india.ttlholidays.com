@@ -198,34 +198,7 @@
                                             <li> <a asp-page="/FlightDetail" asp-route-country="Rome"> <img src="~/assets/img/flight/airplane.png" alt=""> Rome </a> </li>
                                             <li> <a asp-page="/FlightDetail" asp-route-country="Germany"> <img src="~/assets/img/flight/airplane.png" alt=""> Germany </a> </li>
                                         </ul>
-                                    </div>
-                                    @* <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>Middle East</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="United Arab Emirates"> <img src="~/assets/img/home1/uae-flag.png" alt=""> United Arab Emirates </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Qatar"> <img src="~/assets/img/home1/qatar-flag.png" alt=""> Qatar </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Bahrain"> <img src="~/assets/img/home1/bahrain-flag.png" alt=""> Bahrain </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Saudi Arabia"> <img src="~/assets/img/home1/saudi-arabia-flag.png" alt=""> Saudi Arabia </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Jordan"> <img src="~/assets/img/home1/jordan-flag.png" alt=""> Jordan </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Palestine"> <img src="~/assets/img/home1/palestine-flag.png" alt=""> Palestine </a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-single-item">
-                                        <div class="menu-title">
-                                            <h5>North America</h5>
-                                        </div>
-                                        <i class="bi bi-plus dropdown-icon"></i>
-                                        <ul>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="United States"> <img src="~/assets/img/home1/us-flag.png" alt=""> United States </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Canada"> <img src="~/assets/img/home1/canada-flag.png" alt=""> Canada </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Mexico"> <img src="~/assets/img/home1/mexico-flag.png" alt=""> Mexico </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Jamaica"> <img src="~/assets/img/home1/jamaica-flag.png" alt=""> Jamaica </a> </li>
-                                            <li> <a asp-page="/FlightDetail" asp-route-country="Costa Rica"> <img src="~/assets/img/home1/costa-rica-flag.png" alt=""> Costa Rica </a> </li>
-                                        </ul>
-                                    </div> *@
+                                    </div> 
                                 </div>
                             </div>
                             <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1"> <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
@@ -235,8 +208,84 @@
                         <a href="/Holidays" class="drop-down"> Holidays <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
                         <div class="mega-menu">
                             <div class="container">
-                                <div class="row">
-                                    @await Component.InvokeAsync("PackageMenu")
+                                <div class="menu-row">
+                                    <div class="menu-single-item">
+                                        <div class="menu-title">
+                                            <h5>Australia</h5>
+                                        </div>
+                                        <i class="bi bi-plus dropdown-icon"></i>  
+                                        <ul>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Sydney">Sydney </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Port_Cambell">Port Cambell </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Canberra">Canberra </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Cairns">Cairns </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Brisbane">Brisbane </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Gold_Coast">Gold Coast </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Queensland">Queensland </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Adelaide">Adelaide </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Darwin">Darwin </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Tasmania">Tasmania </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Hobart">Hobart </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Melbourne">Melbourne </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Perth">Perth </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Blue_Mountains">Blue Mountains </a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-single-item">
+                                        <div class="menu-title">
+                                            <h5>India</h5>
+                                        </div>
+                                        <i class="bi bi-plus dropdown-icon"></i> 
+                                        <ul>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Golden_Triangle">Golden Triangle </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Maharashtra">Maharashtra </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Sikkim">Sikkim </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Kerala">Kerala </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Goa">Goa </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Dharamshala">Dharamshala </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Golden_Temple">Golden Temple </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Ayodhya_Ram_Mandir">Ayodhya Ram Mandir </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Ujjain_Mahakaleshwar">Ujjain Mahakaleshwar </a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-single-item">
+                                        <div class="menu-title">
+                                            <h5>New Zealand</h5>
+                                        </div>
+                                        <i class="bi bi-plus dropdown-icon"></i>  
+                                        <ul>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Clutha">Clutha </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Rotorua">Rotorua </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Waikato">Waikato </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Auckland">Auckland </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Wellington">Wellington </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Dunedin">Dunedin </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Hamilton">Hamilton</a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Fiordland">Fiordland </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Southland">Southland </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Christchurch">Christchurch </a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-single-item">
+                                        <div class="menu-title">
+                                            <h5>International</h5>
+                                        </div>
+                                        <i class="bi bi-plus dropdown-icon"></i>  
+                                        <ul>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Bali">Bali </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Italy">Italy </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Paris">Paris </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Dubai">Dubai </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Mexico">Mexico </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="London">London </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Jamaica">Jamaica </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Thailand">Thailand </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Bahamas">Bahamas </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Switzerland">Switzerland </a> </li>
+                                            <li> <a asp-page="/countryDetail" asp-route-country="Dominic_Republic">Dominic Republic </a> </li>
+                                        </ul>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <img src="~/assets/img/home1/mega-menu-vector1.svg" alt="" class="vector1"> <img src="~/assets/img/home1/mega-menu-vector2.svg" alt="" class="vector2">
@@ -253,14 +302,11 @@
                     </li>
                     <li> <a asp-page="/Cruise">Cruises</a></li>
                     <li class="menu-item-has-children position-inherit">
-                        <a href="/offers" class="drop-down"> Special Offres <i class="bi bi-caret-down-fill"></i> </a> <i class="bi bi-plus dropdown-icon"></i>
-                        @await Component.InvokeAsync("OffersMenu")
+                        <a href="/offers" class="drop-down"> Special Offres  </a>  
+                        
                     </li>
                     <li><a href="/Contact">Contact</a></li>
-                </ul>
-
-
-
+                </ul> 
                 <div class="contact-area d-lg-none d-flex">
                     <div class="single-contact">
                         <div class="icon">
