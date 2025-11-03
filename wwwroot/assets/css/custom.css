@@ -115,6 +115,8 @@ img {
         background-color: #b02527;
     }
 
+
+
 /* Traveler dropdown */
 .traveler-dropdown {
     position: relative;
@@ -133,7 +135,9 @@ img {
     display: none;
     z-index: 10;
 }
-
+.home1-offer-section img {
+    min-height:210px;
+}
 .traveler-count {
     display: flex;
     align-items: center;
@@ -205,8 +209,7 @@ img {
 
 
 .price {
-    list-style-type: none;
-    border: 1px solid #eee;
+    list-style-type: none; 
     margin: 0;
     padding: 0;
     -webkit-transition: 0.3s;
@@ -415,12 +418,7 @@ img {
     min-height: 195px;
 }
 
-.home_offer_slide img {
-    height: auto;
-    max-height: 150px;
-    width: 100%;
-} 
-
+ 
 
 /*xcxcxc*/
 .deal-card {
@@ -495,4 +493,207 @@ img {
     .call-btn:hover {
         background-color: #16a34a;
         color: #fff;
+    }
+
+
+
+.tour-card {
+    border-radius: 16px;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: .3s;
+    margin-bottom: 10px;
+}
+
+    .tour-card:hover {
+        box-shadow: 0 5px 20px rgba(0,0,0,.12);
+    }
+
+/* Image Styling */
+.tour-img-wrapper {
+    position: relative;
+}
+
+.tour-img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.tour-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.rating {
+    color: #13aa52;
+    font-weight: 600;
+}
+
+.itinerary {
+    background: #fff8e6;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #444;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+}
+
+.save-tag {
+    background: #e8ffea;
+    color: #01972c;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.tour-card .price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    border: none;
+}
+
+/* Buttons */
+.tour-card .call-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #ff7a00;
+    border-radius: 10px;
+    font-size: 21px;
+    color: #ff7a00;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+    .tour-card .call-btn:hover {
+        background: #ff7a00;
+        color: #fff;
+    }
+
+.request-btn {
+    background: #ff7a00;
+    border-radius: 10px;
+    flex: 1;
+    transition: .3s;
+}
+
+    .request-btn:hover {
+        background: #e66b00;
+    }
+
+//model
+.elegant-modal {
+    border-radius: 18px;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+}
+
+.tour-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.modal-tour-title {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #1a1a1a;
+}
+
+.price-bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+.save-badge {
+    background: #d9f7d9;
+    color: #0b8e37;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+.modal-close-btn {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.elegant-field {
+    border-radius: 12px !important;
+    border: 1px solid #e5e5e5;
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+    .elegant-field:focus {
+        border-color: #ff7a00;
+        box-shadow: 0 0 0 .15rem rgba(255,122,0,0.2);
+    }
+
+.submit-btn {
+    background: #ff7a00;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    transition: .25s;
+}
+
+    .submit-btn:hover {
+        background: #e56700;
+        transform: translateY(-2px);
+    }
+
+
+header.style-1 .main-menu > ul > li .mega-menu {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    margin: 0;
+    display: none;
+    background: var(--white-color);
+    border: 1px solid var(--borders-color);
+    padding: 50px 0px;
+    width: 100%;
+    transform-origin: top;
+    z-index: 1;
+    background-image: url(../img/megamenubg2.webp);
+}
+
+    header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li > a img {
+        min-width: 15px;
+        max-width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+ 
+    }
+    header.style-1 .main-menu > ul > li .mega-menu .menu-row .menu-single-item ul li {
+        margin-bottom: 10px; 
+    }
+
+    header.style-1 .main-menu > ul > li .mega-menu .menu-row {
+        display: flex; 
+        justify-content: space-between;
     }

@@ -1505,8 +1505,7 @@ body.tt-magic-cursor #magic-cursor {
 .section-title h2 {
   color: var(--title-color);
   font-family: var(--font-poppins);
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 24px; 
   line-height: 1.1;
   margin-bottom: 0;
 }
@@ -1533,7 +1532,7 @@ body.tt-magic-cursor #magic-cursor {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  padding-top: 20px; 
+  padding-top: 10px; 
   width: 100%;
   margin: 0 auto;
 }
