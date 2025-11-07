@@ -29,11 +29,11 @@ namespace india.ttlholidays.com.Pages
                 {
                     Name = "Barcelona",
                     ImageUrls = new List<string> {
-                        "img/destination/h3-barcelona-resumption.webp",
-                        "img/destination/h3-barcelona1.webp",
-                        "img/destination/h3-barcelona2.webp",
-                        "img/destination/h3-barcelona3.webp",
-                        "img/destination/h3-barcelona4.webp"
+                        "/assets/img/destination/h3-barcelona-resumption.webp",
+                        "/assets/img/destination/h3-barcelona1.webp",
+                        "/assets/img/destination/h3-barcelona2.webp",
+                        "/assets/img/destination/h3-barcelona3.webp",
+                        "/assets/img/destination/h3-barcelona4.webp"
                     },
                     Description = "Barcelona is famous for its architecture, beaches, and vibrant nightlife. The city is home to iconic landmarks such as the Sagrada Familia, Park Güell, and Casa Batlló. Visitors can enjoy the bustling La Rambla street, relax on Barceloneta Beach, and experience the rich Catalan culture. The city also offers a variety of museums, including the Picasso Museum and the Joan Miró Foundation. Barcelona is a food lover's paradise, with a wide range of tapas bars and restaurants offering traditional Catalan cuisine.",
                     Itinerary = new List<string> {"Day 1: Arrival in Barcelona, check-in at the hotel, explore La Rambla.",
@@ -78,11 +78,11 @@ namespace india.ttlholidays.com.Pages
                 new Destination
                 {
                     Name = "Australia",
-                    ImageUrls = new List<string> {"img/destination/h2-melbourne-beach.webp",
-            "img/destination/h2-melbourne1.webp",
-            "img/destination/h2-melbourne2.webp",
-            "img/destination/h2-melbourne3.webp",
-            "img/destination/h2-melbourne4.webp"},
+                    ImageUrls = new List<string> {"/assets/img/destination/h2-melbourne-beach.webp",
+            "/assets/img/destination/h2-melbourne1.webp",
+            "/assets/img/destination/h2-melbourne2.webp",
+            "/assets/img/destination/h2-melbourne3.webp",
+            "/assets/img/destination/h2-melbourne4.webp"},
                     Description = "Australia is known for its diverse landscapes, from the Great Barrier Reef to the Outback. The country offers a unique blend of natural wonders, vibrant cities, and a rich cultural heritage. Visitors can explore the iconic Sydney Opera House, relax on the beaches of the Gold Coast, and experience the natural beauty of the Blue Mountains. Australia is also home to a variety of wildlife, including kangaroos, koalas, and platypuses. The country offers a wide range of outdoor activities, such as hiking, snorkeling, and surfing.",
                     Itinerary = new List<string> {"Day 1: Arrival in Sydney, check-in at the hotel, explore the Sydney Opera House.",
             "Day 2: Visit the Sydney Harbour Bridge and the Royal Botanic Garden.",
@@ -236,11 +236,11 @@ namespace india.ttlholidays.com.Pages
                 new Destination
                 {
                     Name =  "Denmark",
-                    ImageUrls = new List<string> { "img/destination/AMS.webp",
-            "img/destination/AMS1.webp",
-            "img/destination/AMS2.webp",
-            "img/destination/AMS3.webp",
-            "img/destination/AMS4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/AMS.webp",
+            "/assets/img/destination/AMS1.webp",
+            "/assets/img/destination/AMS2.webp",
+            "/assets/img/destination/AMS3.webp",
+            "/assets/img/destination/AMS4.webp"},
                     Description = "Denmark is known for its design, architecture, and quality of life. The country offers a unique blend of modern and historic attractions. Visitors can explore the iconic Little Mermaid statue in Copenhagen, visit the historic castles of Kronborg and Frederiksborg, and enjoy the vibrant culture of the capital city. Denmark is also home to a variety of outdoor activities, such as cycling, hiking, and sailing. The country is a perfect destination for those interested in design, architecture, and quality of life.",
                     Itinerary = new List<string> {  "Day 1: Arrival in Copenhagen, check-in at the hotel, explore the Little Mermaid statue.",
             "Day 2: Visit the historic castles of Kronborg and Frederiksborg.",
@@ -286,11 +286,11 @@ namespace india.ttlholidays.com.Pages
                 new Destination
                 {
                     Name = "Abu Dhabi",
-                    ImageUrls = new List<string> {"img/destination/h3-abu-dhabi-grand-mosque.webp",
-            "img/destination/h3-abu-dhabi1.webp",
-            "img/destination/h3-abu-dhabi2.webp",
-            "img/destination/h3-abu-dhabi3.webp",
-            "img/destination/h3-abu-dhabi4.webp"},
+                    ImageUrls = new List<string> {"/assets/img/destination/h3-abu-dhabi-grand-mosque.webp",
+            "/assets/img/destination/h3-abu-dhabi1.webp",
+            "/assets/img/destination/h3-abu-dhabi2.webp",
+            "/assets/img/destination/h3-abu-dhabi3.webp",
+            "/assets/img/destination/h3-abu-dhabi4.webp"},
                     Description = "Abu Dhabi is known for its modern architecture and cultural heritage. The city offers a unique blend of modern skyscrapers and traditional cultural sites. Visitors can explore the iconic Sheikh Zayed Grand Mosque, visit the Louvre Abu Dhabi, and enjoy the natural beauty of the Saadiyat Beach. The city also offers a variety of outdoor activities, such as desert safaris and water sports. Abu Dhabi is a perfect destination for those interested in modern architecture and cultural heritage.",
 
 
@@ -333,11 +333,11 @@ namespace india.ttlholidays.com.Pages
                 new Destination
                 {
                     Name = "China",
-                    ImageUrls = new List<string> { "img/destination/h3-beijing-city.webp",
-            "img/destination/h3-beijing1.webp",
-            "img/destination/h3-beijing2.webp",
-            "img/destination/h3-beijing3.webp",
-            "img/destination/h3-beijing4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/h3-beijing-city.webp",
+            "/assets/img/destination/h3-beijing1.webp",
+            "/assets/img/destination/h3-beijing2.webp",
+            "/assets/img/destination/h3-beijing3.webp",
+            "/assets/img/destination/h3-beijing4.webp"},
                     Description = "China is a vast country with a rich history and diverse landscapes. The country offers a unique blend of ancient and modern attractions. Visitors can explore the iconic Great Wall of China, visit the Forbidden City in Beijing, and enjoy the natural beauty of the Li River in Guilin. China is also home to a variety of cultural experiences, such as traditional markets and local cuisine. The country is a perfect destination for history buffs and adventure seekers.",
                     Itinerary = new List<string> { "Day 1: Arrival in Beijing, check-in at the hotel, explore the Forbidden City.",
             "Day 2: Visit the Great Wall of China.",
@@ -419,11 +419,11 @@ namespace india.ttlholidays.com.Pages
                 new Destination
                 {
                     Name ="Greece",
-                    ImageUrls = new List<string> {"img/destination/h3-santorini-greece.webp",
-            "img/destination/h3-santorini1.webp",
-            "img/destination/h3-santorini2.webp",
-            "img/destination/h3-santorini3.webp",
-            "img/destination/h3-santorini4.webp"},
+                    ImageUrls = new List<string> {"/assets/img/destination/h3-santorini-greece.webp",
+            "/assets/img/destination/h3-santorini1.webp",
+            "/assets/img/destination/h3-santorini2.webp",
+            "/assets/img/destination/h3-santorini3.webp",
+            "/assets/img/destination/h3-santorini4.webp"},
                     Description =  "Greece is known for its beautiful islands, ancient ruins, and Mediterranean cuisine. The country offers a unique blend of natural beauty and historical significance. Visitors can explore the iconic Acropolis in Athens, visit the ancient city of Delphi, and enjoy the natural beauty of the islands of Santorini and Mykonos. Greece is also home to a variety of cultural experiences, such as traditional markets and local cuisine. The country is a perfect destination for those interested in history and natural beauty.",
                     Itinerary = new List<string> { "Day 1: Arrival in Athens, check-in at the hotel, explore the Acropolis.",
             "Day 2: Visit the ancient city of Delphi.",
@@ -462,11 +462,11 @@ namespace india.ttlholidays.com.Pages
     Name = "Himalayas",
     ImageUrls = new List<string>
     {
-        "img/destination/Himalaya.webp",
-        "img/destination/Himalaya1.webp",
-        "img/destination/Himalaya2.webp",
-        "img/destination/Himalaya3.webp",
-        "img/destination/Himalaya4.webp"
+        "/assets/img/destination/Himalaya.webp",
+        "/assets/img/destination/Himalaya1.webp",
+        "/assets/img/destination/Himalaya2.webp",
+        "/assets/img/destination/Himalaya3.webp",
+        "/assets/img/destination/Himalaya4.webp"
     },
     Description = "The Himalayas, the highest mountain range in the world, offer breathtaking natural beauty and a unique cultural experience. Visitors can explore the serene monasteries, trek through lush valleys, and witness the stunning snow-capped peaks. The region is also home to diverse flora and fauna, making it a paradise for nature lovers.",
     Itinerary = new List<string>
@@ -530,11 +530,11 @@ namespace india.ttlholidays.com.Pages
     Name = "Maharashtra",
     ImageUrls = new List<string>
     {
-        "img/destination/Maharashtra.webp",
-        "img/destination/Maharashtra1.webp",
-        "img/destination/Maharashtra2.webp",
-        "img/destination/Maharashtra3.webp",
-        "img/destination/Maharashtra4.webp"
+        "/assets/img/destination/Maharashtra.webp",
+        "/assets/img/destination/Maharashtra1.webp",
+        "/assets/img/destination/Maharashtra2.webp",
+        "/assets/img/destination/Maharashtra3.webp",
+        "/assets/img/destination/Maharashtra4.webp"
     },
     Description = "Maharashtra, the land of the Marathas, is known for its rich history, vibrant culture, and bustling cities. From the bustling streets of Mumbai to the serene beaches of Goa, Maharashtra offers a diverse range of experiences. Visitors can explore the historic forts, ancient caves, and beautiful temples.",
     Itinerary = new List<string>
@@ -602,11 +602,11 @@ namespace india.ttlholidays.com.Pages
     Name = "Sikkim",
     ImageUrls = new List<string>
     {
-        "img/destination/Sikkim.webp",
-        "img/destination/Sikkim1.webp",
-        "img/destination/Sikkim2.webp",
-        "img/destination/Sikkim3.webp",
-        "img/destination/Sikkim4.webp"
+        "/assets/img/destination/Sikkim.webp",
+        "/assets/img/destination/Sikkim1.webp",
+        "/assets/img/destination/Sikkim2.webp",
+        "/assets/img/destination/Sikkim3.webp",
+        "/assets/img/destination/Sikkim4.webp"
     },
     Description = "Sikkim, nestled in the Himalayas, is known for its breathtaking natural beauty, rich cultural heritage, and serene monasteries. Visitors can explore the Tsomgo Lake, Nathu La Pass, and the Rumtek Monastery. Sikkim offers a perfect blend of adventure and tranquility.",
     Itinerary = new List<string>
@@ -680,11 +680,11 @@ namespace india.ttlholidays.com.Pages
     Name = "Rishikesh",
     ImageUrls = new List<string>
     {
-        "img/destination/Rishikesh.webp",
-        "img/destination/Rishikesh1.webp",
-        "img/destination/Rishikesh2.webp",
-        "img/destination/Rishikesh3.webp",
-        "img/destination/Rishikesh4.webp"
+        "/assets/img/destination/Rishikesh.webp",
+        "/assets/img/destination/Rishikesh1.webp",
+        "/assets/img/destination/Rishikesh2.webp",
+        "/assets/img/destination/Rishikesh3.webp",
+        "/assets/img/destination/Rishikesh4.webp"
     },
     Description = "Rishikesh, known as the 'Yoga Capital of the World', is located in the foothills of the Himalayas in Uttarakhand. It is a spiritual hub offering a blend of adventure and tranquility. Visitors can explore the Triveni Ghat, Neelkanth Mahadev Temple, and the Lakshman Jhula.",
     Itinerary = new List<string>
@@ -749,11 +749,11 @@ namespace india.ttlholidays.com.Pages
     Name = "Gujarat",
     ImageUrls = new List<string>
     {
-        "img/destination/Gujarat.webp",
-        "img/destination/Gujarat1.webp",
-        "img/destination/Gujarat2.webp",
-        "img/destination/Gujarat3.webp",
-        "img/destination/Gujarat4.webp"
+        "/assets/img/destination/Gujarat.webp",
+        "/assets/img/destination/Gujarat1.webp",
+        "/assets/img/destination/Gujarat2.webp",
+        "/assets/img/destination/Gujarat3.webp",
+        "/assets/img/destination/Gujarat4.webp"
     },
     Description = "Gujarat, located on the western coast of India, is known for its rich cultural heritage, historical sites, and vibrant festivals. Visitors can explore the Rann of Kutch, the Somnath Temple, and the Sabarmati Ashram. Gujarat offers a blend of history, culture, and natural beauty.",
     Itinerary = new List<string>
@@ -825,11 +825,11 @@ new Destination
     Name = "Delhi",
     ImageUrls = new List<string>
     {
-        "img/destination/Delhi.webp",
-        "img/destination/Delhi1.webp",
-        "img/destination/Delhi2.webp",
-        "img/destination/Delhi3.webp",
-        "img/destination/Delhi4.webp"
+        "/assets/img/destination/Delhi.webp",
+        "/assets/img/destination/Delhi1.webp",
+        "/assets/img/destination/Delhi2.webp",
+        "/assets/img/destination/Delhi3.webp",
+        "/assets/img/destination/Delhi4.webp"
     },
     Description = "Delhi, the capital of India, is a city of contrasts, blending ancient history with modern development. Visitors can explore the Red Fort, India Gate, and the Qutub Minar. Delhi offers a mix of historical sites, cultural experiences, and vibrant markets.",
     Itinerary = new List<string>
@@ -898,11 +898,11 @@ new Destination
     Name = "Kashmir",
     ImageUrls = new List<string>
     {
-        "img/destination/Kashmir.webp",
-        "img/destination/Kashmir1.webp",
-        "img/destination/Kashmir2.webp",
-        "img/destination/Kashmir3.webp",
-        "img/destination/Kashmir4.webp"
+        "/assets/img/destination/Kashmir.webp",
+        "/assets/img/destination/Kashmir1.webp",
+        "/assets/img/destination/Kashmir2.webp",
+        "/assets/img/destination/Kashmir3.webp",
+        "/assets/img/destination/Kashmir4.webp"
     },
     Description = "Kashmir, known as 'Paradise on Earth', is a region of breathtaking natural beauty and rich cultural heritage. Visitors can explore the Dal Lake, Pahalgam, and the Mughal Gardens. Kashmir offers a blend of adventure, tranquility, and cultural experiences.",
     Itinerary = new List<string>
@@ -970,11 +970,11 @@ new Destination
     Name = "North East India",
     ImageUrls = new List<string>
     {
-        "img/destination/north_east_india.webp",
-        "img/destination/north_east_india1.webp",
-        "img/destination/north_east_india2.webp",
-        "img/destination/north_east_india3.webp",
-        "img/destination/north_east_india4.webp"
+        "/assets/img/destination/north_east_india.webp",
+        "/assets/img/destination/north_east_india1.webp",
+        "/assets/img/destination/north_east_india2.webp",
+        "/assets/img/destination/north_east_india3.webp",
+        "/assets/img/destination/north_east_india4.webp"
     },
     Description = "North East India, a region of diverse cultures and natural beauty, offers a unique blend of tribal heritage and stunning landscapes. Visitors can explore the Kaziranga National Park, visit the ancient temples of Assam, and experience the vibrant culture of Meghalaya. The region is also known for its tea gardens and waterfalls.",
     Itinerary = new List<string>
@@ -1039,11 +1039,11 @@ new Destination
     Name = "Rajasthan",
     ImageUrls = new List<string>
     {
-        "img/destination/Rajasthan.webp",
-        "img/destination/Rajasthan1.webp",
-        "img/destination/Rajasthan2.webp",
-        "img/destination/Rajasthan3.webp",
-        "img/destination/Rajasthan4.webp"
+        "/assets/img/destination/Rajasthan.webp",
+        "/assets/img/destination/Rajasthan1.webp",
+        "/assets/img/destination/Rajasthan2.webp",
+        "/assets/img/destination/Rajasthan3.webp",
+        "/assets/img/destination/Rajasthan4.webp"
     },
     Description = "Rajasthan, known for its rich history and vibrant culture, offers a journey through its majestic forts and palaces. Visitors can explore the Amber Palace in Jaipur, visit the Mehrangarh Fort in Jodhpur, and experience the desert life in Jaisalmer. The state is also known for its colorful markets and traditional Rajasthani cuisine.",
     Itinerary = new List<string>
@@ -1111,11 +1111,11 @@ new Destination
     Name = "Dharamshala",
     ImageUrls = new List<string>
     {
-        "img/destination/Dharamshala.webp",
-        "img/destination/Dharamshala1.webp",
-        "img/destination/Dharamshala2.webp",
-        "img/destination/Dharamshala3.webp",
-        "img/destination/Dharamshala4.webp"
+        "/assets/img/destination/Dharamshala.webp",
+        "/assets/img/destination/Dharamshala1.webp",
+        "/assets/img/destination/Dharamshala2.webp",
+        "/assets/img/destination/Dharamshala3.webp",
+        "/assets/img/destination/Dharamshala4.webp"
     },
     Description = "Dharamshala, located in the Kangra Valley at the foothills of the Dhauladhar range in Himachal Pradesh, is known for its rich cultural heritage and natural beauty. It is also the center of the Tibetan government in exile. Visitors can explore the Dalai Lama Temple, Bhagsunag Waterfall, and the Norbulingka Institute. The region offers a blend of spirituality, adventure, and tranquility.",
     Itinerary = new List<string>
@@ -1180,11 +1180,11 @@ new Destination
     Name = "Dharamshala",
     ImageUrls = new List<string>
     {
-        "img/destination/Dharamshala.webp",
-        "img/destination/Dharamshala1.webp",
-        "img/destination/Dharamshala2.webp",
-        "img/destination/Dharamshala3.webp",
-        "img/destination/Dharamshala4.webp"
+        "/assets/img/destination/Dharamshala.webp",
+        "/assets/img/destination/Dharamshala1.webp",
+        "/assets/img/destination/Dharamshala2.webp",
+        "/assets/img/destination/Dharamshala3.webp",
+        "/assets/img/destination/Dharamshala4.webp"
     },
     Description = "Dharamshala, located in the Kangra Valley at the foothills of the Dhauladhar range in Himachal Pradesh, is known for its rich cultural heritage and natural beauty. It is also the center of the Tibetan government in exile. Visitors can explore the Dalai Lama Temple, Bhagsunag Waterfall, and the Norbulingka Institute. The region offers a blend of spirituality, adventure, and tranquility.",
     Itinerary = new List<string>
@@ -1250,11 +1250,11 @@ new Destination
     Name = "Melbourne",
     ImageUrls = new List<string>
     {
-        "img/destination/melbourne.webp",
-        "img/destination/melbourne1.webp",
-        "img/destination/melbourne2.webp",
-        "img/destination/melbourne3.webp",
-        "img/destination/melbourne4.webp"
+        "/assets/img/destination/melbourne.webp",
+        "/assets/img/destination/melbourne1.webp",
+        "/assets/img/destination/melbourne2.webp",
+        "/assets/img/destination/melbourne3.webp",
+        "/assets/img/destination/melbourne4.webp"
     },
     Description = "Melbourne, the cultural capital of Australia, offers a vibrant mix of arts, sports, and coffee culture. Visitors can explore the iconic Federation Square, visit the Melbourne Cricket Ground, and enjoy the city's famous laneway cafes. The city is also known for its beautiful parks and gardens.",
     Itinerary = new List<string>
@@ -1319,11 +1319,11 @@ new Destination
     Name = "The Grampians",
     ImageUrls = new List<string>
     {
-        "img/destination/the_grampians.webp",
-        "img/destination/the_grampians1.webp",
-        "img/destination/the_grampians2.webp",
-        "img/destination/the_grampians3.webp",
-        "img/destination/the_grampians4.webp"
+        "/assets/img/destination/the_grampians.webp",
+        "/assets/img/destination/the_grampians1.webp",
+        "/assets/img/destination/the_grampians2.webp",
+        "/assets/img/destination/the_grampians3.webp",
+        "/assets/img/destination/the_grampians4.webp"
     },
     Description = "The Grampians, a national park in Victoria, offers stunning natural beauty and a variety of outdoor activities. Visitors can explore the rugged mountain ranges, visit the ancient Aboriginal rock art sites, and enjoy the scenic walks. The region is also known for its diverse flora and fauna.",
     Itinerary = new List<string>
@@ -1387,11 +1387,11 @@ new Destination
     Name = "Gold Coast",
     ImageUrls = new List<string>
     {
-        "img/destination/gold_coast.webp",
-        "img/destination/gold_coast1.webp",
-        "img/destination/gold_coast2.webp",
-        "img/destination/gold_coast3.webp",
-        "img/destination/gold_coast4.webp"
+        "/assets/img/destination/gold_coast.webp",
+        "/assets/img/destination/gold_coast1.webp",
+        "/assets/img/destination/gold_coast2.webp",
+        "/assets/img/destination/gold_coast3.webp",
+        "/assets/img/destination/gold_coast4.webp"
     },
     Description = "Discover the stunning Gold Coast, Australia's premier holiday destination known for its golden beaches, thrilling theme parks, and vibrant nightlife. From Surfers Paradise to the lush hinterlands, this tour offers the perfect mix of adventure, relaxation, and natural beauty. Enjoy exciting attractions, wildlife encounters, and breathtaking coastal views.",
     Itinerary = new List<string>
@@ -1447,11 +1447,11 @@ new Destination
     Name = "Port Campbell",
     ImageUrls = new List<string>
     {
-        "img/destination/port_campbell.webp",
-        "img/destination/port_campbell1.webp",
-        "img/destination/port_campbell2.webp",
-        "img/destination/port_campbell3.webp",
-        "img/destination/port_campbell4.webp"
+        "/assets/img/destination/port_campbell.webp",
+        "/assets/img/destination/port_campbell1.webp",
+        "/assets/img/destination/port_campbell2.webp",
+        "/assets/img/destination/port_campbell3.webp",
+        "/assets/img/destination/port_campbell4.webp"
     },
     Description = "Port Campbell, located along the Great Ocean Road, offers stunning coastal scenery and natural attractions. Visitors can explore the Twelve Apostles, visit the Loch Ard Gorge, and enjoy the scenic walks. The region is also known for its diverse flora and fauna.",
     Itinerary = new List<string>
@@ -1514,11 +1514,11 @@ new Destination
     Name = "Golden Triangle",
     ImageUrls = new List<string>
     {
-        "img/destination/golden_triangle.webp",
-        "img/destination/golden_triangle1.png",
-        "img/destination/golden_triangle2.webp",
-        "img/destination/golden_triangle3.webp",
-        "img/destination/golden_triangle4.webp"
+        "/assets/img/destination/golden_triangle.webp",
+        "/assets/img/destination/golden_triangle1.png",
+        "/assets/img/destination/golden_triangle2.webp",
+        "/assets/img/destination/golden_triangle3.webp",
+        "/assets/img/destination/golden_triangle4.webp"
     },
     Description = "Golden Triangle Tour Package is a classic journey through three of India's most iconic cities: Delhi, Agra, and Jaipur. Visit historic landmarks such as the Red Fort, Jama Masjid, Taj Mahal, and the Hawa Mahal in Jaipur. Experience the Mughal heritage, Rajasthani architecture, and vibrant culture that define India's rich history. This journey offers a perfect blend of history, architecture, and tradition.",
     Itinerary = new List<string>
@@ -1589,11 +1589,11 @@ new Destination
     Name = "Sydney",
     ImageUrls = new List<string>
     {
-        "img/destination/Sydney.webp",
-        "img/destination/Sydney1.webp",
-        "img/destination/Sydney2.webp",
-        "img/destination/Sydney3.webp",
-        "img/destination/Sydney4.webp"
+        "/assets/img/destination/Sydney.webp",
+        "/assets/img/destination/Sydney1.webp",
+        "/assets/img/destination/Sydney2.webp",
+        "/assets/img/destination/Sydney3.webp",
+        "/assets/img/destination/Sydney4.webp"
     },
     Description = "Experience the vibrant city of Sydney, Australia's iconic metropolis, filled with breathtaking attractions, stunning beaches, and rich cultural experiences. From the world-famous Sydney Opera House and Harbour Bridge to the golden sands of Bondi Beach, this tour offers an unforgettable adventure. Enjoy scenic cruises, wildlife encounters, and guided city explorations, making this a perfect getaway.",
     Itinerary = new List<string>
@@ -1650,11 +1650,11 @@ new Destination
     Name = "Melbourne",
     ImageUrls = new List<string>
     {
-        "img/destination/Melbourne.webp",
-        "img/destination/Melbourne1.webp",
-        "img/destination/Melbourne2.webp",
-        "img/destination/Melbourne3.webp",
-        "img/destination/Melbourne4.webp"
+        "/assets/img/destination/Melbourne.webp",
+        "/assets/img/destination/Melbourne1.webp",
+        "/assets/img/destination/Melbourne2.webp",
+        "/assets/img/destination/Melbourne3.webp",
+        "/assets/img/destination/Melbourne4.webp"
     },
     Description = "Discover the vibrant city of Melbourne, known for its artistic culture, bustling laneways, iconic landmarks, and stunning coastal drives. From the famous Federation Square and the Yarra River to the picturesque Great Ocean Road, this tour promises an unforgettable experience. Enjoy a mix of history, wildlife encounters, and culinary delights in Australia's cultural capital.",
     Itinerary = new List<string>
@@ -1711,11 +1711,11 @@ new Destination
     Name = "Brisbane",
     ImageUrls = new List<string>
     {
-        "img/destination/Brisbane.webp",
-        "img/destination/Brisbane1.webp",
-        "img/destination/Brisbane2.webp",
-        "img/destination/Brisbane3.webp",
-        "img/destination/Brisbane4.webp"
+        "/assets/img/destination/Brisbane.webp",
+        "/assets/img/destination/Brisbane1.webp",
+        "/assets/img/destination/Brisbane2.webp",
+        "/assets/img/destination/Brisbane3.webp",
+        "/assets/img/destination/Brisbane4.webp"
     },
     Description = "Discover the vibrant city of Brisbane, a perfect blend of modern attractions, stunning riverfront views, and cultural heritage. From the breathtaking Story Bridge to the lively South Bank and the scenic Moreton Island, this tour offers an unforgettable experience. Enjoy adventure, wildlife encounters, and leisure in Australia's sunshine capital.",
     Itinerary = new List<string>
@@ -1772,11 +1772,11 @@ new Destination
     Name = "Perth",
     ImageUrls = new List<string>
     {
-        "img/destination/Perth.webp",
-        "img/destination/Perth1.webp",
-        "img/destination/Perth2.webp",
-        "img/destination/Perth3.webp",
-        "img/destination/Perth4.webp"
+        "/assets/img/destination/Perth.webp",
+        "/assets/img/destination/Perth1.webp",
+        "/assets/img/destination/Perth2.webp",
+        "/assets/img/destination/Perth3.webp",
+        "/assets/img/destination/Perth4.webp"
     },
     Description = "Explore Perth, the sunniest capital of Australia, known for its beautiful beaches, stunning river views, and unique wildlife. From the breathtaking Kings Park to the stunning Rottnest Island, this tour offers a perfect mix of nature, adventure, and city exploration. Enjoy pristine coastal landscapes, vibrant markets, and a relaxed atmosphere in Western Australia's capital.",
     Itinerary = new List<string>
@@ -1834,11 +1834,11 @@ new Destination
     Name = "Adelaide",
     ImageUrls = new List<string>
     {
-        "img/destination/Adelaide.webp",
-        "img/destination/Adelaide1.webp",
-        "img/destination/Adelaide2.webp",
-        "img/destination/Adelaide3.webp",
-        "img/destination/Adelaide4.webp"
+        "/assets/img/destination/Adelaide.webp",
+        "/assets/img/destination/Adelaide1.webp",
+        "/assets/img/destination/Adelaide2.webp",
+        "/assets/img/destination/Adelaide3.webp",
+        "/assets/img/destination/Adelaide4.webp"
     },
     Description = "Experience the charm of Adelaide, a city known for its elegant architecture, lush parklands, and world-class wineries. From the vibrant Central Market to the picturesque Barossa Valley, this tour offers a perfect mix of cultural exploration, nature, and gourmet experiences. Discover the best of South Australia's capital with exciting city highlights and scenic day trips.",
     Itinerary = new List<string>
@@ -1904,11 +1904,11 @@ new Destination
     Name = "Cairns",
     ImageUrls = new List<string>
     {
-        "img/destination/Cairns.webp",
-        "img/destination/Cairns1.webp",
-        "img/destination/Cairns2.webp",
-        "img/destination/Cairns3.webp",
-        "img/destination/Cairns4.webp"
+        "/assets/img/destination/Cairns.webp",
+        "/assets/img/destination/Cairns1.webp",
+        "/assets/img/destination/Cairns2.webp",
+        "/assets/img/destination/Cairns3.webp",
+        "/assets/img/destination/Cairns4.webp"
     },
     Description = "Explore the tropical paradise of Cairns, the gateway to the Great Barrier Reef and the lush rainforests of North Queensland. This tour offers an incredible mix of adventure, natural beauty, and cultural experiences. From snorkeling in the world's largest coral reef system to exploring the heritage-listed Daintree Rainforest, Cairns is the perfect destination for nature lovers and thrill-seekers alike.",
     Itinerary = new List<string>
@@ -1969,11 +1969,11 @@ new Destination
     Name = "Hobart",
     ImageUrls = new List<string>
     {
-        "img/destination/Hobart.webp",
-        "img/destination/Hobart1.webp",
-        "img/destination/Hobart2.webp",
-        "img/destination/Hobart3.webp",
-        "img/destination/Hobart4.webp"
+        "/assets/img/destination/Hobart.webp",
+        "/assets/img/destination/Hobart1.webp",
+        "/assets/img/destination/Hobart2.webp",
+        "/assets/img/destination/Hobart3.webp",
+        "/assets/img/destination/Hobart4.webp"
     },
     Description = "Experience the charm of Hobart, the capital of Tasmania, known for its stunning landscapes, rich history, and vibrant cultural scene. From breathtaking coastal views to unique wildlife encounters, this tour offers a perfect blend of nature, adventure, and gourmet experiences. Explore iconic landmarks like Mount Wellington, MONA, and the historic Port Arthur site while indulging in Tasmania's world-renowned produce and wines.",
     Itinerary = new List<string>
@@ -2043,11 +2043,11 @@ new Destination
     Name = "Canberra",
     ImageUrls = new List<string>
     {
-        "img/destination/Canberra.webp",
-        "img/destination/Canberra1.webp",
-        "img/destination/Canberra2.webp",
-        "img/destination/Canberra3.webp",
-        "img/destination/Canberra4.webp"
+        "/assets/img/destination/Canberra.webp",
+        "/assets/img/destination/Canberra1.webp",
+        "/assets/img/destination/Canberra2.webp",
+        "/assets/img/destination/Canberra3.webp",
+        "/assets/img/destination/Canberra4.webp"
     },
     Description = "Discover the capital city of Australia, Canberra, a perfect blend of history, culture, and nature. This tour will take you through iconic landmarks, world-class museums, and scenic landscapes. Visit Parliament House, explore the Australian War Memorial, enjoy stunning views from Mount Ainslie, and relax at Lake Burley Griffin. Whether you are a history buff, a nature lover, or an art enthusiast, Canberra has something to offer for everyone.",
     Itinerary = new List<string>
@@ -2105,11 +2105,11 @@ new Destination
     Name = "Victoria",
     ImageUrls = new List<string>
     {
-        "img/destination/Victoria.webp",
-        "img/destination/Victoria1.webp",
-        "img/destination/Victoria2.webp",
-        "img/destination/Victoria3.webp",
-        "img/destination/Victoria4.webp"
+        "/assets/img/destination/Victoria.webp",
+        "/assets/img/destination/Victoria1.webp",
+        "/assets/img/destination/Victoria2.webp",
+        "/assets/img/destination/Victoria3.webp",
+        "/assets/img/destination/Victoria4.webp"
     },
     Description = "Victoria, Australia, offers a perfect mix of natural beauty, cultural heritage, and vibrant city life. This tour takes you through the bustling city of Melbourne, the stunning Great Ocean Road, the picturesque Yarra Valley, and the scenic landscapes of Phillip Island. Discover iconic landmarks, enjoy wildlife encounters, and indulge in world-class food and wine experiences.",
     Itinerary = new List<string>
@@ -2178,11 +2178,11 @@ new Destination
     Name = "Queensland",
     ImageUrls = new List<string>
     {
-        "img/destination/Queensland.webp",
-        "img/destination/Queensland1.webp",
-        "img/destination/Queensland2.webp",
-        "img/destination/Queensland3.webp",
-        "img/destination/Queensland4.webp"
+        "/assets/img/destination/Queensland.webp",
+        "/assets/img/destination/Queensland1.webp",
+        "/assets/img/destination/Queensland2.webp",
+        "/assets/img/destination/Queensland3.webp",
+        "/assets/img/destination/Queensland4.webp"
     },
     Description = "Discover the stunning natural beauty and vibrant cities of Queensland, Australia. From the world-famous Great Barrier Reef to the lush rainforests, this tour offers an incredible mix of adventure, relaxation, and wildlife encounters. Explore the Gold Coast's pristine beaches, visit the Daintree Rainforest, and immerse yourself in the cultural and natural wonders of this diverse state.",
     Itinerary = new List<string>
@@ -2257,11 +2257,11 @@ new Destination
     Name = "Tasmania",
     ImageUrls = new List<string>
     {
-        "img/destination/Tasmania.webp",
-        "img/destination/Tasmania1.webp",
-        "img/destination/Tasmania2.webp",
-        "img/destination/Tasmania3.webp",
-        "img/destination/Tasmania4.webp"
+        "/assets/img/destination/Tasmania.webp",
+        "/assets/img/destination/Tasmania1.webp",
+        "/assets/img/destination/Tasmania2.webp",
+        "/assets/img/destination/Tasmania3.webp",
+        "/assets/img/destination/Tasmania4.webp"
     },
     Description = "Experience the breathtaking natural beauty and rich history of Tasmania, Australia's island state. From the stunning landscapes of Cradle Mountain to the charming city of Hobart, this tour offers a perfect blend of adventure, culture, and relaxation. Discover world-class food and wine, explore pristine national parks, and witness unique wildlife encounters in this unforgettable journey.",
     Itinerary = new List<string>
@@ -2332,11 +2332,11 @@ new Destination
     Name = "Ujjain Mahakaleshwar",
     ImageUrls = new List<string>
     {
-        "img/destination/ujjain_mahakaleshwar.webp",
-        "img/destination/ujjainmandir.webp",
-        "img/destination/ujjain_mahakaleshwar2.webp",
-        "img/destination/ujjain_mahakaleshwar3.webp",
-        "img/destination/ujjain_mahakaleshwar4.webp"
+        "/assets/img/destination/ujjain_mahakaleshwar.webp",
+        "/assets/img/destination/ujjainmandir.webp",
+        "/assets/img/destination/ujjain_mahakaleshwar2.webp",
+        "/assets/img/destination/ujjain_mahakaleshwar3.webp",
+        "/assets/img/destination/ujjain_mahakaleshwar4.webp"
     },
     Description = "Exploring Ujjain Mahakaleshwar Tour Packages and its revered Mahakaleshwar Temple promises a spiritually enriching vacation. Here's a suggested itinerary to make the most of your trip. Arrive in Ujjain, a city known for its religious significance and historical charm.",
     Itinerary = new List<string>
@@ -2399,11 +2399,11 @@ new Destination
     Name = "Ayodhya Ram Mandir",
     ImageUrls = new List<string>
     {
-        "img/destination/ayodhya_ram_mandir.webp",
-        "img/destination/ayodhya_ram_mandir1.webp",
-        "img/destination/ayodhya_ram_mandir2.webp",
-        "img/destination/ayodhya_ram_mandir3.webp",
-        "img/destination/ayodhya_ram_mandir4.webp"
+        "/assets/img/destination/ayodhya_ram_mandir.webp",
+        "/assets/img/destination/ayodhya_ram_mandir1.webp",
+        "/assets/img/destination/ayodhya_ram_mandir2.webp",
+        "/assets/img/destination/ayodhya_ram_mandir3.webp",
+        "/assets/img/destination/ayodhya_ram_mandir4.webp"
     },
     Description = "Immerse yourself in Ayodhya Ram Mandir Tour Vacation rich cultural heritage by attending local events, festivals, and cultural performances showcasing the city's vibrant traditions and folklore.",
     Itinerary = new List<string>
@@ -2481,11 +2481,11 @@ new Destination
     Name = "Kerala",
     ImageUrls = new List<string>
     {
-        "img/destination/Kerala.webp",
-        "img/destination/Kerala1.webp",
-        "img/destination/Kerala2.webp",
-        "img/destination/Kerala3.webp",
-        "img/destination/Kerala4.webp"
+        "/assets/img/destination/Kerala.webp",
+        "/assets/img/destination/Kerala1.webp",
+        "/assets/img/destination/Kerala2.webp",
+        "/assets/img/destination/Kerala3.webp",
+        "/assets/img/destination/Kerala4.webp"
     },
     Description = "Kerala backwaters Tour Package offers a serene and rejuvenating experience amidst the lush greenery, tranquil waterways, and unique cultural heritage of India's southern state. Embark on a houseboat cruise through the scenic backwaters of Alleppey, where you can relax and unwind while drifting past coconut groves, paddy fields, and picturesque villages.",
     Itinerary = new List<string>
@@ -2549,11 +2549,11 @@ new Destination
     Name = "Golden Temple",
     ImageUrls = new List<string>
     {
-        "img/destination/golden_temple.webp",
-        "img/destination/golden_temple1.webp",
-        "img/destination/golden_temple2.webp",
-        "img/destination/golden_temple3.webp",
-        "img/destination/golden_temple4.webp"
+        "/assets/img/destination/golden_temple.webp",
+        "/assets/img/destination/golden_temple1.webp",
+        "/assets/img/destination/golden_temple2.webp",
+        "/assets/img/destination/golden_temple3.webp",
+        "/assets/img/destination/golden_temple4.webp"
     },
     Description = "The Golden Temple Tour Package, also known as Sri Harmandir Sahib, is not only a central religious site for Sikhs but also a marvel of architectural beauty and spiritual significance. Golden Temple Tour Package itself. Marvel at its golden domes, serene sarovar (holy tank), and the beautiful architecture. The community kitchen of the Golden Temple Tour Package, where volunteers serve free meals to all visitors regardless of their religion, caste, or creed.",
     Itinerary = new List<string>
@@ -2611,11 +2611,11 @@ new Destination
     Name = "Italy",
     ImageUrls = new List<string>
     {
-        "img/destination/Italy.webp",
-        "img/destination/Italy1.webp",
-        "img/destination/Italy2.webp",
-        "img/destination/Italy3.webp",
-        "img/destination/Italy4.webp"
+        "/assets/img/destination/Italy.webp",
+        "/assets/img/destination/Italy1.webp",
+        "/assets/img/destination/Italy2.webp",
+        "/assets/img/destination/Italy3.webp",
+        "/assets/img/destination/Italy4.webp"
     },
     Description = "Italy Tour Packages with its rich history, vibrant culture, delectable cuisine, and stunning landscapes, offers a Italy Tour Packages experience like no other. Whether you're drawn to the ancient ruins of Rome, the Renaissance art of Florence, the romantic canals of Venice, or the sun-soaked beaches of the Amalfi Coast, Italy has something to enchant every traveler. Here's a customizable itinerary to help you plan your dream Italy Tour Packages.",
     Itinerary = new List<string>
@@ -2696,11 +2696,11 @@ new Destination
     Name = "Paris",
     ImageUrls = new List<string>
     {
-        "img/destination/Paris.webp",
-        "img/destination/Paris1.webp",
-        "img/destination/Paris2.webp",
-        "img/destination/Paris3.webp",
-        "img/destination/Paris4.webp"
+        "/assets/img/destination/Paris.webp",
+        "/assets/img/destination/Paris1.webp",
+        "/assets/img/destination/Paris2.webp",
+        "/assets/img/destination/Paris3.webp",
+        "/assets/img/destination/Paris4.webp"
     },
     Description = "Paris Tour Package, the City of Lights, is a dream destination for many travelers. With its world-famous landmarks, romantic atmosphere, and rich history, Paris has something to offer everyone. Here's a suggested itinerary for a 3-day trip to Paris.",
     Itinerary = new List<string>
@@ -2765,11 +2765,11 @@ new Destination
     Name = "London",
     ImageUrls = new List<string>
     {
-        "img/destination/London.webp",
-        "img/destination/London1.webp",
-        "img/destination/London2.webp",
-        "img/destination/London3.webp",
-        "img/destination/London4.webp"
+        "/assets/img/destination/London.webp",
+        "/assets/img/destination/London1.webp",
+        "/assets/img/destination/London2.webp",
+        "/assets/img/destination/London3.webp",
+        "/assets/img/destination/London4.webp"
     },
     Description = "London Tour Packages, a city steeped in history, culture, and innovation, offers a plethora of experiences for travelers of all tastes. Walk in the footsteps of royalty as you explore the majestic palaces and learn about the city's intriguing past from knowledgeable guides.",
     Itinerary = new List<string>
@@ -2847,11 +2847,11 @@ new Destination
     Name = "Switzerland",
     ImageUrls = new List<string>
     {
-        "img/destination/switzerland.webp",
-        "img/destination/switzerland1.webp",
-        "img/destination/switzerland2.webp",
-        "img/destination/switzerland3.webp",
-        "img/destination/switzerland4.webp"
+        "/assets/img/destination/switzerland.webp",
+        "/assets/img/destination/switzerland1.webp",
+        "/assets/img/destination/switzerland2.webp",
+        "/assets/img/destination/switzerland3.webp",
+        "/assets/img/destination/switzerland4.webp"
     },
     Description = "Nestled in the heart of Europe, Switzerland Tour Package is a picturesque paradise renowned for its stunning landscapes, charming cities, and vibrant culture. From snow-capped mountains to serene lakes and quaint villages, this alpine wonderland offers a myriad of experiences for travelers seeking adventure, relaxation, and everything in between.",
     Itinerary = new List<string>
@@ -2936,11 +2936,11 @@ new Destination
     Name = "Bali",
     ImageUrls = new List<string>
     {
-        "img/destination/Bali1.webp",
-        "img/destination/Bali.webp",
-        "img/destination/Bali2.webp",
-        "img/destination/Bali3.webp",
-        "img/destination/Bali4.webp"
+        "/assets/img/destination/Bali1.webp",
+        "/assets/img/destination/Bali.webp",
+        "/assets/img/destination/Bali2.webp",
+        "/assets/img/destination/Bali3.webp",
+        "/assets/img/destination/Bali4.webp"
     },
     Description = "Bali Tour Package is a tropical paradise renowned for its lush landscapes, vibrant culture, and warm hospitality.",
     Itinerary = new List<string>
@@ -3003,11 +3003,11 @@ new Destination
     Name = "Dubai",
     ImageUrls = new List<string>
     {
-        "img/destination/Dubai.webp",
-        "img/destination/Dubai1.webp",
-        "img/destination/Dubai2.webp",
-        "img/destination/Dubai3.webp",
-        "img/destination/Dubai4.webp"
+        "/assets/img/destination/Dubai.webp",
+        "/assets/img/destination/Dubai1.webp",
+        "/assets/img/destination/Dubai2.webp",
+        "/assets/img/destination/Dubai3.webp",
+        "/assets/img/destination/Dubai4.webp"
     },
     Description = "Dubai Tour Vacation offers a wealth of experiences for travelers seeking excitement, luxury, and cultural immersion. Stay in world-class hotels overlooking the iconic Burj Khalifa and enjoy VIP access to exclusive attractions and experiences.",
     Itinerary = new List<string>
@@ -3067,11 +3067,11 @@ new Destination
     Name = "Thailand",
     ImageUrls = new List<string>
     {
-        "img/destination/Thailand.webp",
-        "img/destination/Thailand1.webp",
-        "img/destination/Thailand2.webp",
-        "img/destination/Thailand3.webp",
-        "img/destination/Thailand4.webp"
+        "/assets/img/destination/Thailand.webp",
+        "/assets/img/destination/Thailand1.webp",
+        "/assets/img/destination/Thailand2.webp",
+        "/assets/img/destination/Thailand3.webp",
+        "/assets/img/destination/Thailand4.webp"
     },
     Description = "Thailand Tour Packages offers a tapestry of experiences that will captivate your senses and leave you longing for more. Explore the bustling streets, vibrant markets, and iconic landmarks of Bangkok. Visit the majestic Grand Palace and Wat Phra Kaew, home to the revered Emerald Buddha.",
     Itinerary = new List<string>
@@ -3126,11 +3126,11 @@ new Destination
     Name = "Jamaica",
     ImageUrls = new List<string>
     {
-        "img/destination/Jamaica.webp",
-        "img/destination/Jamaica1.webp",
-        "img/destination/Jamaica2.webp",
-        "img/destination/Jamaica3.webp",
-        "img/destination/Jamaica4.webp"
+        "/assets/img/destination/Jamaica.webp",
+        "/assets/img/destination/Jamaica1.webp",
+        "/assets/img/destination/Jamaica2.webp",
+        "/assets/img/destination/Jamaica3.webp",
+        "/assets/img/destination/Jamaica4.webp"
     },
     Description = "Jamaica Tour Packages, the land of reggae rhythms, lush rainforests, and breathtaking beaches. Whether you're drawn to the vibrant culture, the stunning landscapes, or the warm hospitality of its people, Jamaica Tour Packages offers a diverse array of experiences for every traveler.",
     Itinerary = new List<string>
@@ -3183,11 +3183,11 @@ new Destination
     Name = "Mexico",
     ImageUrls = new List<string>
     {
-        "img/destination/Mexico.webp",
-        "img/destination/Mexico1.webp",
-        "img/destination/Mexico2.webp",
-        "img/destination/Mexico3.webp",
-        "img/destination/Mexico4.webp"
+        "/assets/img/destination/Mexico.webp",
+        "/assets/img/destination/Mexico1.webp",
+        "/assets/img/destination/Mexico2.webp",
+        "/assets/img/destination/Mexico3.webp",
+        "/assets/img/destination/Mexico4.webp"
     },
     Description = "From ancient ruins and colonial cities to pristine beaches and lush jungles, there's something for everyone in this diverse and captivating country. Discover the colonial charm of cities like Mexico City, Oaxaca, and Puebla, with their cobblestone streets, colorful buildings, and historic landmarks.",
     Itinerary = new List<string>
@@ -3245,11 +3245,11 @@ new Destination
     Name = "Bahamas",
     ImageUrls = new List<string>
     {
-        "img/destination/Bahamas.webp",
-        "img/destination/Bahamas1.webp",
-        "img/destination/Bahamas2.webp",
-        "img/destination/Bahamas3.webp",
-        "img/destination/Bahamas4.webp"
+        "/assets/img/destination/Bahamas.webp",
+        "/assets/img/destination/Bahamas1.webp",
+        "/assets/img/destination/Bahamas2.webp",
+        "/assets/img/destination/Bahamas3.webp",
+        "/assets/img/destination/Bahamas4.webp"
     },
     Description = "Whether you're dreaming of lazy days on the sand, thrilling water sports adventures, or exploring the colorful streets of historic towns, the Bahamas Tour Vacation offers an unforgettable vacation experience for every traveler.",
     Itinerary = new List<string>
@@ -3305,11 +3305,11 @@ new Destination
     Name = "Dominican Republic",
     ImageUrls = new List<string>
     {
-        "img/destination/dominic_republic.webp",
-        "img/destination/dominic_republic1.webp",
-        "img/destination/dominic_republic2.webp",
-        "img/destination/dominic_republic3.webp",
-        "img/destination/dominic_republic4.webp"
+        "/assets/img/destination/dominic_republic.webp",
+        "/assets/img/destination/dominic_republic1.webp",
+        "/assets/img/destination/dominic_republic2.webp",
+        "/assets/img/destination/dominic_republic3.webp",
+        "/assets/img/destination/dominic_republic4.webp"
     },
     Description = "Whether you're a beach lover, an adventure seeker, a history buff, or a food enthusiast, there's something for everyone in this vibrant Caribbean nation. Explore the pristine beaches of Punta Cana, Bavaro, and Juanillo, where palm-fringed sands stretch as far as the eye can see.",
     Itinerary = new List<string>
@@ -3363,11 +3363,11 @@ new Destination
     Name = "Blue Mountains",
     ImageUrls = new List<string>
     {
-        "img/destination/Clutha.webp",
-        "img/destination/Clutha1.webp",
-        "img/destination/Clutha2.webp",
-        "img/destination/Clutha3.webp",
-        "img/destination/Clutha4.webp"
+        "/assets/img/destination/Clutha.webp",
+        "/assets/img/destination/Clutha1.webp",
+        "/assets/img/destination/Clutha2.webp",
+        "/assets/img/destination/Clutha3.webp",
+        "/assets/img/destination/Clutha4.webp"
     },
     Description = "The Blue Mountains, a UNESCO World Heritage site, offers a unique blend of natural beauty, rich history, and adventure. From the iconic Three Sisters to the serene Jamison Valley, this region is perfect for hikers, nature lovers, and anyone seeking a tranquil escape.",
     Itinerary = new List<string>
@@ -3417,11 +3417,11 @@ new Destination
     Name = "Australian Outback",
     ImageUrls = new List<string>
     {
-        "img/destination/australian_outback.webp",
-        "img/destination/australian_outback1.webp",
-        "img/destination/australian_outback2.webp",
-        "img/destination/australian_outback3.webp",
-        "img/destination/australian_outback4.webp"
+        "/assets/img/destination/australian_outback.webp",
+        "/assets/img/destination/australian_outback1.webp",
+        "/assets/img/destination/australian_outback2.webp",
+        "/assets/img/destination/australian_outback3.webp",
+        "/assets/img/destination/australian_outback4.webp"
     },
     Description = "The Australian Outback is a vast, arid region that stretches across much of Australia. It is a land of breathtaking landscapes, rich indigenous culture, and unique wildlife. Whether you're looking for adventure or a peaceful escape, the Outback offers an unforgettable experience.",
     Itinerary = new List<string>
@@ -3469,11 +3469,11 @@ new Destination
                 new Destination
                 {
                     Name = "Auckland",
-                    ImageUrls = new List<string> { "img/destination/Auckland.webp",
-        "img/destination/Auckland1.webp",
-        "img/destination/Auckland2.webp",
-        "img/destination/Auckland3.webp",
-        "img/destination/Auckland4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/Auckland.webp",
+        "/assets/img/destination/Auckland1.webp",
+        "/assets/img/destination/Auckland2.webp",
+        "/assets/img/destination/Auckland3.webp",
+        "/assets/img/destination/Auckland4.webp"},
                     Description ="Discover the vibrant city of Auckland, known as the 'City of Sails,' and its stunning natural surroundings. This tour takes you through Auckland's iconic landmarks, the picturesque Waitomo Caves, the geothermal wonders of Rotorua, and the famous Hobbiton Movie Set. Enjoy breathtaking landscapes, cultural experiences, and adventure activities in this unforgettable New Zealand getaway.",
                     Itinerary = new List<string> {"Day 1: Arrival & Auckland City Tour. Arrive in Auckland and transfer to the hotel. Visit Sky Tower for a panoramic view of the city. Explore Auckland Harbour, Viaduct, and Queen Street. Relax at Mission Bay Beach. Overnight stay in Auckland.",
         "Day 2: Waitomo Glowworm Caves & Rotorua. Breakfast at the hotel. Travel to Waitomo Caves and explore the glowworm-lit caverns. Continue to Rotorua and visit Te Puia Geothermal Park. Enjoy a traditional Maori cultural performance and Hangi dinner. Overnight stay in Rotorua.",
@@ -3508,11 +3508,11 @@ new Destination
                 new Destination
                 {
                     Name = "Hamilton",
-                    ImageUrls = new List<string> {"img/destination/Hamilton.webp",
-        "img/destination/Hamilton1.webp",
-        "img/destination/Hamilton2.webp",
-        "img/destination/Hamilton3.webp",
-        "img/destination/Hamilton4.webp"},
+                    ImageUrls = new List<string> {"/assets/img/destination/Hamilton.webp",
+        "/assets/img/destination/Hamilton1.webp",
+        "/assets/img/destination/Hamilton2.webp",
+        "/assets/img/destination/Hamilton3.webp",
+        "/assets/img/destination/Hamilton4.webp"},
                     Description = "Explore the charming city of Hamilton, New Zealand, known for its stunning gardens, vibrant culture, and proximity to incredible attractions. This tour takes you through the breathtaking Hamilton Gardens, the iconic Hobbiton Movie Set, the magical Waitomo Glowworm Caves, and the serene Waikato River. Enjoy a perfect blend of nature, history, and adventure in this memorable journey.",
                     Itinerary = new List<string> { "Day 1: Arrival & Hamilton City Exploration. Arrive in Hamilton and transfer to the hotel. Visit Hamilton Gardens and explore its themed sections. Walk along the Waikato River and enjoy the scenic views. Explore Waikato Museum and learn about the region's rich history. Overnight stay in Hamilton.",
         "Day 2: Waitomo Glowworm Caves & Hobbiton Movie Set. Breakfast at the hotel. Travel to Waitomo and take a guided boat tour through the Glowworm Caves. Continue to Matamata and enjoy a guided tour of the Hobbiton Movie Set. Return to Hamilton for overnight stay.",
@@ -3547,11 +3547,11 @@ new Destination
                 new Destination
                 {
                     Name = "Wellington",
-                    ImageUrls = new List<string> { "img/destination/Wellington.webp",
-        "img/destination/Wellington1.webp",
-        "img/destination/Wellington2.webp",
-        "img/destination/Wellington3.webp",
-        "img/destination/Wellington4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/Wellington.webp",
+        "/assets/img/destination/Wellington1.webp",
+        "/assets/img/destination/Wellington2.webp",
+        "/assets/img/destination/Wellington3.webp",
+        "/assets/img/destination/Wellington4.webp"},
                     Description =  "Discover the capital city of New Zealand, Wellington, known for its stunning waterfront, vibrant arts scene, and rich history. This tour takes you through the iconic Te Papa Museum, the breathtaking views from Mount Victoria, the lush greenery of the Wellington Botanic Garden, and the cinematic wonders of Weta Workshop. Experience the charm and culture of Wellington in an unforgettable journey.",
                     Itinerary = new List<string> { "Day 1: Arrival & Wellington City Tour. Arrive in Wellington and transfer to the hotel. Visit Te Papa Tongarewa Museum for an interactive cultural experience. Walk along the Wellington Waterfront and enjoy the scenic Oriental Bay. Explore Cuba Street for dining and shopping. Overnight stay in Wellington.",
         "Day 2: Mount Victoria & Weta Workshop. Breakfast at the hotel. Drive up to Mount Victoria Lookout for stunning panoramic views. Visit Weta Workshop for an insider's look at movie magic. Explore the Wellington Botanic Garden via the iconic Wellington Cable Car. Overnight stay in Wellington.",
@@ -3588,11 +3588,11 @@ new Destination
                 new Destination
                 {
                     Name = "Waikato",
-                    ImageUrls = new List<string> { "img/destination/Waikato.webp",
-        "img/destination/Waikato1.webp",
-        "img/destination/Waikato2.webp",
-        "img/destination/Waikato3.webp",
-        "img/destination/Waikato4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/Waikato.webp",
+        "/assets/img/destination/Waikato1.webp",
+        "/assets/img/destination/Waikato2.webp",
+        "/assets/img/destination/Waikato3.webp",
+        "/assets/img/destination/Waikato4.webp"},
                     Description = "Explore the stunning Waikato region, known for its lush landscapes, rich Maori culture, and world-famous attractions. This tour takes you through the magical Waitomo Glowworm Caves, the iconic Hobbiton Movie Set, the beautiful Hamilton Gardens, and the scenic Waikato River. Experience a mix of adventure, nature, and cultural heritage in this unforgettable journey.",
                     Itinerary = new List<string> {"Day 1: Arrival & Hamilton City Exploration. Arrive in Waikato and transfer to the hotel. Visit Hamilton Gardens and explore its themed sections. Take a relaxing Waikato River cruise. Free time to explore Hamilton's shopping and dining areas. Overnight stay in Hamilton.",
         "Day 2: Waitomo Glowworm Caves & Hobbiton Movie Set. Breakfast at the hotel. Travel to Waitomo and take a guided boat tour through the Glowworm Caves. Continue to Matamata for a guided tour of the Hobbiton Movie Set. Return to Hamilton for overnight stay.",
@@ -3629,11 +3629,11 @@ new Destination
     Name = "Rotorua",
     ImageUrls = new List<string>
     {
-        "img/destination/Rotorua.webp",
-        "img/destination/Rotorua1.webp",
-        "img/destination/Rotorua2.webp",
-        "img/destination/Rotorua3.webp",
-        "img/destination/Rotorua4.webp"
+        "/assets/img/destination/Rotorua.webp",
+        "/assets/img/destination/Rotorua1.webp",
+        "/assets/img/destination/Rotorua2.webp",
+        "/assets/img/destination/Rotorua3.webp",
+        "/assets/img/destination/Rotorua4.webp"
     },
     Description = "Rotorua, known as the geothermal and cultural heart of New Zealand, offers breathtaking landscapes, rich Maori heritage, and thrilling adventure activities. This tour takes you through bubbling geothermal parks, Maori cultural experiences, stunning lakes, and thrilling adventure activities for a well-rounded and unforgettable journey.",
     Itinerary = new List<string>
@@ -3687,11 +3687,11 @@ new Destination
      new Destination
                 {
                     Name ="Christchurch",
-                    ImageUrls = new List<string> { "img/destination/Christchurch.webp",
-        "img/destination/Christchurch1.webp",
-        "img/destination/Christchurch2.webp",
-        "img/destination/Christchurch3.webp",
-        "img/destination/Christchurch4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/Christchurch.webp",
+        "/assets/img/destination/Christchurch1.webp",
+        "/assets/img/destination/Christchurch2.webp",
+        "/assets/img/destination/Christchurch3.webp",
+        "/assets/img/destination/Christchurch4.webp"},
                     Description = "Christchurch, the largest city in the South Island of New Zealand, is renowned for its stunning gardens, historic architecture, and vibrant cultural scene. This tour will take you through the city's must-see attractions, including the beautiful Botanic Gardens, scenic Avon River, and the historic tram ride. Experience the charm of Christchurch alongside breathtaking landscapes and adventure opportunities in the surrounding Canterbury region.",
                     Itinerary = new List<string> {"Day 1: Arrival & Christchurch City Exploration. Arrive in Christchurch and transfer to the hotel. Visit the Christchurch Botanic Gardens. Explore Canterbury Museum & Arts Centre. Enjoy a relaxing punting experience on the Avon River. Overnight stay in Christchurch.",
         "Day 2: Scenic Adventures & Wildlife. Breakfast at the hotel. Take a ride on the Christchurch Gondola for panoramic views. Visit Willowbank Wildlife Reserve to see native New Zealand animals. Explore the historic New Regent Street for shopping and dining. Overnight stay in Christchurch.",
@@ -3730,11 +3730,11 @@ new Destination
                 new Destination
                 {
                     Name = "Dunedin",
-                    ImageUrls = new List<string> {  "img/destination/Dunedin.webp",
-        "img/destination/Dunedin1.webp",
-        "img/destination/Dunedin2.webp",
-        "img/destination/Dunedin3.webp",
-        "img/destination/Dunedin4.webp"},
+                    ImageUrls = new List<string> {  "/assets/img/destination/Dunedin.webp",
+        "/assets/img/destination/Dunedin1.webp",
+        "/assets/img/destination/Dunedin2.webp",
+        "/assets/img/destination/Dunedin3.webp",
+        "/assets/img/destination/Dunedin4.webp"},
                     Description =  "Dunedin, known as the 'Edinburgh of the South,' is famous for its Scottish heritage, stunning natural landscapes, and rich wildlife. This tour takes you through Dunedin's historic landmarks, breathtaking coastal scenery, and unique wildlife experiences. Discover the beauty of Otago Peninsula, explore Larnach Castle, and witness rare albatross colonies in this unforgettable journey.",
 
                     Itinerary = new List<string> { "Day 1: Arrival & City Exploration. Arrive in Dunedin and transfer to the hotel. Visit Baldwin Street, the steepest street in the world. Explore the historic Dunedin Railway Station. Free time to explore the city center. Overnight stay in Dunedin.",
@@ -3773,11 +3773,11 @@ new Destination
                  new Destination
                 {
                     Name = "Fiordland",
-                    ImageUrls = new List<string> {  "img/destination/Fiordland.webp",
-        "img/destination/Fiordland1.webp",
-        "img/destination/Fiordland2.webp",
-        "img/destination/Fiordland3.webp",
-        "img/destination/Fiordland4.webp"},
+                    ImageUrls = new List<string> {  "/assets/img/destination/Fiordland.webp",
+        "/assets/img/destination/Fiordland1.webp",
+        "/assets/img/destination/Fiordland2.webp",
+        "/assets/img/destination/Fiordland3.webp",
+        "/assets/img/destination/Fiordland4.webp"},
                     Description = "Fiordland, located in the southwest of New Zealand's South Island, is a world-renowned region of breathtaking natural beauty. Home to the famous Milford Sound and Doubtful Sound, Fiordland offers pristine wilderness, towering waterfalls, and unique wildlife encounters. This tour will take you on an unforgettable journey through lush rainforests, mirror-like lakes, and dramatic mountain landscapes.",
                     Itinerary = new List<string> { "Day 1: Arrival & Te Anau Exploration. Arrive in Queenstown and transfer to Te Anau, the gateway to Fiordland. Explore Lake Te Anau and its surroundings. Visit the Te Anau Bird Sanctuary to see native New Zealand birds. Overnight stay in Te Anau.",
         "Day 2: Milford Sound Cruise & Scenic Drive. Breakfast at the hotel. Enjoy a scenic drive through Fiordland National Park, stopping at Mirror Lakes. Take a Milford Sound cruise to experience waterfalls, dolphins, and seals. Visit The Chasm, a powerful waterfall cutting through rock formations. Return to Te Anau for an overnight stay.",
@@ -3815,11 +3815,11 @@ new Destination
                 new Destination
                 {
                     Name ="Southland",
-                    ImageUrls = new List<string> {"img/destination/Southland.webp",
-        "img/destination/Southland1.webp",
-        "img/destination/Southland2.webp",
-        "img/destination/Southland3.webp",
-        "img/destination/Southland4.webp"},
+                    ImageUrls = new List<string> {"/assets/img/destination/Southland.webp",
+        "/assets/img/destination/Southland1.webp",
+        "/assets/img/destination/Southland2.webp",
+        "/assets/img/destination/Southland3.webp",
+        "/assets/img/destination/Southland4.webp"},
                     Description =  "Southland, located at the southernmost part of New Zealand, is known for its rugged landscapes, stunning coastal scenery, and rich wildlife. From the breathtaking Catlins to the charming town of Invercargill and the untouched beauty of Stewart Island, this tour offers an unforgettable adventure through one of New Zealand's most scenic regions.",
                     Itinerary = new List<string> { "Day 1: Arrival & Invercargill Exploration. Arrive in Invercargill and transfer to the hotel. Visit Bill Richardson Transport World. Explore Queens Park, a beautiful botanical garden. Enjoy local cuisine in the city center. Overnight stay in Invercargill.",
         "Day 2: The Catlins Scenic Adventure. Breakfast at the hotel. Travel to The Catlins and explore Nugget Point Lighthouse. Visit Purakaunui Falls, one of New Zealand's most picturesque waterfalls. Explore Curio Bay and see the fossilized forest and Hector's dolphins. Return to Invercargill for an overnight stay.",
@@ -3858,11 +3858,11 @@ new Destination
                 new Destination
                 {
                     Name ="Clutha",
-                    ImageUrls = new List<string> { "img/destination/Clutha.webp",
-        "img/destination/Clutha1.webp",
-        "img/destination/Clutha2.webp",
-        "img/destination/Clutha3.webp",
-        "img/destination/Clutha4.webp"},
+                    ImageUrls = new List<string> { "/assets/img/destination/Clutha.webp",
+        "/assets/img/destination/Clutha1.webp",
+        "/assets/img/destination/Clutha2.webp",
+        "/assets/img/destination/Clutha3.webp",
+        "/assets/img/destination/Clutha4.webp"},
                     Description ="Clutha, located in the Otago region of New Zealand, is a scenic paradise with rugged coastlines, beautiful waterfalls, and rich historical heritage. From the iconic Nugget Point Lighthouse to the stunning Balclutha Bridge and the tranquil beauty of the Clutha River, this tour offers an authentic and off-the-beaten-path experience in New Zealand's southern region.",
                     Itinerary = new List<string> { "Day 1: Arrival & Balclutha Exploration. Arrive in Balclutha and transfer to the hotel. Explore Balclutha Bridge and Clutha River walks. Visit local cafes and restaurants for an authentic culinary experience. Overnight stay in Balclutha.",
         "Day 2: Coastal Wonders & Nugget Point. Breakfast at the hotel. Visit Nugget Point Lighthouse for breathtaking views. Explore Kaka Point and enjoy its sandy beaches. Stop at Jacks Blowhole to witness the power of the ocean. Return to Balclutha for an overnight stay.",

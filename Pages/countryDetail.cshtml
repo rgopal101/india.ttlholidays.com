@@ -6,13 +6,13 @@
     ViewData["keywords"] ="";
 }
 @foreach (var dest in Model.CountryDestinations)
-{
+{  
     <div class="breadcrumb-section two">
-        <div class="swiper home2-banner-slider">
+        <div class="home2-banner-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="banner-bg"
-                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/innerpages/package-breadcrumb-bg1.jpg);">
+                    <div class=" "
+                         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('@dest.ImageUrls[0]');">
                     </div>
                 </div> 
             </div>
@@ -65,93 +65,22 @@
                             <p>@dest.Description</p> 
                         </div>
                         <div class="location-slider-wrap mb-60">
-                            <h4>Explore Locations</h4>
+                            <h4>Explore Gallery</h4>
                             <div class="location-slider-area">
                                 <div class="swiper package-dt-location-slider">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="location-card">
-                                                <a href="#" class="location-img" data-bs-toggle="modal"
-                                                data-bs-target="#packageLocationModal">
-                                                    <img src="~/assets/img/innerpages/package-dt-location-img1.jpg"
-                                                    alt="">
-                                                </a>
-                                                <div class="location-content">
-                                                    <h6>
-                                                        <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#packageLocationModal">Eiffel Tower</a>
-                                                    </h6>
-                                                    <span>(02 Days)</span>
+ 
+                                        @foreach (var img in dest.ImageUrls)
+                                        { 
+                                            <div class="swiper-slide">
+                                                <div class="location-card">
+                                                    <a href="#" class="location-img" data-bs-toggle="modal"
+                                                       data-bs-target="#packageLocationModal">
+                                                        <img src="@img" alt="@dest.Name">
+                                                    </a> 
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="location-card">
-                                                <a href="#" class="location-img" data-bs-toggle="modal"
-                                                data-bs-target="#packageLocationModal">
-                                                    <img src="~/assets/img/innerpages/package-dt-location-img2.jpg"
-                                                    alt="">
-                                                </a>
-                                                <div class="location-content">
-                                                    <h6>
-                                                        <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#packageLocationModal">Loire Valley</a>
-                                                    </h6>
-                                                    <span>(01 Days)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="location-card">
-                                                <a href="#" class="location-img" data-bs-toggle="modal"
-                                                data-bs-target="#packageLocationModal">
-                                                    <img src="~/assets/img/innerpages/package-dt-location-img3.jpg"
-                                                    alt="">
-                                                </a>
-                                                <div class="location-content">
-                                                    <h6>
-                                                        <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#packageLocationModal">Southern France</a>
-                                                    </h6>
-                                                    <span>(01 Days)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="location-card">
-                                                <a href="#" class="location-img" data-bs-toggle="modal"
-                                                data-bs-target="#packageLocationModal">
-                                                    <img src="~/assets/img/innerpages/package-dt-location-img4.jpg"
-                                                    alt="">
-                                                </a>
-                                                <div class="location-content">
-                                                    <h6>
-                                                        <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#packageLocationModal">Louvre Museum</a>
-                                                    </h6>
-                                                    <span>(03 Days)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="location-card">
-                                                <a href="#" class="location-img" data-bs-toggle="modal"
-                                                data-bs-target="#packageLocationModal">
-                                                    <img src="~/assets/img/innerpages/package-dt-location-img5.jpg"
-                                                    alt="">
-                                                </a>
-                                                <div class="location-content">
-                                                    <h6>
-                                                        <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#packageLocationModal">
-                                                            Palace of
-                                                            Versailles
-                                                        </a>
-                                                    </h6>
-                                                    <span>(02 Days)</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        } 
                                     </div>
                                 </div>
                                 <div class="slider-btn-grp two">
