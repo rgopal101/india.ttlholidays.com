@@ -46,7 +46,7 @@
         </div>
     </div>
 </div>
-<div class="filter-wrapper three mb-100">
+<div class="filter-wrapper three mb-50">
     <div class="container">
         <div class="filter-input-wrap">
             <h6>Check Your Eligibility</h6>
@@ -316,32 +316,26 @@
             <div class="tab-pane fade show active" id="pills-tourist" role="tabpanel" aria-labelledby="pills-tourist-tab">
                 @if (Model.TouristVisaDestinations.Any())
                 {
-                    <div class="list-grid-product-wrap mt-5">
+                    <div class="list-grid-product-wrap mt-2">
                         <div class="row gy-md-5 gy-4">
                             @foreach (var dest in Model.TouristVisaDestinations)
                             {
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-img-wrap">
-                                            <div class="swiper package-card-img-slider">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="package-img">
-                                                            <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slider-pagi-wrap">
-                                                <div class="package-card-img-pagi paginations"></div>
-                                            </div>
-                                            <div class="batch">
-                                                <span class="discount">"@dest.Name</span>
-                                            </div>
+                                    <div class="tour-card">
+                                        <div class="tour-img-wrapper">
+                                            <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="tour-img">
+                                                <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px; min-height:200px" />
+                                            </a>
                                         </div>
-                                        <div class="package-content pb-0">
-                                            <h5> <a asp-page="/VisaDetail" asp-route-country="@dest.Name">@dest.Name</a><small class="float-end text-primary" >@dest.ProcessingDays Days</small></h5>
-                                            
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <small class="text-muted">Processing Days : @dest.ProcessingDays Days</small>
+                                        </div>
+                                        <div class="itinerary mt-2">
+                                            <b>@dest.Name</b>
+                                        </div>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="btn call-btn"><i class="bi bi-telephone-fill"></i></button>
+                                            <button class="btn request-btn text-white fw-bold" data-bs-toggle="modal" onclick="GetpopData('@dest.Name',@dest.ApplicationCost,'@dest.ImageUrl')" data-bs-target="#callbackModal">Request Callback</button>
                                         </div>
                                     </div>
                                 </div>
@@ -351,7 +345,7 @@
                 }
                 else
                 {
-                    <p>No destinations found.</p>
+                    <p>No Visa Found found.</p>
                 }
             </div>
             <div class="tab-pane fade" id="pills-study" role="tabpanel" aria-labelledby="pills-study-tab">
@@ -361,36 +355,29 @@
                         <div class="row gy-md-5 gy-4">
                             @foreach (var dest in Model.StudyVisaDestinations)
                             {
-
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-img-wrap">
-                                            <div class="swiper package-card-img-slider">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="package-img">
-                                                            <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="slider-pagi-wrap">
-                                                <div class="package-card-img-pagi paginations"></div>
-                                            </div>
-                                            <div class="batch">
-                                                <span class="discount">"@dest.Name</span>
-                                            </div>
+                                    <div class="tour-card">
+                                        <div class="tour-img-wrapper">
+                                            <a asp-page="/VisaDetail" asp-route-country="@dest.Name" class="tour-img">
+                                                <img src="@dest.ImageUrl" alt="@dest.Name" class="w-100" style="max-height:200px; min-height:200px" />
+                                            </a>
                                         </div>
-                                        <div class="package-content pb-0">
-                                            <h5> <a asp-page="/VisaDetail" asp-route-country="@dest.Name">@dest.Name</a><small class="float-end text-primary">@dest.ProcessingDays Days</small></h5>
-
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <small class="text-muted">Processing Days : @dest.ProcessingDays Days</small>
+                                        </div>
+                                        <div class="itinerary mt-2">
+                                            <b>@dest.Name</b>
+                                        </div>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="btn call-btn"><i class="bi bi-telephone-fill"></i></button>
+                                            <button class="btn request-btn text-white fw-bold" data-bs-toggle="modal" onclick="GetpopData('@dest.Name',@dest.ApplicationCost,'@dest.ImageUrl')" data-bs-target="#callbackModal">Request Callback</button>
                                         </div>
                                     </div>
                                 </div>
                             }
                         </div>
                     </div>
-                }    
+                }
                 else
                 {
                     <p>No study visa destinations found.</p>
@@ -534,6 +521,77 @@
     </div>
     <div class="vector">
         <img src="~/assets/img/home8/home8-process-section-vector.png" alt="">
+    </div>
+</div>
+
+<script>
+
+    function GetpopData(Name,packagePrice,image)
+    {
+        document.getElementById("tourThumb").src =image;
+        document.getElementById("tourtitle").innerText =Name;
+        document.getElementById("packagePrice").innerText ='INR '+packagePrice; 
+    }
+</script>
+<div class="modal fade" id="callbackModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered" style="width:100%;max-width:500px;">
+        <div class="modal-content elegant-modal">
+            <div class="modal-header p-3 border-0 align-items-start">
+                <div class="d-flex align-items-start gap-3">
+                    <img id="tourThumb" src="" class="tour-thumb">
+                    <div>
+                        <h2 class="fw-bold mb-1 modal-tour-title" id="tourtitle"> 
+                        </h2>
+
+                        @* <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <span class="price-bold" id="packagePrice">INR 42,000</span>
+                            <span class="price-old" id="packagePriceValue">INR 46,200</span>
+                            <span class="save-badge" id="saving">SAVE INR 4,200</span>
+                        </div> *@
+                    </div>
+                </div>
+
+                <button type="button" class="  shadow-sm modal-close-btn"
+                        data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
+            </div>
+            <div class="modal-body pt-0">
+
+                <form class="row g-3">
+
+                    <div class="col-12">
+                        <input type="text" class="form-control elegant-field" placeholder="Full Name*">
+                    </div>
+
+                    <div class="col-12">
+                        <input type="email" class="form-control elegant-field" placeholder="Email*">
+                    </div>
+
+                    <div class="col-12">
+                        <input type="tel" class="form-control elegant-field" placeholder="Phone Number*">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" id="dob_date" class="form-control elegant-field" placeholder="Date Of Birth*">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control elegant-field" placeholder="No Of Travellers">
+                    </div>
+
+                    <div class="col-12">
+                        <textarea class="form-control elegant-field" rows="3" placeholder="Short Notes"></textarea>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer border-0">
+                <button class="btn submit-btn w-100 py-3">Connect With An Expert</button>
+            </div>
+
+        </div>
     </div>
 </div>
 

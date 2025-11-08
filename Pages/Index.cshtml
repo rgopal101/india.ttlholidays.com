@@ -406,6 +406,8 @@
                     {
                         var PackageData = package.Value;
                         var Name = PackageData.GetProperty("packageName").GetString();
+                        var Days = PackageData.GetProperty("days").GetString();
+                        var Night = PackageData.GetProperty("night").GetString();
                         var image = PackageData.GetProperty("imagePath").GetString();
                         var url = PackageData.GetProperty("url").GetString();
                         var packagePrice = PackageData.GetProperty("packagePrice").GetString(); 
@@ -426,86 +428,54 @@
 
                                 <!-- Image -->
                                 <div class="tour-img-wrapper">
+                                     <a asp-page="/packageDetails" asp-route-pkg_name="@url" class="tour-img">
                                     <img src="@($"{image}")" alt="" class="tour-img">
+                                    </a>
                                 </div>
 
                                 <!-- Duration + Rating -->
                                 <div class="d-flex justify-content-between mt-2">
-                                    <small class="text-muted">4 days & 3 nights</small>
+                                    @if (!string.IsNullOrEmpty(Days) && !string.IsNullOrEmpty(Night))
+                                    {
+                                    <small class="text-muted"> @Days days & @Night nights</small> 
+                                    }
                                     <small class="rating"><i class="bi bi-star-fill"></i> 4.5 (24)</small>
                                 </div>
 
                                 <!-- Title -->
-                                <h5 class="mt-1 tour-title">@Name</h5>
-
-                                <!-- Itinerary -->
+                                <h5 class="mt-1 tour-title">@Name</h5>  
                                 <div class="itinerary mt-2">
-                                    <b>2D</b> Cherrapunji • <b>1D</b> Shillong • <b>1D</b> Guwahati
+                                    <b>@Name</b> 
                                 </div>
-
-                                <!-- Old Price + Saving -->
-                                <div class="d-flex align-items-center gap-2 mt-2">
-                                    <span class="old-price">INR @packagePriceValue</span>
-                                    <span class="save-tag">SAVE INR @saving</span>
-                                </div>
-
-                                <!-- Price -->
-                                <div class="price mt-1">INR @packagePrice <span class="text-muted">/Adult</span></div>
-
-                                <!-- Buttons -->
+                                 
+                                <span class="price">INR @packagePriceValue <span class="text-muted">/Adult</span></span>
+                                <span class="old-price">INR @packagePriceValue</span>
+                                <span class="save-tag">SAVE INR @saving</span> 
                                 <div class="d-flex gap-2 mt-3">
                                     <button class="btn call-btn"><i class="bi bi-telephone-fill"></i></button>
                                     <button class="btn request-btn text-white fw-bold" data-bs-toggle="modal" onclick="GetpopData('@Name',@packagePrice,@packagePriceValue,@saving,'@image')" data-bs-target="#callbackModal">Request Callback</button>
                                 </div>
 
-                            </div>
-                            @* <div class="package-card">
-                            <div class="package-img-wrap">
-                                <div class="swiper package-card-img-slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                                <a asp-page="/packageDetails" asp-route-pkg_name="@url" class="package-img">
-                                                <img src="@($"{image}")" alt="">
-                                            </a>
-                                        </div> 
-                                    </div>
-                                </div> 
-                                <div class="batch">
-                                        <span>@packageType</span>
-                                </div>
-                            </div>
-                            <div class="package-content">
-                                    <h5> <a asp-page="/packageDetails" asp-route-pkg_name="@url">@Name</a></h5>
-                                    <svg class="divider" height="6" viewBox="0 0 374 6" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM369 3.5L374 5.88675V0.113249L369 2.5V3.5ZM4.5 3.5H369.5V2.5H4.5V3.5Z"></path>
-                                    </svg>
-                                <div class="btn-and-price-area">
-                                       
-                                    <div class="price-area">
-
-                                       
-                                            <span><del>@packagePriceValue</del>Rs.@packagePrice</span>
-                                    </div>
-                                      
-                                </div>
-                                    <div class="d-flex gap-2 mt-3 w-100">
-
-                                        <!-- Call Button -->
-                                        <button class="btn call-btn">
-                                            <i class="bi bi-telephone-fill"></i>
-                                        </button>
-
-                                        <!-- Request Callback Button -->
-                                        <button class="btn request-btn text-white fw-bold w-100">
-                                            Request Callback
-                                        </button>
-
-                                    </div>
-                            </div>
-                        </div>  *@
+                            </div> 
                         </div>
                     }
                 </div>
+            </div>
+            <div class="justify-content-center d-flex">
+                <a href="Holidays" class="primary-btn1 two ">
+                <span>
+                        View All Package
+                    <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z"></path>
+                    </svg>
+                </span>
+                <span>
+                        View All Package
+                    <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.73535 1.14746C9.57033 1.97255 9.32924 3.26406 9.24902 4.66797C9.16817 6.08312 9.25559 7.5453 9.70214 8.73633C9.84754 9.12406 9.65129 9.55659 9.26367 9.70215C8.9001 9.83849 8.4969 9.67455 8.32812 9.33398L8.29785 9.26367L8.19921 8.98438C7.73487 7.5758 7.67054 5.98959 7.75097 4.58203C7.77875 4.09598 7.82525 3.62422 7.87988 3.17969L1.53027 9.53027C1.23738 9.82317 0.762615 9.82317 0.469722 9.53027C0.176829 9.23738 0.176829 8.76262 0.469722 8.46973L6.83593 2.10254C6.3319 2.16472 5.79596 2.21841 5.25 2.24902C3.8302 2.32862 2.2474 2.26906 0.958003 1.79102L0.704097 1.68945L0.635738 1.65527C0.303274 1.47099 0.157578 1.06102 0.310542 0.704102C0.463655 0.347333 0.860941 0.170391 1.22363 0.28418L1.29589 0.310547L1.48828 0.387695C2.47399 0.751207 3.79966 0.827571 5.16601 0.750977C6.60111 0.670504 7.97842 0.428235 8.86132 0.262695L9.95312 0.0585938L9.73535 1.14746Z"></path>
+                    </svg>
+                </span>
+            </a>
             </div>
         </div>
     </div>
@@ -526,8 +496,7 @@
         <div class="modal-content elegant-modal">
             <div class="modal-header p-3 border-0 align-items-start">
                 <div class="d-flex align-items-start gap-3">
-                    <img id="tourThumb" src=""
-                         class="tour-thumb">
+                    <img id="tourThumb" src="" class="tour-thumb">
                     <div>
                         <h6 class="fw-bold mb-1 modal-tour-title" id="tourtitle">
                             Northeastern Nirvana With Dirang Sightseeing Tour
@@ -541,8 +510,10 @@
                     </div>
                 </div>
 
-                <button type="button" class="btn-close shadow-sm modal-close-btn"
-                        data-bs-dismiss="modal"></button>
+                <button type="button" class="  shadow-sm modal-close-btn"
+                        data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
             </div>
             <div class="modal-body pt-0">
 
@@ -556,26 +527,15 @@
                         <input type="email" class="form-control elegant-field" placeholder="Email*">
                     </div>
 
-                    <div class="col-4 col-md-3">
-                        <select class="form-select elegant-field">
-                            <option selected>+91</option>
-                        </select>
-                    </div>
-                    <div class="col-8 col-md-9">
+                    <div class="col-12">
                         <input type="tel" class="form-control elegant-field" placeholder="Phone Number*">
                     </div>
 
                     <div class="col-md-6">
-                        <input type="date" class="form-control elegant-field" placeholder="Travel Date*">
+                        <input type="text" id="common_date" class="form-control elegant-field" placeholder="Travel Date*">
                     </div>
-
                     <div class="col-md-6">
-                        <select class="form-select elegant-field">
-                            <option selected>Travellers*</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3+</option>
-                        </select>
+                        <input type="text" class="form-control elegant-field" placeholder="No Of Travellers">
                     </div>
 
                     <div class="col-12">

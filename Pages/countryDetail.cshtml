@@ -8,8 +8,7 @@
 @foreach (var dest in Model.CountryDestinations)
 {  
     <div class="breadcrumb-section two">
-        <div class="banner-bg"
-             style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('@dest.ImageUrls[0]');">
+        <div class="banner-bg" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('@dest.ImageUrls[0]');">
         </div>
         <div class="banner-content-wrap">
             <div class="container">
@@ -45,7 +44,7 @@
                                                 <div class="location-card">
                                                     <a href="#" class="location-img" data-bs-toggle="modal"
                                                        data-bs-target="#packageLocationModal">
-                                                        <img src="@img" alt="@dest.Name">
+                                                        <img src="@img" alt="@dest.Name" style="height:200px">
                                                     </a> 
                                                 </div>
                                             </div>
@@ -66,55 +65,6 @@
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="highlights-tour-area mb-60">
-                            <h4>Highlights of the Tour</h4>
-                            <div class="highlights-wrap">
-                                <ul class="items-list">
-                                    <li>
-                                        <svg width="16" height="16" viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                        </svg>
-                                        Eiffel Tower – Skip-the-line access & breathtaking views from the summit.
-                                    </li>
-                                    <li>
-                                        <svg width="16" height="16" viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                        </svg>
-                                        Louvre Museum – See the Mona Lisa and world-renowned masterpieces.
-                                    </li>
-                                    <li>
-                                        <svg width="16" height="16" viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                        </svg>
-                                        Opéra Garnier – Visit the stunning opera house that inspired "The Phantom of the
-                                        Opera”.
-                                    </li>
-                                    <li>
-                                        <svg width="16" height="16" viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                        </svg>
-                                        French Café & Bakery Tour – Savor croissants, macarons & espresso at historic
-                                        cafés.
-                                    </li>
-                                    <li>
-                                        <svg width="16" height="16" viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                        </svg>
-                                        Sunset Dinner Cruise on the Seine – Romantic fine dining on the river.
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                         <div class="tour-itinerary-area mb-60">
@@ -151,7 +101,7 @@
                                                                          xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M7 14C7 14 12.25 9.02475 12.25 5.25C12.25 3.85761 11.6969 2.52226 10.7123 1.53769C9.72774 0.553123 8.39239 0 7 0C5.60761 0 4.27226 0.553123 3.28769 1.53769C2.30312 2.52226 1.75 3.85761 1.75 5.25C1.75 9.02475 7 14 7 14ZM7 7.875C6.30381 7.875 5.63613 7.59844 5.14384 7.10616C4.65156 6.61387 4.375 5.94619 4.375 5.25C4.375 4.55381 4.65156 3.88613 5.14384 3.39384C5.63613 2.90156 6.30381 2.625 7 2.625C7.69619 2.625 8.36387 2.90156 8.85616 3.39384C9.34844 3.88613 9.625 4.55381 9.625 5.25C9.625 5.94619 9.34844 6.61387 8.85616 7.10616C8.36387 7.59844 7.69619 7.875 7 7.875Z" />
                                                                     </svg>
-                                                                    Day-@(i + 1)
+                                                                    @(dest.Itinerary[i]?.Substring(0, Math.Min(70, dest.Itinerary[i].Length)) + (dest.Itinerary[i].Length > 70 ? "..." : ""))        
                                                                 </span>
                                                             </h6>
 
@@ -177,258 +127,105 @@
                             </ul>
 
                         </div>
-                        
-                        <div class="feature-list-area mb-60">
-                            <h4>Package Features List</h4>
-                            <div class="row gy-md-5 gy-4 justify-content-between">
-                                <div class="col-lg-5 col-md-6">
-                                    <div class="single-feature-list">
-                                        <h5>Include Features</h5>
-                                        <ul class="items-list two">
-                                            <li>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                                </svg>
-                                                Accommodation (Hotel, Resort, Villa, Camping, etc.)
-                                            </li>
-                                            <li>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                                </svg>
-                                                Meals (Breakfast, Lunch, Dinner – specify type)
-                                            </li>
-                                            <li>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                                </svg>
-                                                Guided Tours & Excursions
-                                            </li>
-                                            <li>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                                </svg>
-                                                Entry Tickets to Attractions
-                                            </li>
-                                            <li>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                                </svg>
-                                                Adventure Activities & Travel Insurance.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6">
-                                    <div class="single-feature-list">
-                                        <h5>Exclude Features</h5>
-                                        <ul class="items-list two">
-                                            <li>
-                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <g>
-                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
-                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
-                                                    </g>
-                                                </svg>
-                                                Visa Fees & Processing.
-                                            </li>
-                                            <li>
-                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <g>
-                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
-                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
-                                                    </g>
-                                                </svg>
-                                                Personal Expenses (Shopping, Souvenirs, Tips, etc.)
-                                            </li>
-                                            <li>
-                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <g>
-                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
-                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
-                                                    </g>
-                                                </svg>
-                                                Optional Excursions & Activities.
-                                            </li>
-                                            <li>
-                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <g>
-                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
-                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
-                                                    </g>
-                                                </svg>
-                                                Meals Not Mentioned in Itinerary.
-                                            </li>
-                                            <li>
-                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                    <g>
-                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
-                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
-                                                    </g>
-                                                </svg>
-                                                Travel Insurance (if not included).
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="highlights-tour-area mb-60"> 
+                            <h4>What To Do</h4>
+                            <div class="highlights-wrap">
+                                <div class="row items-list">
+                                    @foreach (var todo in dest.WhatToDo)
+                                    {
+                                        <div class="col-4">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
+                                            <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
+                                        </svg>
+                                         @todo
+                                        </div>
+                                    }
+                                     
                                 </div>
                             </div>
                         </div>
-                        <a href="assets/company-desk.pdf" download="company-desk.pdf" class="download-area mb-60">
-                            <img src="~/assets/img/innerpages/package-dt-brochure-download-img.png" alt="">
-                        </a>
-                        <div class="additional-info mb-60">
-                            <h4>Additional Info</h4>
-                            <ul class="items-list two">
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                        <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                    </svg>
-                                    <div class="content">
-                                        <span>Free Cancellation</span> – Some tours offer free cancellation up to a
-                                        certain period (e.g., 24–48 hours before departure).
-                                    </div>
-                                </li>
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
-                                        <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
-                                    </svg>
-                                    <div class="content">
-                                        <span>Health & Safety Guidelines</span> – COVID-19 regulations, vaccinations, or
-                                        travel restrictions.
-                                    </div>
-                                </li>
-                            </ul>
+
+                        <div class="highlights-tour-area mb-60">
+                            <h4>Inclusions</h4>
+                            <div class="highlights-wrap">
+                                <div class="single-feature-list "> 
+                                    <ul class="items-list two">
+                                        @foreach (var inc in dest.Inclusions)
+                                        {
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
+                                                    <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
+                                                </svg>
+                                                @inc
+                                            </li>
+                                        }
+                                    </ul> 
+                                </div>
+                            </div>
                         </div>
-                        <div class="faq-area mb-60">
-                            <h4>Frequently Asked & Question</h4>
-                            <div class="faq-wrap">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item">
-                                        <h5 class="accordion-header" id="flush-headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                            aria-controls="flush-collapseOne">
-                                                What are the must-visit places in
-                                                France?
-                                            </button>
-                                        </h5>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                Top destinations include Paris (Eiffel Tower, Louvre), Nice (French
-                                                Riviera), Bordeaux (wine tours), Provence (lavender fields), and
-                                                Normandy (Mont Saint-Michel).
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h5 class="accordion-header" id="flush-headingTwo">
-                                            <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                Do tour packages
-                                                include entrance fees?
-                                            </button>
-                                        </h5>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                Yes, most of our tour packages include entrance fees to major
-                                                attractions as listed in the itinerary. However, optional activities or
-                                                personal expenses may not be covered. Please check the inclusions
-                                                section of your selected package for full details.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h5 class="accordion-header" id="flush-headingThree">
-                                            <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
-                                                What type of
-                                                accommodation is included?
-                                            </button>
-                                        </h5>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingThree"
-                                        data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                Our packages typically include stays in 3 to 4-star hotels, offering
-                                                comfortable rooms with essential amenities. Higher or boutique
-                                                categories may be available upon request or in premium packages.
-                                                Accommodation details are provided in each tour itinerary.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h5 class="accordion-header" id="flush-headingFour">
-                                            <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                            aria-expanded="false" aria-controls="flush-collapseFour">
-                                                Will I get a
-                                                full refund if I cancel my trip?
-                                            </button>
-                                        </h5>
-                                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                Refund eligibility depends on the cancellation policy of the specific
-                                                tour package. While some packages offer a full refund if canceled within
-                                                a certain time frame, others may involve partial charges. Please refer
-                                                to the cancellation terms provided during booking for full details.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h5 class="accordion-header" id="flush-headingFive">
-                                            <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
-                                            aria-expanded="false" aria-controls="flush-collapseFive">
-                                                What travel
-                                                documents should I carry?
-                                            </button>
-                                        </h5>
-                                        <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                You should carry a valid passport, visa (if required), travel insurance,
-                                                flight tickets, hotel booking confirmations, and a government-issued ID.
-                                                It’s also helpful to have copies of important documents and emergency
-                                                contact information.
-                                            </div>
-                                        </div>
-                                    </div>
+
+                        <div class="highlights-tour-area mb-60">
+                            <h4>Exclusions</h4>
+                            <div class="highlights-wrap">
+                                <div class="single-feature-list ">
+                                    <ul class="items-list two">
+                                        @foreach (var exc in dest.Exclusions)
+                                        {
+                                            <li>
+                                                <svg class="exclude" width="16" height="16" viewBox="0 0 16 16"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" />
+                                                        <path d="M6.00165 5.00036C5.8601 5.00368 5.72612 5.05514 5.62413 5.15703L5.1296 5.65267C4.89714 5.88495 4.92646 6.28828 5.19443 6.55662L6.67129 8.03561L5.19443 9.51394C4.92646 9.78219 4.89704 10.1856 5.1296 10.4184L5.62413 10.9136C5.8566 11.1458 6.2592 11.117 6.52753 10.8486L8.0044 9.36982L9.48126 10.8486C9.74978 11.117 10.1527 11.1458 10.3847 10.9136L10.8799 10.4184C11.1119 10.1857 11.0831 9.78228 10.8145 9.51394L9.33769 8.03561L10.8145 6.55662C11.0831 6.28828 11.1119 5.88495 10.8799 5.65267L10.3847 5.15703C10.1527 4.92429 9.74978 4.9537 9.48126 5.22241L8.0044 6.70084L6.52753 5.2225C6.37677 5.07109 6.18321 4.99594 6.00165 5.00036Z" />
+                                                    </g>
+                                                </svg>
+                                                @exc
+                                            </li>
+                                        }
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                          
+                     
+                        <div class="highlights-tour-area">
+                            <h4>Places to Visit</h4>
+                            <div class="highlights-wrap">
+                                <ul class="items-list">
+                                    @foreach (var place in dest.Places)
+                                    {
+
+                                        <span class="me-2">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V15C11.866 15 15 11.866 15 8Z" />
+                                                <path d="M11.6947 6.45795L7.24644 10.9086C7.17556 10.9771 7.08572 11.0126 6.99596 11.0126C6.9494 11.0127 6.90328 11.0035 6.86027 10.9857C6.81727 10.9678 6.77822 10.9416 6.7454 10.9086L4.3038 8.46699C4.16436 8.32987 4.16436 8.10539 4.3038 7.96595L5.16652 7.10083C5.29892 6.96851 5.53524 6.96851 5.66764 7.10083L6.99596 8.42915L10.3309 5.09179C10.3638 5.05887 10.4028 5.03274 10.4457 5.01489C10.4887 4.99705 10.5347 4.98784 10.5812 4.98779C10.6757 4.98779 10.7656 5.02563 10.8317 5.09179L11.6944 5.95699C11.8341 6.09643 11.8341 6.32091 11.6947 6.45795Z" />
+                                            </svg>
+                                        @place</span>
+
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                         
+                      
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 sticky-sidebar">
                     <div class="package-details-sidebar">
                         <div class="pricing-and-booking-area mb-40">
                             <div class="batch">
                                 <span>10% Off</span>
                             </div>
                             <div class="price-area">
+                               
                                 <h6>Starting From</h6>
-                                <span><del>$899</del> $800<sub>/per person</sub></span>
+                                <span><del>$@dest.Price</del>$ @dest.Price<sub>/per person</sub></span>
                             </div>
                             <ul>
                                 <li>
@@ -535,73 +332,4 @@
         </div>
     </div>
 }
-
-@foreach (var dest in Model.CountryDestinations)
-{
-    <div class="destination-box">
-
-        <h2>@dest.Name</h2>
-
-        <!-- Images -->
-        <div class="image-gallery">
-            @foreach (var img in dest.ImageUrls)
-            {
-                <img src="@img" alt="@dest.Name" width="200" />
-            }
-        </div>
-
-        <!-- Description -->
-       
-
-        <!-- Itinerary -->
-        <h4>Itinerary</h4>
-        <ul>
-            @foreach (var day in dest.Itinerary)
-            {
-                <li>@day</li>
-            }
-        </ul>
-
-        <!-- What To Do -->
-        <h4>What To Do</h4>
-        <ul>
-            @foreach (var todo in dest.WhatToDo)
-            {
-                <li>@todo</li>
-            }
-        </ul>
-
-        <!-- Places -->
-        <h4>Places to Visit</h4>
-        <ul>
-            @foreach (var place in dest.Places)
-            {
-                <li>@place</li>
-            }
-        </ul>
-
-        <!-- Price -->
-        <h4>Price</h4>
-        <p>$@dest.Price</p>
-
-        <!-- Inclusions -->
-        <h4>Inclusions</h4>
-        <ul>
-            @foreach (var inc in dest.Inclusions)
-            {
-                <li>@inc</li>
-            }
-        </ul>
-
-        <!-- Exclusions -->
-        <h4>Exclusions</h4>
-        <ul>
-            @foreach (var exc in dest.Exclusions)
-            {
-                <li>@exc</li>
-            }
-        </ul>
-
-        <hr />
-    </div>
-} 
+ 

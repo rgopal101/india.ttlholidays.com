@@ -2984,6 +2984,27 @@ $(document).ready(function () {
 $(document).ready(function() {
     let today = moment().startOf('day');
 
+
+    $('#common_date').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minDate: today,
+        autoApply: true,
+        autoUpdateInput: true,
+        locale: { format: 'DD-MM-YYYY' }
+    });
+    $('#common_date').val('');
+
+    $('#dob_date').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true, 
+        autoApply: true,
+        autoUpdateInput: true,
+        locale: { format: 'DD-MM-YYYY' }
+    });
+    $('#dob_date').val('');
+
+
     // Start datepicker
     $('#startDate').daterangepicker({
         singleDatePicker: true,
@@ -3096,3 +3117,20 @@ function closePopup() {
 //    document.getElementById('popupOverlay').style.display = 'flex';
 //}, 5000);
 //});
+
+
+window.addEventListener('scroll', () => {
+    const left = document.querySelector('.col-lg-8');
+    const right = document.querySelector('.col-lg-4 .sticky-sidebar');
+    if (!left || !right) return;
+    const leftRect = left.getBoundingClientRect();
+    if (leftRect.top < 20) {
+        right.style.position = 'fixed';
+        right.style.top = '20px';
+        right.style.width = right.parentElement.getBoundingClientRect().width + 'px'; // keep width
+    } else {
+        right.style.position = '';
+        right.style.top = '';
+        right.style.width = '';
+    }
+});
