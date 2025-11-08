@@ -24669,7 +24669,7 @@ header.style-3.two .main-menu > ul > li.active > a i {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 550px;
-  animation: imageAnimation 15s ease-in-out infinite 0s;
+/*  animation: imageAnimation 15s ease-in-out infinite 0s;*/
 }
 @media (max-width: 991px) {
   .breadcrumb-section.two .banner-bg {
