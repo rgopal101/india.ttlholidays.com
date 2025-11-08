@@ -695,7 +695,7 @@ header.style-1 .main-menu > ul > li .mega-menu {
         margin-bottom: 10px; 
     }
 
-    header.style-1 .main-menu > ul > li .mega-menu .menu-row {
+    header.style-1 .main-menu > ul > li .mega-menu .menu-row { 
         display: flex; 
         justify-content: space-between;
     }
