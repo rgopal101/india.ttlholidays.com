@@ -8,19 +8,28 @@ namespace india.ttlholidays.com.Pages
 {
     public class offerDetailsModel : PageModel
     {
+        private readonly IConfiguration _config;
+
+        // ✅ Constructor injection for IConfiguration
+        public offerDetailsModel(IConfiguration config)
+        {
+            _config = config;
+        }
         public string? title { get; set; }
         public string? description { get; set; }
         public string? imagePath { get; set; }
         public string? shortDesc { get; set; }
         public string? dateTime { get; set; }
-       public JsonElement OffersRoot { get; set; } 
+       public JsonElement OffersRoot { get; set; }
+
+        public string IMGURL { get; set; } = string.Empty;
+        public string APIURL { get; set; } = string.Empty;
 
         public async Task OnGetAsync(string? offer_name)
         {
             
                 // Load the offers listing if no offer name is provided
-                await LoadOffersListAsync();
-             
+                await LoadOffersListAsync(); 
                 // Load details of a specific offer
                 await LoadOfferDetailsAsync(offer_name);
              
@@ -28,8 +37,8 @@ namespace india.ttlholidays.com.Pages
 
         private async Task LoadOfferDetailsAsync(string offerName)
         {
-            var apiUrl = $"https://docket.ttlholidays.com/api/india/get_offers_detail.php?url={System.Net.WebUtility.UrlEncode(offerName)}";
-
+            APIURL = _config["AppSettings:APIURL"] ?? string.Empty;
+            var apiUrl = $"{APIURL}get_offers_detail.php?url={System.Net.WebUtility.UrlEncode(offerName)}"; 
             using var client = new HttpClient();
             try
             {

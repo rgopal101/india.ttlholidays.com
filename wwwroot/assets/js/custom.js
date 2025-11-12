@@ -3134,3 +3134,31 @@ window.addEventListener('scroll', () => {
         right.style.width = '';
     }
 });
+function newroundtrip() {
+    //alert("Please select departure date first");
+    document.getElementById('endDate').disabled = false;
+}
+
+function newone() {
+   // alert("Please select return date for round trip");
+    document.getElementById('endDate').disabled = true;
+}
+
+document.getElementById('locationInput').addEventListener('input', function () {
+    const name = this.value.trim();
+    const link = document.getElementById('searchButton');
+    link.setAttribute('href', `/countryDetail/${encodeURIComponent(name)}`);
+});
+
+function selectLocation(name) {
+    alert(name);
+    //// set selected name into the input
+    //document.getElementById('locationInput').value = name;
+
+    //// update the link dynamically
+    //const link = document.getElementById('searchButton');
+    //alert(name);
+    //link.setAttribute('href', `/countryDetail/${encodeURIComponent(name)}`);
+}
+
+// also update link when typing manually

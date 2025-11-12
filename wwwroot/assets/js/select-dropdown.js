@@ -94,10 +94,15 @@ $(document).ready(function () {
     }
   }
 
-  function handleItemSelected(item, itemId) {
-    console.log("Item selected:", item, "with ID:", itemId);
-    // You can handle selection logic here
-  }
+    function handleItemSelected(item, itemId) {
+        console.log("Item selected:", item, "with ID:", itemId);
+        const link = document.getElementById('searchButton');
+        if (link) {
+            const formatted = item.replace(/\s+/g, "_");
+            link.setAttribute('href', `/countryDetail/${encodeURIComponent(formatted)}`);
+        }
+        // You can handle selection logic here
+    }
 
   initializeDropdown($("#search_vendor"));
   initializeDropdown($("#search_customer"));
